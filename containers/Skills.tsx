@@ -4,8 +4,12 @@ import Fade from "react-reveal/Fade";
 import { Col, Container, Row, UncontrolledTooltip } from "reactstrap";
 import DisplayLottie from "../components/DisplayLottie";
 import { skillsSection } from "../portfolio";
+import Marquee from "react-fast-marquee";
 
 const Skills = () => {
+  const generateSafeId = (label: string) =>
+    label.toLowerCase().replace(/[^a-z0-9]/g, "");
+
   return (
     skillsSection && (
       <Fade bottom duration={2000}>
@@ -20,23 +24,37 @@ const Skills = () => {
                 </Col>
                 <Col lg="6" className="order-1 order-lg-2">
                   <h3 className="h3 mb-2">{section.title}</h3>
-                  <div className="d-flex justify-content-center flex-wrap mb-2">
+                  <Marquee
+                    gradient={false}
+                    speed={50}
+                    pauseOnHover={true}
+                    direction="left"
+                    className="skill-marquee"
+                  >
                     {section.softwareSkills.map((skill, i) => {
+                      const safeId = generateSafeId(skill.skillName);
                       return (
                         <Fragment key={i}>
                           <div
-                            className="icon icon-lg icon-shape shadow-sm rounded-circle m-1"
-                            id={skill.skillName.replace(/\s/g, "")}
+                            id={safeId}
+                            className="mx-3 my-3 grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
                           >
-                            <Icon icon={skill.iconifyTag} data-inline="false"></Icon>
+                            <div className="icon icon-lg icon-shape shadow-sm rounded-circle">
+                              <Icon icon={skill.iconifyTag} data-inline="false" width="32" height="32" />
+                            </div>
                           </div>
-                          <UncontrolledTooltip delay={0} placement="bottom" target={skill.skillName.replace(/\s/g, "")}>
+                          <UncontrolledTooltip
+                            delay={0}
+                            placement="bottom"
+                            target={safeId}
+                          >
                             {skill.skillName}
                           </UncontrolledTooltip>
                         </Fragment>
                       );
                     })}
-                  </div>
+                  </Marquee>
+
                   <div>
                     {section.skills.map((skill, i) => {
                       return <p key={i}>{skill}</p>;
@@ -51,5 +69,6 @@ const Skills = () => {
     )
   );
 };
+
 
 export default Skills;

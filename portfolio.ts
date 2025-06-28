@@ -36,61 +36,72 @@ export const socialLinks: SocialLinksType = {
 
 export const skillsSection: SkillsSectionType = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "AGILE FULL STACK DEVELOPER WITH A DESIGNER'S EYE AND A STRATEGIST'S MIND",
   data: [
     {
-      title: "Full Stack Development",
-      lottieAnimationFile: "/lottie/skills/fullstack.json", // Path of Lottie Animation JSON File
+      title: "Full Stack Development & Project Management",
+      lottieAnimationFile: "/lottie/skills/fullstack.json",
       skills: [
-        emoji("⚡ Building responsive Single-Page-Apps (SPA) & PWA in React.js"),
-        emoji("⚡ Building responsive static websites using Next.js"),
-        emoji("⚡ Building RESTful APIs in Django & Django REST Framework"),
+        emoji("⚡ Crafting responsive and dynamic user interfaces with React.js"),
+        emoji("⚡ Architecting scalable APIs and backend logic using Laravel 12"),
+        emoji("⚡ Designing sleek, mobile-first layouts with Tailwind CSS"),
+        emoji("⚡ Leading Agile sprints, stakeholder meetings, and release planning"),
+        emoji("⚡ Managing source control and CI/CD pipelines with GitHub and Vite"),
       ],
       softwareSkills: [
         {
-          skillName: "Python",
-          iconifyTag: "logos:python",
+          skillName: "Laravel",
+          iconifyTag: "logos:laravel",
         },
         {
-          skillName: "Django",
-          iconifyTag: "vscode-icons:file-type-django",
+          skillName: "PHP",
+          iconifyTag: "logos:php",
+        },
+        {
+          skillName: "React.js",
+          iconifyTag: "vscode-icons:file-type-reactjs",
         },
         {
           skillName: "JavaScript",
           iconifyTag: "logos:javascript",
         },
         {
-          skillName: "Reactjs",
-          iconifyTag: "vscode-icons:file-type-reactjs",
+          skillName: "MySQL",
+          iconifyTag: "logos:mysql",
         },
         {
-          skillName: "Nextjs",
-          iconifyTag: "vscode-icons:file-type-light-next",
+          skillName: "Tailwind CSS",
+          iconifyTag: "logos:tailwindcss-icon",
         },
         {
-          skillName: "AWS",
-          iconifyTag: "logos:aws",
+          skillName: "Vite",
+          iconifyTag: "logos:vitejs",
         },
         {
-          skillName: "Heroku",
-          iconifyTag: "logos:heroku-icon",
+          skillName: "Figma",
+          iconifyTag: "logos:figma",
         },
         {
-          skillName: "Github",
+          skillName: "Postman",
+          iconifyTag: "logos:postman-icon",
+        },
+        {
+          skillName: "GitHub",
           iconifyTag: "akar-icons:github-fill",
-        },
-        {
-          skillName: "Docker",
-          iconifyTag: "logos:docker-icon",
         },
       ],
     },
   ],
 };
 
+
 export const SkillBars: SkillBarsType[] = [
   {
-    Stack: "Frontend/Design", //Insert stack or technology you have experience in
+    Stack: "Project Management", //Insert stack or technology you have experience in
+    progressPercentage: "100", //Insert relative proficiency in percentage
+  },
+  {
+    Stack: "Frontend / Design", //Insert stack or technology you have experience in
     progressPercentage: "85", //Insert relative proficiency in percentage
   },
   {
@@ -98,7 +109,7 @@ export const SkillBars: SkillBarsType[] = [
     progressPercentage: "90",
   },
   {
-    Stack: "Programming",
+    Stack: "Presentation & Communication",
     progressPercentage: "95",
   },
 ];
@@ -196,18 +207,18 @@ export const feedbacks: FeedbackType[] = [
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
-  title: "Hanzla Tauqeer",
+  title: "Portfolio of Andika Supriyadi Nur Maulana",
   description: greetings.description,
-  author: "Hanzla Tauqeer",
+  author: "Andika Supriyadi Nur Maulana",
   image: "https://avatars.githubusercontent.com/u/59178380?v=4",
   url: "https://developer-portfolio-1hanzla100.vercel.app",
   keywords: [
-    "Hanzla",
-    "Hanzla Tauqeer",
-    "@1hanzla100",
-    "1hanzla100",
+    "Andika",
+    "Andika Supriyadi Nur Maulana",
+    "@itsmedikaa_",
+    "Andika Portfolio",
     "Portfolio",
-    "Hanzla Portfolio ",
-    "Hanzla Tauqeer Portfolio",
+    "Andika SNM",
+    "Andika SNM Portfolio",
   ],
 };
