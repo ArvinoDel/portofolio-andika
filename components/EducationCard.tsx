@@ -8,27 +8,29 @@ const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBulle
     <Fade bottom duration={1000} distance="20px">
       <Card className="shadow-lg--hover shadow mt-4">
         <CardBody>
-          <div className="d-flex flex-column flex-md-row align-items-start px-3">
-            <div className="mb-3 mb-md-0 me-md-3 d-flex justify-content-center">
+          <div className="d-flex flex-column flex-md-row align-items-center align-items-md-start px-3 text-center text-md-start">
+            <div className="mb-3 mb-md-0 me-md-3">
               <img
                 src="https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png"
                 alt={`${schoolName} logo`}
-                className="rounded-circle"
-                style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                className="rounded-circle mx-auto d-block"
+                style={{ width: "60px", height: "60px", objectFit: "cover" }}
               />
             </div>
-            <div className="text-center text-md-start">
+            <div>
               <h5 className="text-info">{schoolName}</h5>
               <h6>{subHeader}</h6>
-              <Badge color="info" className="me-1">
-                {duration}
-              </Badge>
-              {grade && (
-                <Badge color="primary" className="me-1">
-                  {grade}
+              <div className="mb-2">
+                <Badge color="info" className="me-1">
+                  {duration}
                 </Badge>
-              )}
-              <p className="description mt-3">{desc}</p>
+                {grade && (
+                  <Badge color="primary" className="me-1">
+                    {grade}
+                  </Badge>
+                )}
+              </div>
+              <p className="description">{desc}</p>
               <ul className="text-start">
                 {descBullets?.map((desc, index) => (
                   <li key={index}>{desc}</li>
