@@ -19,7 +19,7 @@ const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBulle
               />
             </div>
             <div>
-              <a href={link}></a><h5 className="text-info">{schoolName}</h5>
+              <a href={link} className="text-decoration-none"><h5 className="text-info">{schoolName}</h5></a>
               <h6>{subHeader}</h6>
               <div className="mb-2">
                 <Badge color="info" className="me-1">
