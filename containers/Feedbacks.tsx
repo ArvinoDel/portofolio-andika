@@ -22,37 +22,37 @@ const Feedbacks = () => {
 
     return () => clearInterval(timer);
   }, []);
-  
+
   const [avatarUrls, setAvatarUrls] = useState<string[]>([]);
 
-useEffect(() => {
-  const urls = feedbacks.map((f) => {
-    const bg = Math.floor(Math.random() * 16777215).toString(16); // hex warna random
-    return `https://ui-avatars.com/api/?name=${f.name}&background=${bg}&color=fff`;
-  });
-  setAvatarUrls(urls);
-}, []);
+  useEffect(() => {
+    const urls = feedbacks.map((f) => {
+      const bg = Math.floor(Math.random() * 16777215).toString(16); // hex warna random
+      return `https://ui-avatars.com/api/?name=${f.name}&background=${bg}&color=fff`;
+    });
+    setAvatarUrls(urls);
+  }, []);
 
   return (
     <section className="section py-5 bg-white">
       <Fade duration={2000}>
         <Container>
-              <div className="d-flex p-4">
-              <div>
-                <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
+          <div className="d-flex p-4">
+            <div>
+              <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
                 <i className="fa fa-star text-info" />
-                </div>
-              </div>
-              <div className="pl-4">
-                <h4 className="display-3 text-info">Feedbacks</h4>
               </div>
             </div>
+            <div className="pl-4">
+              <h4 className="display-3 text-info">Feedbacks</h4>
+            </div>
+          </div>
           <Row className="align-items-center">
-            
+
             <Col md="4">
               <div className="d-flex flex-wrap gap-3 justify-content-center">
                 {feedbacks.map((feedback, i) => (
-                  
+
                   <div
                     key={i}
                     className="avatar-wrapper"
@@ -76,11 +76,12 @@ useEffect(() => {
               </div>
             </Col>
 
-            <Col md="8">
+            <Col md="8" className="my-4 my-md-0">
               <Fade key={activeIndex} bottom duration={500}>
                 <FeedbackCard {...feedbacks[activeIndex]} />
               </Fade>
             </Col>
+
           </Row>
         </Container>
       </Fade>
