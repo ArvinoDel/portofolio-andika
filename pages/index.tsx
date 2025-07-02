@@ -27,6 +27,17 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
       <Projects />
       <Contacts />
       <GithubProfileCard {...githubProfileData} />
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/6281234567890?text=Halo%20Andika,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20Anda!" // Ganti dengan nomor WA kamu
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat via WhatsApp"
+      >
+        <i className="fab fa-whatsapp whatsapp-icon" />
+      </a>
     </div>
   );
 }
