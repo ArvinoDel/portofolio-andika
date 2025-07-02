@@ -13,10 +13,10 @@ import {
 
 export const greetings: GreetingsType = {
   name: "Andika snm",
-  title: "Hi all, I'm Andika",
+  title: "Hi, I'm Andika Supriyadi Nur Maulana",
   description:
-    "I'm a A Full-Stack Developer and Project Manager with strong expertise in both front-end and backend technologies. Skilled in leading projects end-to-end, ensuring quality, efficiency, and time delivery. Adept at public communication, with fluent English proficiency for effective collaboration across diverse teams and stakeholders.",
-  resumeLink: "https://assets.glints.com/resume/20108cda0edfe5b7cf9e6c9ae02a2c0d.pdf?OSSAccessKeyId=LTAI5tHYuZ31FJpMoiUjG4iy&Expires=1751128803&Signature=sDRpHI%2FaU7ZQ8myQKiDcPxedN1o%3D",
+    "A Full-Stack Developer and Project Manager with strong expertise in both front-end and backend technologies. Skilled in leading projects end-to-end, ensuring quality, efficiency, and time delivery. Adept at public communication, with fluent English proficiency for effective collaboration across diverse teams and stakeholders.",
+  resumeLink: "https://drive.google.com/file/d/1eq7B-WUhup99SyVnGx19oyYllV8t-C_W/view?usp=sharing",
 };
 
 export const openSource = {
@@ -119,7 +119,7 @@ export const educationInfo: EducationType[] = [
     schoolName: "State Vocational High School 1 Cirebon",
     subHeader: "Software Engineering",
     duration: "May 2022 - May 2025",
-    desc: "",
+    desc: "Graduated from State Vocational High School 1 Cirebon in Software Engineering, with hands-on experience in programming, databases, and web/mobile app development.",
     grade: "Scores: 88.37",
     descBullets: [], // Array of Strings
   },
@@ -146,24 +146,28 @@ export const experience: ExperienceType[] = [
 export const projects: ProjectType[] = [
   {
     name: "Pandai Digital",
+    tech: ["Laravel", "Tailwind CSS"],
     desc:
       "A comprehensive learning management system built for educators and digital bootcamp providers. Developed using React.js and Next.js, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
     link: "https://pandaidigital.id",
   },
   {
     name: "TerasKBK",
+    tech: ["Laravel", "Tailwind CSS"],
     desc:
       "A local e-commerce and podcast platform that empowers creators to publish, promote, and monetize digital audio content. With seamless Handcash BitcoinSV integration, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the web3 frontier.",
     link: "https://teraskbk.com",
   },
   {
     name: "SMK1Presence",
+    tech: ["Next.js", "React.js", "Tailwind CSS"],
     desc:
       "A digital presence and attendance management system built for vocational schools. SMK1Presence leverages Next.js and modern web technologies to simplify student tracking and administrative workflows, tailored specifically for the Indonesian education landscape.",
     link: "https://github.com/ArvinoDel/SMK1Presence",
   },
   {
     name: "Djajanan",
+    tech: ["Laravel", "Tailwind CSS"],
     desc:
       "An e-commerce platform for local snacks and products, blending modern shopping experiences with crypto-native payments via Handcash BitcoinSV. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
     link: "https://github.com/PT-Grage-Media-Technology/djajanan",
@@ -188,7 +192,7 @@ export const feedbacks: FeedbackType[] = [
   name: "Sabiq Sabirullah",
   role: "Product Strategist",
   feedback:
-    "As a client, I had high expectations—and Andika exceeded every single one. From the very first kickoff call to post-launch refinement, his professionalism, communication, and technical expertise stood out. He transformed our product vision into a dynamic, scalable web platform, all while maintaining crystal-clear transparency throughout the development cycle. Despite shifting requirements and tight timelines, Andika remained composed and solution-oriented, always proposing smart, sustainable approaches. What impressed me most was his rare ability to translate business goals into technical execution without losing sight of user experience."
+    "As a client, I had high expectations, and Andika exceeded every single one. From the very first kickoff call to post-launch refinement, his professionalism, communication, and technical expertise stood out. He transformed our product vision into a dynamic, scalable web platform, all while maintaining crystal-clear transparency throughout the development cycle. Despite shifting requirements and tight timelines, Andika remained composed and solution-oriented, always proposing smart, sustainable approaches. What impressed me most was his rare ability to translate business goals into technical execution without losing sight of user experience."
 },
 ];
 

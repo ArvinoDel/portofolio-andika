@@ -32,3 +32,111 @@ body > div:first-child {
     min-width: 700px !important;
   }
 }
+
+.avatar-wrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ✔️ Nama class disamakan dengan JSX: .avatar-progress-ring */
+.avatar-progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  z-index: 1;
+  pointer-events: none;
+
+  /* Border animated effect */
+  background: linear-gradient(90deg, #0d6efd, #0d6efd);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: ringProgress linear forwards;
+}
+
+/* Avatar image */
+.avatar-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  border-radius: 12px;
+}
+
+/* Animation keyframe */
+@keyframes ringProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.avatar-progress-ring {
+  background: none;
+  will-change: transform;
+  border: 2px solid #0d6efd;
+}
+
+.card {
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: #e1f0ff;
+  color: #0d6efd;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .projects-section .row-grid {
+    gap: 2rem;
+  }
+}
+
+.modern-filter-tabs .nav-link {
+  border-radius: 50px !important;
+  padding: 0.5rem 1.8rem;
+  font-weight: 600;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #6c757d; /* muted grey */
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 2px solid transparent;
+  box-shadow: none;
+  user-select: none;
+}
+
+.modern-filter-tabs .nav-link:hover {
+  color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.1);
+  cursor: pointer;
+  border-color: #0d6efd;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
+}
+
+.modern-filter-tabs .nav-link.active {
+  color: white !important;
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  box-shadow: 0 12px 25px rgba(59, 130, 246, 0.4);
+  border-color: transparent;
+}

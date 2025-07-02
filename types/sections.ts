@@ -75,6 +75,7 @@ export type ExperienceType = {
 
 export type ProjectType = {
   name: string;
+  tech: string[];
   desc: string;
   github?: string;
   link?: string;
