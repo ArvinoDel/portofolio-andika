@@ -36,7 +36,8 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
         rel="noopener noreferrer"
         aria-label="Chat via WhatsApp"
       >
-        <i className="fab fa-whatsapp whatsapp-icon" />
+             <i className="ni ni-chat-round"></i>
+
       </a>
     </div>
   );
