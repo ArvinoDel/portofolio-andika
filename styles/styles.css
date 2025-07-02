@@ -1,3 +1,34 @@
 body > div:first-child {
   overflow-x: hidden;
 }
+
+.hover-scale:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+/* Force ExperienceCard to be full width */
+.experience-card-override {
+  width: 100% !important;
+}
+
+.experience-card-override * {
+  max-width: 100% !important;
+}
+
+/* Target common card patterns */
+.experience-card-override .card,
+.experience-card-override .card-body,
+.experience-card-override [class*="card"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* For desktop only */
+@media (min-width: 769px) {
+  .experience-card-override {
+    width: 100% !important;
+    min-width: 700px !important;
+  }
+}

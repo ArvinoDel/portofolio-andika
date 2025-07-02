@@ -127,83 +127,71 @@ export const educationInfo: EducationType[] = [
 
 export const experience: ExperienceType[] = [
   {
-    role: "Django Developer",
-    company: "Meganos Software",
-    companyLogo: "/img/icons/common/meganos.png",
-    date: "Aug 2022 - Present",
-    desc: "I crafted backends for diverse web apps, APIs, and WebSockets in e-commerce, podcasts, and property management. Managed server upkeep, deployments on Linux, Heroku, and AWS S3. Implemented PyTest for automated unit and integration testing, slashing 4 hours of manual testing each sprint, fortifying a dependable and flawless code foundation.",
+    role: "Project Manager",
+    company: "PT Grage Media Technology",
+    companyLogo: "https://media.licdn.com/dms/image/v2/C560BAQGBCV5LuLQkKg/company-logo_200_200/company-logo_200_200/0/1674809054642?e=1756944000&v=beta&t=gMBsZ1BY7iLZdV8vnqGVppMy6Gy-jouFSWZP95KO80g",
+    date: "Jul 2024 - Dec 2024",
+    desc: "Spearheaded the Pandai Digital project by orchestrating cross-functional collaboration, managing stakeholder communication, and aligning delivery with client expectations. Ensured project success by leading Agile ceremonies, mitigating scope creep, and implementing strategic feature prioritization. Delivered impactful milestones on time while fostering synergy between frontend, backend, and business teams.",
   },
   {
-    role: "Full Stack Developer",
-    company: "Duseca Software",
-    companyLogo: "/img/icons/common/duseca_software_logo.jpeg",
-    date: "Jan 2022 - Sept 2023",
-    desc: "Crafted robust mobile application backends employing Django, Python, and REST APIs. Leveraged Django REST Framework, PostgreSQL, AWS, Firebase, Stripe, and WebSocket for efficient development. Collaborated across teams to surpass client expectations. Designed intuitive UIs, empowering clients to effortlessly manage their applications with a visually captivating interface.",
-    // descBullets: [
-    // 	"Lorem ipsum dolor sit amet, consdfgectetur adipiscing elit",
-    // 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    // ],
-  },
-  {
-    role: "Full Stack Developer",
-    company: "ZRTechnologies",
-    companyLogo: "/img/icons/common/zrtech.jpeg",
-    date: "Aug 2022 - Jun 2023",
-    desc: "Crafting diverse web applications, I've elevated functionality and user engagement. Spearheaded Visual Portfolio, leveraging AI for captivating presentations from parsed text. Proficiently set up and optimized applications on Linux servers, guaranteeing smooth scalability and top-notch performance for seamless user experiences.",
-  },
-  {
-    role: "Backend Developer",
-    company: "Bleed-AI",
-    companyLogo: "/img/icons/common/bleedAI.jpg",
-    date: "Sept 2021 - Oct 2021",
-    desc: "As a Django developer at Bleed AI, I integrated a computer vision AI model to process YouTube URLs on a website. I used Django Channels and Websockets to show real-time processing and implemented threading to run multiple instances of the AI model. I also used jQuery for UI rendering and deployed the website on a Heroku server.",
+    role: "Full-Stack Developer",
+    company: "PT Grage Media Technology",
+    companyLogo: "https://media.licdn.com/dms/image/v2/C560BAQGBCV5LuLQkKg/company-logo_200_200/company-logo_200_200/0/1674809054642?e=1756944000&v=beta&t=gMBsZ1BY7iLZdV8vnqGVppMy6Gy-jouFSWZP95KO80g",
+    date: "Jul 2024 - Dec 2024",
+    desc: "Built dynamic and scalable web solutions using Laravel, React, and Tailwind CSS for the Pandai Digital platform. Engineered secure RESTful APIs, optimized MySQL queries, and implemented responsive UIs. Managed deployment pipelines using shared hosting tools and Git-based workflows. Acted as the bridge between development and design, ensuring technical feasibility and visual excellence.",
   },
 ];
+
 
 export const projects: ProjectType[] = [
   {
-    name: "developer-portfolio",
-    desc: "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
-    github: "https://github.com/1hanzla100/developer-portfolio",
-    link: "https://developer-portfolio-1hanzla100.vercel.app/",
+    name: "Pandai Digital",
+    desc:
+      "A comprehensive learning management system built for educators and digital bootcamp providers. Developed using React.js and Next.js, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
+    link: "https://pandaidigital.id",
   },
   {
-    name: "Giebo",
-    desc: "A Podcast Platform where creators can easily publish and sell their podcasts, and users can purchase with Handcash BitcoinSV, the future of fast and secure transactions.",
-    link: "https://gibeo.io/",
+    name: "TerasKBK",
+    desc:
+      "A local e-commerce and podcast platform that empowers creators to publish, promote, and monetize digital audio content. With seamless Handcash BitcoinSV integration, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the web3 frontier.",
+    link: "https://teraskbk.com",
   },
   {
-    name: "O Mejor Oferta",
-    desc: "O Mejor Oferta is a mobile marketplace for buying and selling items nearby, helping users find deals on things they want and make money from items they no longer need.",
-    link: "https://play.google.com/store/apps/details?id=com.duseca.mejor_oferta",
+    name: "SMK1Presence",
+    desc:
+      "A digital presence and attendance management system built for vocational schools. SMK1Presence leverages Next.js and modern web technologies to simplify student tracking and administrative workflows, tailored specifically for the Indonesian education landscape.",
+    link: "https://github.com/ArvinoDel/SMK1Presence",
   },
   {
-    name: "Hooligan Culture",
-    desc: "A Ecommerce Platform, where shopping meets the future! With HandCash BitcoinSV integration, you can authenticate and purchase products with ease and confidence.",
-    link: "https://hooliganculture.com/",
+    name: "Djajanan",
+    desc:
+      "An e-commerce platform for local snacks and products, blending modern shopping experiences with crypto-native payments via Handcash BitcoinSV. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
+    link: "https://github.com/PT-Grage-Media-Technology/djajanan",
   },
 ];
 
+
 export const feedbacks: FeedbackType[] = [
   {
-    name: "Syed Jamal",
-    role: "Frontend Developer at Meganos Software",
+    name: "Rendi Ramadhan",
+    role: "Senior Programmer at Grage Media Technology",
     feedback:
-      "You were a wonderful addition to our team, alhumdulillah. I'm quite impressed with your abilities and professional practices. You approach problems from a unique perspective and always ask the right question. Finding a good teammate like Hanzla is extremely difficult. He has contributed to the growth of our organization and continues to do so. May Allah bless you with everything you desire.",
+      "Andika embodies the rare harmony of precision and passion. His technical intuition is backed by a mastery of modern frameworks, from Laravel to React, resulting in solutions that are not only functional but future-proof. In our time working together, he consistently demonstrated the ability to decode complexity into clean, scalable architecture. One of his most impressive feats was accelerating our project lifecycle by 30% without compromising code quality. Truly, a Senior-level talent who thinks like a systems architect but moves like an agile craftsman. Any engineering squad would be lucky to have him steering the helm.",
   },
   {
-    name: "Wajahat Malek",
-    role: "CEO at Duseca Software",
+    name: "Calista Yudhistira",
+    role: "CEO at Grage Media Technology",
     feedback:
-      "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively with others while maintaining a high level of productivity and quality. Hanzla is a pleasure to work with, and I have no doubt that he will be an asset to any team or organization. I highly recommend Hanzla for any Full Stack Django, React.js, or Blockchain development projects, and I wish him all the best in his future endeavors.",
+      "In a world overflowing with digital noise, Andika builds platforms that speak. His involvement in our rebranding initiative was nothing short of transformational. Not only did he restructure our digital ecosystem with elegance, but he also aligned our tech infrastructure with the soul of our brand. He was both visionary and pragmatic, blending corporate objectives with seamless user journeys. His leadership inspired our team, his delivery exceeded expectations, and his professionalism set a new internal benchmark. I’ve worked with many developers, but few possess Andika’s caliber of insight, execution, and empathy. He doesn't just code, he curates digital excellence.",
   },
   {
-    name: "Zaid Zaffar",
-    role: "CEO at ZR Technologies",
-    feedback:
-      "Very skilled at what he does and has an in depth knowledge of Django and he's always ready to handle any challenges thrown at him. He's been a valuable member of my team and i look forward to working with him in the years to come",
-  },
+  name: "Sabiq Sabirullah",
+  role: "Product Strategist",
+  feedback:
+    "As a client, I had high expectations—and Andika exceeded every single one. From the very first kickoff call to post-launch refinement, his professionalism, communication, and technical expertise stood out. He transformed our product vision into a dynamic, scalable web platform, all while maintaining crystal-clear transparency throughout the development cycle. Despite shifting requirements and tight timelines, Andika remained composed and solution-oriented, always proposing smart, sustainable approaches. What impressed me most was his rare ability to translate business goals into technical execution without losing sight of user experience."
+},
 ];
+
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
