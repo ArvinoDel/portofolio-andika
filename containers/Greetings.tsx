@@ -30,8 +30,7 @@ const Greetings = () => {
               <Row>
                 <Col lg="6">
                   <h1 className="display-3 text-white">
-                    {greetings.title} 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><title>badge-check</title><g fill="#327aff"><path d="M27 15a4.89 4.89 0 0 0-2.2-4.06 4.9 4.9 0 0 0-1.32-4.42 4.89 4.89 0 0 0-4.42-1.32c-0.89-1.34-2.41-2.2-4.06-2.2s-3.17 0.85-4.06 2.2c-1.58-0.32-3.26 0.15-4.42 1.32s-1.64 2.84-1.32 4.41c-1.34 0.89-2.2 2.42-2.2 4.07s0.85 3.17 2.2 4.06c-0.32 1.58 0.16 3.26 1.32 4.42s2.85 1.64 4.42 1.32c0.89 1.34 2.41 2.2 4.06 2.2s3.17-0.85 4.06-2.2a4.89 4.89 0 0 0 4.42-1.32 4.89 4.89 0 0 0 1.32-4.42 4.89 4.89 0 0 0 2.2-4.06z m-6.33-2.81l-6 7.5a1.51 1.51 0 0 1-1.09 0.56h-0.08a1.49 1.49 0 0 1-1.07-0.44l-3-3a1.5 1.5 0 1 1 2.13-2.12l1.81 1.82 4.96-6.2a1.5 1.5 0 0 1 2.34 1.88z" stroke-width="0" fill="#327aff"></path></g></svg>
+                    {greetings.title} <i className="ni icon-badge-check text-white" />
                   </h1>
 
                   <p className="lead text-white">{greetings.description}</p>
