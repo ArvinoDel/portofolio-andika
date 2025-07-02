@@ -12,7 +12,7 @@ import {
 
 export default function Contacts() {
   return (
-    <section className="py-5 bg-light text-dark">
+    <section className="py-5 text-dark">
       <Container className="text-center">
         <h5 className="text-uppercase text-primary fw-semibold mb-3">
           Get In Touch With Me
