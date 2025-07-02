@@ -9,6 +9,7 @@ import {
   SEODataType,
   SocialLinksType,
   GreetingsType,
+  AchievementsType,
 } from "./types/sections";
 
 export const greetings: GreetingsType = {
@@ -198,6 +199,18 @@ export const feedbacks: FeedbackType[] = [
 },
 ];
 
+export const achievements: AchievementsType[] = [
+  {
+    title: "TOEIC Listening & Reading Certificate",
+    issuer: "ETS Educational Testing Service, Inc.",
+    description: "Achieved a TOEIC score of 815, demonstrating strong proficiency in English for professional and business communication. Skilled in understanding spoken and written English in workplace contexts, effective communication in international environments, and professional correspondence.",
+    tags: ["TOEIC", "English Proficiency"],
+    link: "https://www.ets.org/toeic",
+    scores: "815",
+    img: "https://miro.medium.com/v2/resize:fit:1400/1*WzmsmHBf7l0T0DBTtmsUqQ.png",
+    date: "2022",
+  },
+];
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {

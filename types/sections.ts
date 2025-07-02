@@ -90,3 +90,14 @@ export type FeedbackType = {
   role: string;
   feedback: string;
 };
+
+export type AchievementsType = {
+  title: string;
+  issuer: string;
+  date?: string;
+  description: string;
+  tags?: string[];
+  link?: string; // Optional link to the achievement or publisher's website
+  scores?: string;
+  img?: string; // Optional
+};
