@@ -30,7 +30,7 @@ const Greetings = () => {
               <Row>
                 <Col lg="6">
                   <h1 className="display-3 text-white">
-                    {greetings.title} <i className="ni icon-badge-check text-white" />
+                    {greetings.title} <i className="icon-badge-check text-white" />
                   </h1>
 
                   <p className="lead text-white">{greetings.description}</p>
