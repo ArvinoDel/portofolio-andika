@@ -12,7 +12,7 @@ import {
 
 export default function Contacts() {
   return (
-    <section className="py-5 text-dark">
+    <section className="py-5 bg-white text-dark">
       <Container className="text-center">
         <h5 className="text-uppercase text-primary fw-semibold mb-3">
           Get In Touch With Me
@@ -48,7 +48,7 @@ export default function Contacts() {
 
           {/* Contact Form */}
           <Col lg="6">
-            <div className="bg-white shadow rounded-3 p-4 p-md-5 h-100">
+            <div className="bg-white shadow-lg rounded-3 p-4 p-md-5 h-100">
               <Form
                 action="https://formspree.io/f/xblyqznv"
                 method="POST"
