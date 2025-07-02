@@ -202,7 +202,7 @@ export const seoData: SEODataType = {
   title: "Portfolio of Andika Supriyadi Nur Maulana",
   description: greetings.description,
   author: "Andika Supriyadi Nur Maulana",
-  image: "https://avatars.githubusercontent.com/u/59178380?v=4",
+  image: "https://avatars.githubusercontent.com/u/133538317?v=4",
   url: "https://portofolio-andika-one.vercel.app/",
   keywords: [
     "Andika",
