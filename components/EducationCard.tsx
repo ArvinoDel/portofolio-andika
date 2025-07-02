@@ -2,8 +2,9 @@ import React from "react";
 import { Card, CardBody, Badge } from "reactstrap";
 import { EducationType } from "../types/sections";
 import Fade from "react-reveal/Fade";
+import { link } from "fs";
 
-const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBullets }: EducationType) => {
+const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBullets, link, img }: EducationType) => {
   return (
     <Fade bottom duration={1000} distance="20px">
       <Card className="shadow-lg--hover shadow mt-4">
@@ -11,14 +12,14 @@ const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBulle
           <div className="d-flex flex-column flex-md-row align-items-center align-items-md-start px-3 text-center text-md-start">
             <div className="mb-3 mb-md-0 me-md-3">
               <img
-                src="https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png"
+                src={img}
                 alt={`${schoolName} logo`}
                 className="rounded-circle mx-auto d-block"
                 style={{ width: "60px", height: "60px", objectFit: "cover" }}
               />
             </div>
             <div>
-              <h5 className="text-info">{schoolName}</h5>
+              <a href={link}></a><h5 className="text-info">{schoolName}</h5>
               <h6>{subHeader}</h6>
               <div className="mb-2">
                 <Badge color="info" className="me-1">

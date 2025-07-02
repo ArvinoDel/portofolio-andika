@@ -117,6 +117,8 @@ export const SkillBars: SkillBarsType[] = [
 export const educationInfo: EducationType[] = [
   {
     schoolName: "State Vocational High School 1 Cirebon",
+    img: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    link: "https://pplg-smkn1cirebon.sch.id/",
     subHeader: "Software Engineering",
     duration: "May 2022 - May 2025",
     desc: "Graduated from State Vocational High School 1 Cirebon in Software Engineering, with hands-on experience in programming, databases, and web/mobile app development.",

@@ -53,6 +53,8 @@ export type SkillBarsType = {
 
 export type EducationType = {
   schoolName: string;
+  img: string;
+  link?: string; // Optional link to the school's website or program
   subHeader: string;
   duration: string;
   desc: string;
