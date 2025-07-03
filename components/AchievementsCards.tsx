@@ -222,7 +222,7 @@ const AchievementsCards = ({
                                             <span className="text-truncate" style={{ maxWidth: '100%' }}>
                                                 {date && (
                                                     <>
-                                                        <i className="fa fa-calendar-days"></i>
+                                                        <i className="ni ni-calendar-grid"></i>
                                                         <span className="text-truncate mx-1" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
                                                             {date}
                                                         </span>
