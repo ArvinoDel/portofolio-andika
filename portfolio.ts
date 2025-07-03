@@ -205,10 +205,20 @@ export const achievements: AchievementsType[] = [
     issuer: "ETS Educational Testing Service, Inc.",
     description: "Achieved a TOEIC score of 815, demonstrating strong proficiency in English for professional and business communication. Skilled in understanding spoken and written English in workplace contexts, effective communication in international environments, and professional correspondence.",
     tags: ["TOEIC", "English Proficiency"],
-    link: "https://www.ets.org/toeic",
+    link: "https://drive.google.com/file/d/11v5hxEz5fVte0gK0u6AI3q2TcrhG0-NH/view?usp=sharing",
     scores: "815",
     img: "https://miro.medium.com/v2/resize:fit:1400/1*WzmsmHBf7l0T0DBTtmsUqQ.png",
-    date: "2022",
+    date: "November 2024",
+  },
+  {
+    title: "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+    issuer: "Microsoft",
+    description: "Achieved the Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) certification in 2024, validating a solid foundation in enterprise security, compliance, and identity concepts within Microsoft environments. Skilled in understanding and applying key principles such as Zero Trust, access management, threat protection, and regulatory compliance across Microsoft Azure and Microsoft 365 platforms. Demonstrates capability in supporting organizational security strategies and navigating cloud-based governance in modern digital infrastructures.",
+    tags: ["Cybersecurity", "Microsoft Azure"],
+    link: "https://drive.google.com/file/d/1nBtHozS5cJqo5WI783AqJ_WYkUo9iETy/view?usp=sharing",
+    scores: "980",
+    img: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain",
+    date: "October 2024",
   },
 ];
 
