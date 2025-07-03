@@ -85,14 +85,25 @@ const Feedbacks = () => {
                         </defs>
                         
                         {/* Progress ring dengan desain asli */}
+                        {isMobile &&
                         <rect
                           x="18"
                           y="18"
-                          width="72"
-                          height="72"
+                          width="54"
+                          height="54"
                           rx="8"
                           ry="8"
-                        />
+                        />    
+                        }
+
+                        <rect
+                          x="18"
+                          y="18"
+                          width="71"
+                          height="71"
+                          rx="8"
+                          ry="8"
+                        />    
                       </svg>
                     )}
 
