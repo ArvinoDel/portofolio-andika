@@ -14,25 +14,41 @@ const AchievementsCards = ({
   img,
 }: AchievementsType) => {
   return (
-    <Fade bottom duration={900} distance="30px">
+    <Fade bottom duration={1000} distance="40px">
       <div
-        className="rounded-4 shadow-sm border position-relative p-4 h-100 bg-white"
+        className="p-4 rounded-4 shadow border bg-white h-100 position-relative overflow-hidden card-modern"
         style={{
-          transition: "all 0.3s ease",
-          borderColor: "#f1f3f5",
+          transition: "all 0.4s ease",
+          borderColor: "#e9ecef",
         }}
       >
-        {/* Logo floating top right */}
+        {/* Accent circle background */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-40px",
+            right: "-40px",
+            width: "120px",
+            height: "120px",
+            background: "radial-gradient(circle, #dee2e6, transparent 70%)",
+            borderRadius: "50%",
+            zIndex: 0,
+          }}
+        />
+
+        {/* Logo floating top */}
         {img && (
           <div
-            className="position-absolute top-0 end-0 m-3"
+            className="position-absolute"
             style={{
+              top: "20px",
+              left: "20px",
               width: "48px",
               height: "48px",
-              borderRadius: "10px",
-              overflow: "hidden",
               background: "#fff",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.05)",
+              borderRadius: "12px",
+              boxShadow: "0 6px 14px rgba(0,0,0,0.08)",
+              zIndex: 2,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -42,63 +58,70 @@ const AchievementsCards = ({
               src={img}
               alt={issuer}
               style={{
-                maxHeight: "70%",
                 maxWidth: "70%",
+                maxHeight: "70%",
                 objectFit: "contain",
               }}
             />
           </div>
         )}
 
-        {/* Title */}
-        <h5 className="fw-bold mb-1 text-dark">{title}</h5>
-        <small className="text-muted">{issuer}</small>
+        {/* Content */}
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <div className="mt-4 pt-3">
+            <h5 className="fw-bold text-dark">{title}</h5>
+            <div className="text-muted small mb-2">{issuer}</div>
 
-        {/* Metadata */}
-        <div className="d-flex flex-wrap small mt-2 mb-3 text-secondary" style={{ gap: "0.75rem" }}>
-          {date && <span>📅 {date}</span>}
-          {scores && <span>📊 {scores}</span>}
-        </div>
+            <div className="d-flex flex-wrap align-items-center text-secondary mb-3" style={{ fontSize: "0.8rem", gap: "1rem" }}>
+              {date && <span>📅 {date}</span>}
+              {scores && <span>📊 Score: {scores}</span>}
+            </div>
 
-        {/* Description */}
-        <p className="text-muted small" style={{ minHeight: "60px" }}>{description}</p>
+            <p className="text-muted small lh-sm mb-3" style={{ minHeight: "60px" }}>
+              {description}
+            </p>
 
-        {/* Tags */}
-        <div className="mb-3">
-          {tags.map((tag, idx) => (
-            <Badge
-              key={idx}
-              className="me-1 mb-1 text-uppercase"
-              color="light"
-              style={{
-                fontSize: "0.65rem",
-                fontWeight: 600,
-                background: "#f5f5f5",
-                color: "#555",
-                letterSpacing: "0.05em",
-              }}
-            >
-              #{tag}
-            </Badge>
-          ))}
-        </div>
+            {tags.length > 0 && (
+              <div className="d-flex flex-wrap gap-1 mb-4">
+                {tags.map((tag, idx) => (
+                  <Badge
+                    key={idx}
+                    className="px-2 py-1"
+                    pill
+                    style={{
+                      backgroundColor: "#f1f3f5",
+                      fontSize: "0.65rem",
+                      fontWeight: 500,
+                      letterSpacing: "0.05em",
+                      color: "#333",
+                    }}
+                  >
+                    #{tag}
+                  </Badge>
+                ))}
+              </div>
+            )}
 
-        {/* Button */}
-        {link && (
-          <div>
-            <Button
-              color="dark"
-              size="sm"
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-pill px-3"
-              style={{ fontSize: "0.8rem", fontWeight: 500 }}
-            >
-              View Certificate
-            </Button>
+            {link && (
+              <Button
+                color="dark"
+                size="sm"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-pill px-3"
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 500,
+                  backgroundColor: "#212529",
+                  border: "none",
+                }}
+              >
+                🎓 View Certificate
+              </Button>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </Fade>
   );
