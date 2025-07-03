@@ -227,7 +227,7 @@ const AchievementsCards = ({
                                             }}
                                         >
                                             <span className="text-truncate" style={{ maxWidth: '100%' }}>
-                                                {credentials}
+                                                Credential ID: {credentials}
                                             </span>
                                         </div>
                                     </div>
