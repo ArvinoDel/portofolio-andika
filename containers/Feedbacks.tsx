@@ -13,34 +13,14 @@ const circumference = normalizedRadius * 2 * Math.PI;
 
 const Feedbacks = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % feedbacks.length);
-      setProgress(0); // Reset progress when switching
     }, INTERVAL);
 
     return () => clearInterval(timer);
   }, []);
-
-  // Progress animation for the active ring
-  useEffect(() => {
-    setProgress(0);
-    const startTime = Date.now();
-    
-    const updateProgress = () => {
-      const elapsed = Date.now() - startTime;
-      const newProgress = Math.min(elapsed / INTERVAL, 1);
-      setProgress(newProgress);
-      
-      if (newProgress < 1) {
-        requestAnimationFrame(updateProgress);
-      }
-    };
-    
-    requestAnimationFrame(updateProgress);
-  }, [activeIndex]);
 
   const [avatarUrls, setAvatarUrls] = useState<string[]>([]);
 
@@ -96,13 +76,13 @@ const Feedbacks = () => {
                   >
                     {i === activeIndex && (
                       <svg className="avatar-progress-ring">
-                        <circle
-                          cx="47"
-                          cy="47"
-                          r="40"
-                          style={{
-                            strokeDashoffset: 251 * (1 - progress)
-                          }}
+                        <rect
+                          x="15"
+                          y="15"
+                          width="64"
+                          height="64"
+                          rx="20"
+                          ry="20"
                         />
                       </svg>
                     )}

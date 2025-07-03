@@ -40,10 +40,10 @@ body > div:first-child {
   height: 64px;
   cursor: pointer;
   border-radius: 12px;
-  overflow: visible; /* Changed from hidden to visible untuk ring */
+  overflow: visible;
 }
 
-/* Progress ring yang melingkari avatar - SVG approach */
+/* Progress ring yang melingkari avatar - SVG approach dengan bentuk kotak rounded */
 .avatar-progress-ring {
   position: absolute;
   top: -15px;
@@ -52,17 +52,21 @@ body > div:first-child {
   height: 94px;
   z-index: 1;
   pointer-events: none;
-  transform: rotate(-90deg); /* Start from top */
 }
 
-.avatar-progress-ring circle {
+.avatar-progress-ring rect {
   fill: none;
   stroke: #0d6efd;
   stroke-width: 15;
   stroke-linecap: round;
-  stroke-dasharray: 251; /* 2 * PI * 40 (radius) */
-  stroke-dashoffset: 251;
-  transition: stroke-dashoffset 0.1s ease;
+  stroke-linejoin: round;
+  rx: 20;
+  ry: 20;
+  /* Perimeter kotak rounded: 2 * (width + height) - 4 * corner_radius + corner_circumference */
+  /* Untuk rect 64x64 dengan rx=20: 2*(64+64) - 4*20 + 4*(PI*20/2) ≈ 256 - 80 + 125 = 301 */
+  stroke-dasharray: 301;
+  stroke-dashoffset: 301;
+  animation: ringProgressAuto 30s linear infinite;
 }
 
 /* Avatar image */
@@ -75,10 +79,10 @@ body > div:first-child {
   border-radius: 12px;
 }
 
-/* Animation keyframe untuk smooth progress */
-@keyframes ringProgress {
+/* Animation keyframe untuk auto progress */
+@keyframes ringProgressAuto {
   0% {
-    stroke-dashoffset: 251;
+    stroke-dashoffset: 301;
   }
   100% {
     stroke-dashoffset: 0;
@@ -110,12 +114,15 @@ body > div:first-child {
     height: 78px;
   }
   
-  .avatar-progress-ring circle {
+  .avatar-progress-ring rect {
     stroke-width: 12;
-    stroke-dasharray: 201; /* 2 * PI * 32 (radius for mobile) */
-    stroke-dashoffset: 201;
+    rx: 17;
+    ry: 17;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
   }
 }
+
 .card {
   border-radius: 1rem;
   transition: all 0.3s ease;
