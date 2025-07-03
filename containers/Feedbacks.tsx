@@ -75,7 +75,7 @@ const Feedbacks = () => {
                     onClick={() => handleAvatarClick(i)}
                   >
                     {i === activeIndex && (
-                      <svg className="avatar-progress-ring">
+                      <svg className="avatar-progress-ring" viewBox="0 0 100 100">
                         <defs>
                           <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor="#0d6efd" />
@@ -84,14 +84,19 @@ const Feedbacks = () => {
                           </linearGradient>
                         </defs>
                         
-                        {/* Hanya progress ring saja, bg-ring dihapus */}
+                        {/* Progress ring yang melekat sempurna */}
                         <rect
-                          x="18"
-                          y="18"
-                          width="64"
-                          height="64"
+                          x="2"
+                          y="2"
+                          width="96"
+                          height="96"
                           rx="8"
                           ry="8"
+                          fill="none"
+                          stroke="url(#progressGradient)"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                     )}
