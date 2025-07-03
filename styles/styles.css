@@ -34,9 +34,12 @@ body > div:first-child {
 }
 
 /* Avatar wrapper styling */
-/* Avatar wrapper styling */
+/* Avatar wrapper styling dengan flexbox centering */
 .avatar-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 64px;
   height: 64px;
   cursor: pointer;
@@ -45,17 +48,25 @@ body > div:first-child {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Progress ring - FIXED positioning dengan margin negatif yang tepat */
+/* Progress ring - menggunakan flexbox absolute positioning */
 .avatar-progress-ring {
   position: absolute;
-  /* Desktop fix: kurang 1-2px ke kanan dan bawah */
-  top: -16px;  /* Was -18px, now -16px (2px ke bawah) */
-  left: -16px; /* Was -18px, now -16px (2px ke kanan) */
-  width: 100px;
-  height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
+}
+
+/* SVG ring sizing */
+.avatar-progress-ring svg {
+  width: 100px;
+  height: 100px;
 }
 
 .avatar-progress-ring rect {
@@ -131,18 +142,14 @@ body > div:first-child {
   filter: drop-shadow(0 0 12px rgba(13, 110, 253, 0.5));
 }
 
-/* RESPONSIVE - PERHITUNGAN YANG BENAR */
-/* Mobile 768px: Avatar 54px, Ring 84px */
+/* Responsive - hanya ubah size avatar dan ring */
 @media (max-width: 768px) {
   .avatar-wrapper {
     width: 54px;
     height: 54px;
   }
   
-  .avatar-progress-ring {
-    /* Mobile fix: terlalu ke bawah dan ke kanan */
-    top: -18px;  /* Was -15px, now -18px (lebih ke atas) */
-    left: -18px; /* Was -15px, now -18px (lebih ke kiri) */
+  .avatar-progress-ring svg {
     width: 84px;
     height: 84px;
   }
@@ -152,17 +159,13 @@ body > div:first-child {
   }
 }
 
-/* Small Mobile 480px: Avatar 48px, Ring 72px */
 @media (max-width: 480px) {
   .avatar-wrapper {
     width: 48px;
     height: 48px;
   }
   
-  .avatar-progress-ring {
-    /* Small mobile fix: sama seperti mobile biasa */
-    top: -15px;  /* Was -12px, now -15px (lebih ke atas) */
-    left: -15px; /* Was -12px, now -15px (lebih ke kiri) */
+  .avatar-progress-ring svg {
     width: 72px;
     height: 72px;
   }
@@ -172,33 +175,19 @@ body > div:first-child {
   }
 }
 
-/* Desktop Large 1200px: Avatar 72px, Ring 112px */
 @media (min-width: 1200px) {
   .avatar-wrapper {
     width: 72px;
     height: 72px;
   }
   
-  .avatar-progress-ring {
-    /* Desktop large: sama adjustment seperti desktop biasa */
-    top: -18px;  /* Was -20px, now -18px (sedikit ke bawah) */
-    left: -18px; /* Was -20px, now -18px (sedikit ke kanan) */
+  .avatar-progress-ring svg {
     width: 112px;
     height: 112px;
   }
 }
 
-/* DEBUG: Tambahkan border sementara untuk memastikan positioning */
-/*
-.avatar-progress-ring {
-  border: 1px solid red;
-}
-.avatar-wrapper {
-  border: 1px solid blue;
-}
-*/
-
-/* ALTERNATIF: Jika masih bermasalah, gunakan CSS Grid untuk perfect centering */
+/* ALTERNATIF 2: Jika masih bermasalah, gunakan CSS Grid */
 .avatar-wrapper-grid {
   display: grid;
   place-items: center;
@@ -212,17 +201,24 @@ body > div:first-child {
 
 .avatar-progress-ring-grid {
   grid-area: 1 / 1;
-  width: 100px;
-  height: 100px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
 }
 
+.avatar-progress-ring-grid svg {
+  width: 100px;
+  height: 100px;
+}
+
 .avatar-img-grid {
   grid-area: 1 / 1;
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: 2;
   border-radius: 12px;
@@ -231,6 +227,50 @@ body > div:first-child {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* ALTERNATIF 3: Manual fine-tuning berdasarkan feedback */
+.avatar-progress-ring-manual {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
+  
+  /* Desktop default - adjust sesuai kebutuhan */
+  top: -17px;    /* Fine tune: -16px sampai -18px */
+  left: -17px;   /* Fine tune: -16px sampai -18px */
+  width: 100px;
+  height: 100px;
+}
+
+/* Manual fine-tuning responsive */
+@media (max-width: 768px) {
+  .avatar-progress-ring-manual {
+    /* Mobile - adjust sesuai kebutuhan */
+    top: -17px;    /* Fine tune: -15px sampai -20px */
+    left: -17px;   /* Fine tune: -15px sampai -20px */
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-progress-ring-manual {
+    /* Small mobile - adjust sesuai kebutuhan */
+    top: -14px;    /* Fine tune: -12px sampai -16px */
+    left: -14px;   /* Fine tune: -12px sampai -16px */
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .avatar-progress-ring-manual {
+    /* Desktop large - adjust sesuai kebutuhan */
+    top: -19px;    /* Fine tune: -18px sampai -22px */
+    left: -19px;   /* Fine tune: -18px sampai -22px */
+    width: 112px;
+    height: 112px;
+  }
+}
 .card {
   border-radius: 1rem;
   transition: all 0.3s ease;
