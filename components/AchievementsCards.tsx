@@ -1,9 +1,7 @@
 import React from "react";
-import { Badge, Button } from "reactstrap";
-// import "./AchievementsCards.css"; // custom CSS for glassmorphism
+import { Badge, Button, Row, Col } from "reactstrap";
 import { AchievementsType } from "../types/sections";
 import Fade from "react-reveal/Fade";
-
 
 const AchievementsCards = ({
   title,
@@ -16,67 +14,73 @@ const AchievementsCards = ({
   img,
 }: AchievementsType) => {
   return (
-    <div className="achievement-card glass shadow-lg p-4 h-100 rounded-4 d-flex flex-column justify-content-between">
-      <div>
-        {/* Logo */}
-        {img && (
-          <div className="text-center mb-3">
-            <img
-              src={img}
-              alt={issuer}
-              style={{
-                height: "50px",
-                objectFit: "contain",
-                borderRadius: "8px",
-              }}
-            />
-          </div>
-        )}
+    <Fade bottom duration={800} distance="20px">
+      <div className="border rounded-4 shadow-sm p-4 h-100 bg-white">
+        <Row className="align-items-center g-3">
+          {/* Logo kiri */}
+          {img && (
+            <Col xs="12" md="3" className="text-center text-md-start">
+              <img
+                src={img}
+                alt={issuer}
+                style={{
+                  height: "50px",
+                  maxWidth: "100%",
+                  objectFit: "contain",
+                  borderRadius: "0.5rem",
+                }}
+              />
+            </Col>
+          )}
 
-        {/* Title + Issuer */}
-        <h5 className="fw-bold mb-1">{title}</h5>
-        <small className="text-muted">{issuer}</small>
+          {/* Konten kanan */}
+          <Col xs="12" md={img ? "9" : "12"}>
+            <h5 className="fw-semibold mb-1">{title}</h5>
+            <small className="text-muted d-block mb-1">{issuer}</small>
 
-        {/* Date + Score */}
-        <div className="mt-2 mb-2">
-          {date && <span className="text-secondary me-3">📅 {date}</span>}
-          {scores && <span className="text-secondary">📊 {scores}</span>}
-        </div>
+            {/* Date & Score */}
+            <div className="text-secondary small mb-2">
+              {date && <>📅 {date}</>}
+              {scores && <> &nbsp;| 📊 {scores}</>}
+            </div>
 
-        {/* Description */}
-        <p className="small text-muted">{description}</p>
+            {/* Description */}
+            <p className="text-muted small mb-2">{description}</p>
 
-        {/* Tags */}
-        <div className="mb-2">
-          {tags.map((tag, idx) => (
-            <Badge
-              key={idx}
-              color="secondary"
-              pill
-              className="me-1"
-              style={{ fontSize: "0.7rem", background: "#e3e8f0" }}
-            >
-              #{tag}
-            </Badge>
-          ))}
-        </div>
+            {/* Tags */}
+            {tags.length > 0 && (
+              <div className="mb-2">
+                {tags.map((tag, idx) => (
+                  <Badge
+                    key={idx}
+                    pill
+                    className="bg-light text-dark me-1 mb-1"
+                    style={{ fontSize: "0.7rem", border: "1px solid #ddd" }}
+                  >
+                    #{tag}
+                  </Badge>
+                ))}
+              </div>
+            )}
+
+            {/* CTA */}
+            {link && (
+              <div className="mt-3">
+                <Button
+                  color="primary"
+                  size="sm"
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Certificate
+                </Button>
+              </div>
+            )}
+          </Col>
+        </Row>
       </div>
-
-      {/* CTA */}
-      {link && (
-        <div className="mt-3 text-end">
-          <Button
-            color="dark"
-            size="sm"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View
-          </Button>
-        </div>
-      )}
-    </div>
+    </Fade>
   );
 };
 
