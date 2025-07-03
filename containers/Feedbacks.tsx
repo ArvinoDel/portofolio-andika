@@ -70,50 +70,49 @@ const Feedbacks = () => {
               <div className="d-flex flex-wrap gap-3 justify-content-center">
                 {feedbacks.map((feedback, i) => (
                   <div
-  key={i}
-  className={`avatar-wrapper ${i === activeIndex ? 'active' : ''}`}
-  onClick={() => handleAvatarClick(i)}
->
-  {i === activeIndex && (
-    <svg className="avatar-progress-ring" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0d6efd" />
-          <stop offset="50%" stopColor="#6c5ce7" />
-          <stop offset="100%" stopColor="#a29bfe" />
-        </linearGradient>
-      </defs>
+                    key={i}
+                    className={`avatar-wrapper ${i === activeIndex ? 'active' : ''}`}
+                    onClick={() => handleAvatarClick(i)}
+                  >
+                    {i === activeIndex && (
+                      <svg className="avatar-progress-ring">
+                        <defs>
+                          <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#0d6efd" />
+                            <stop offset="50%" stopColor="#6c5ce7" />
+                            <stop offset="100%" stopColor="#a29bfe" />
+                          </linearGradient>
+                        </defs>
+                        
+                        {/* Background ring */}
+                        <rect
+                          className="bg-ring"
+                          x="18"
+                          y="18"
+                          width="64"
+                          height="64"
+                          rx="8"
+                          ry="8"
+                        />
+                        
+                        {/* Progress ring */}
+                        <rect
+                          x="18"
+                          y="18"
+                          width="64"
+                          height="64"
+                          rx="8"
+                          ry="8"
+                        />
+                      </svg>
+                    )}
 
-      {/* Background ring */}
-      <rect
-        className="bg-ring"
-        x="6"
-        y="6"
-        width="88"
-        height="88"
-        rx="12"
-        ry="12"
-      />
-
-      {/* Progress ring */}
-      <rect
-        x="6"
-        y="6"
-        width="88"
-        height="88"
-        rx="12"
-        ry="12"
-      />
-    </svg>
-  )}
-
-  <img
-    src={avatarUrls[i]}
-    alt={feedback.name}
-    className="avatar-img"
-  />
-</div>
-
+                    <img
+                      src={avatarUrls[i]} 
+                      alt={feedback.name}
+                      className="avatar-img"
+                    />
+                  </div>
                 ))}
               </div>
             </Col>
