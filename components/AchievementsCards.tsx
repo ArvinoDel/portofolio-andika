@@ -253,7 +253,6 @@ const AchievementsCards = ({
                                     lineHeight: isMobile ? '1.3' : '1.4',
                                     color: '#2d3436',
                                     letterSpacing: '-0.02em',
-                                    wordBreak: 'break-word',
                                     marginBottom: isMobile ? '8px' : '16px'
                                 }}
                             >
@@ -271,7 +270,6 @@ const AchievementsCards = ({
                                     WebkitLineClamp: isMobile ? 3 : 4,
                                     WebkitBoxOrient: 'vertical',
                                     overflow: 'hidden',
-                                    wordBreak: 'break-word',
                                     marginBottom: isMobile ? '12px' : '16px'
                                 }}
                             >
