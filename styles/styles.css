@@ -46,11 +46,11 @@ body > div:first-child {
 /* Progress ring yang melingkari avatar */
 .avatar-progress-ring {
   position: absolute;
-  top: -4px;
-  left: -4px;
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
+  top: -15px;
+  left: -15px;
+  width: 94px;
+  height: 94px;
+  border-radius: 27px;
   z-index: 1;
   pointer-events: none;
   
@@ -62,26 +62,26 @@ body > div:first-child {
     transparent var(--progress, 0deg),
     transparent 360deg
   );
-  padding: 4px;
+  padding: 15px;
   
   /* Mask untuk membuat ring effect */
   -webkit-mask: 
-    radial-gradient(farthest-side, transparent calc(100% - 4px), white calc(100% - 4px));
+    radial-gradient(farthest-side, transparent calc(100% - 15px), white calc(100% - 15px));
   mask: 
-    radial-gradient(farthest-side, transparent calc(100% - 4px), white calc(100% - 4px));
+    radial-gradient(farthest-side, transparent calc(100% - 15px), white calc(100% - 15px));
 }
 
 /* Alternative dengan border approach yang lebih simple */
 .avatar-progress-ring-border {
   position: absolute;
-  top: -4px;
-  left: -4px;
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
+  top: -15px;
+  left: -15px;
+  width: 94px;
+  height: 94px;
+  border-radius: 27px;
   z-index: 1;
   pointer-events: none;
-  border: 4px solid transparent;
+  border: 15px solid transparent;
   background: 
     conic-gradient(from 0deg, #0d6efd var(--progress, 0deg), transparent var(--progress, 0deg)) border-box;
   -webkit-mask: 
@@ -134,13 +134,21 @@ body > div:first-child {
   
   .avatar-progress-ring,
   .avatar-progress-ring-border {
-    top: -3px;
-    left: -3px;
-    width: 60px;
-    height: 60px;
+    top: -12px;
+    left: -12px;
+    width: 78px;
+    height: 78px;
+    padding: 12px;
+    border-width: 12px;
+  }
+  
+  .avatar-progress-ring {
+    -webkit-mask: 
+      radial-gradient(farthest-side, transparent calc(100% - 12px), white calc(100% - 12px));
+    mask: 
+      radial-gradient(farthest-side, transparent calc(100% - 12px), white calc(100% - 12px));
   }
 }
-
 .card {
   border-radius: 1rem;
   transition: all 0.3s ease;
