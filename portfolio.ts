@@ -103,11 +103,11 @@ export const SkillBars: SkillBarsType[] = [
   },
   {
     Stack: "Frontend / Design", //Insert stack or technology you have experience in
-    progressPercentage: "85", //Insert relative proficiency in percentage
+    progressPercentage: "90", //Insert relative proficiency in percentage
   },
   {
     Stack: "Backend",
-    progressPercentage: "90",
+    progressPercentage: "85",
   },
   {
     Stack: "Presentation & Communication",
@@ -149,6 +149,7 @@ export const experience: ExperienceType[] = [
 export const projects: ProjectType[] = [
   {
     name: "Pandai Digital",
+    img: "https://ik.imagekit.io/tdqizhhci/logo_web.png?updatedAt=1751533310399",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "A comprehensive learning management system built for educators and digital bootcamp providers. Developed using React.js and Next.js, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
@@ -156,6 +157,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "TerasKBK",
+    img: "https://ik.imagekit.io/tdqizhhci/logo-removebg-preview.png?updatedAt=1751533310391",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "A local e-commerce and podcast platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the frontier.",
@@ -163,6 +165,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "SMK1Presence",
+    img: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png?updatedAt=1751532959330",
     tech: ["Next.js", "React.js", "Tailwind CSS"],
     desc:
       "A digital presence and attendance management system built for vocational schools. SMK1Presence leverages Next.js and modern web technologies to simplify student tracking and administrative workflows, tailored specifically for the Indonesian education landscape.",
@@ -170,6 +173,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "Djajanan",
+    img: "https://media.licdn.com/dms/image/v2/C560BAQGBCV5LuLQkKg/company-logo_200_200/company-logo_200_200/0/1674809054642?e=1756944000&v=beta&t=gMBsZ1BY7iLZdV8vnqGVppMy6Gy-jouFSWZP95KO80g",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "An e-commerce platform for local snacks and products, blending modern shopping experiences with digital payments. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",

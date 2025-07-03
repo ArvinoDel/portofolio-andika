@@ -3,7 +3,7 @@ import { Card, CardBody, Col, Button, Badge } from "reactstrap";
 import { ProjectType } from "../types/sections";
 import { motion } from "framer-motion";
 
-const ProjectsCard = ({ name, desc, github, link, tech}: ProjectType) => {
+const ProjectsCard = ({ name, desc, github, link, tech, img }: ProjectType) => {
   return (
     <Col lg="6" md="12" className="mb-4 d-flex align-items-stretch">
       <motion.div
@@ -16,8 +16,23 @@ const ProjectsCard = ({ name, desc, github, link, tech}: ProjectType) => {
         <Card className="shadow border-0 h-100 rounded-4 p-3">
           <CardBody className="d-flex flex-column justify-content-between h-100">
             <div>
-              <h4 className="fw-bold mb-2">{name}</h4>
-              <p className="text-muted">{desc}</p>
+              <div className="d-flex align-items-center gap-2 mb-2 flex-wrap">
+                {img && (
+                  <img
+                    src={img}
+                    alt={`${name} Logo`}
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      objectFit: "contain",
+                      borderRadius: "0.5rem"
+                    }}
+                  />
+                )}
+                <h4 className="fw-bold mb-0">{name}</h4>
+              </div>
+
+              <p className="text-muted mt-2">{desc}</p>
 
               {tech && (
                 <div className="my-3 d-flex flex-wrap gap-2">
