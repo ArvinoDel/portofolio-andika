@@ -33,6 +33,7 @@ body > div:first-child {
   }
 }
 
+/* Avatar wrapper styling */
 .avatar-wrapper {
   position: relative;
   width: 64px;
@@ -42,22 +43,55 @@ body > div:first-child {
   overflow: hidden;
 }
 
-/* ✔️ Nama class disamakan dengan JSX: .avatar-progress-ring */
+/* Progress ring yang melingkari avatar */
 .avatar-progress-ring {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  top: -4px;
+  left: -4px;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
   z-index: 1;
   pointer-events: none;
+  
+  /* Ring border dengan gradient yang berputar */
+  background: conic-gradient(
+    from 0deg,
+    #0d6efd 0deg,
+    #0d6efd var(--progress, 0deg),
+    transparent var(--progress, 0deg),
+    transparent 360deg
+  );
+  padding: 4px;
+  
+  /* Mask untuk membuat ring effect */
+  -webkit-mask: 
+    radial-gradient(farthest-side, transparent calc(100% - 4px), white calc(100% - 4px));
+  mask: 
+    radial-gradient(farthest-side, transparent calc(100% - 4px), white calc(100% - 4px));
+}
 
-  /* Border animated effect */
-  background: linear-gradient(90deg, #0d6efd, #0d6efd);
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: ringProgress linear forwards;
+/* Alternative dengan border approach yang lebih simple */
+.avatar-progress-ring-border {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  z-index: 1;
+  pointer-events: none;
+  border: 4px solid transparent;
+  background: 
+    conic-gradient(from 0deg, #0d6efd var(--progress, 0deg), transparent var(--progress, 0deg)) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
 }
 
 /* Avatar image */
@@ -70,20 +104,41 @@ body > div:first-child {
   border-radius: 12px;
 }
 
-/* Animation keyframe */
+/* Animation keyframe untuk smooth progress */
 @keyframes ringProgress {
   0% {
-    transform: scaleX(0);
+    --progress: 0deg;
   }
   100% {
-    transform: scaleX(1);
+    --progress: 360deg;
   }
 }
 
-.avatar-progress-ring {
-  background: none;
-  will-change: transform;
-  border: 2px solid #0d6efd;
+/* Hover effect untuk avatar wrapper */
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Active state styling */
+.avatar-wrapper.active .avatar-img {
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .avatar-wrapper {
+    width: 54px;
+    height: 54px;
+  }
+  
+  .avatar-progress-ring,
+  .avatar-progress-ring-border {
+    top: -3px;
+    left: -3px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .card {
