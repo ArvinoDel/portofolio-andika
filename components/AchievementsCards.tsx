@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge, Button } from "reactstrap";
-import "./AchievementsCards.css"; // custom CSS for glassmorphism
+// import "./AchievementsCards.css"; // custom CSS for glassmorphism
 import { AchievementsType } from "../types/sections";
 import Fade from "react-reveal/Fade";
 
