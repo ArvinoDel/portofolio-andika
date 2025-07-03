@@ -15,6 +15,8 @@ import SEO from "../components/SEO";
 import { GithubUserType } from "../types";
 
 export default function Home({ githubProfileData }: { githubProfileData: any }) {
+  const link = "https://wa.me/6281224964214?text=Halo%20Andika,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20Anda!";
+
   return (
     <div>
       <SEO />
@@ -31,16 +33,15 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
       <GithubProfileCard {...githubProfileData} />
 
       {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/6281224964214?text=Halo%20Andika,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20Anda!" // Ganti dengan nomor WA kamu
+
+      <button
+        onClick={() => window.open(link, '_blank')}
         className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
+        // rel="noopener noreferrer"
         aria-label="Chat via WhatsApp"
       >
-             <i className="ni ni-chat-round"></i>
-
-      </a>
+        <i className="ni ni-chat-round"></i>
+      </button>
     </div>
   );
 }
