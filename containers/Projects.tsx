@@ -23,13 +23,13 @@ const Projects = () => {
     <section className="section section-lg">
       <Container>
         {/* Header */}
-        <div className="d-flex align-items-center p-4 flex-column flex-md-row text-center text-md-start">
-          <div className="mb-3 mb-md-0">
-            <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info mx-auto mx-md-0">
+        <div className="d-flex align-items-start p-4 flex-md-row flex-column">
+          <div className="d-flex justify-content-center justify-content-md-start w-100 w-md-auto mb-3 mb-md-0">
+            <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info">
               <i className="ni ni-laptop text-info" />
             </div>
           </div>
-          <div className="ps-0 ps-md-4">
+          <div className="text-center text-md-start w-100">
             <h4 className="display-3 text-info fw-bold">My Projects</h4>
             <p className="text-muted mb-0">
               A showcase of my latest work, built with modern tools and elegant design.
