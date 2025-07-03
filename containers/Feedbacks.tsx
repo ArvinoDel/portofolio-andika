@@ -84,18 +84,7 @@ const Feedbacks = () => {
                           </linearGradient>
                         </defs>
                         
-                        {/* Background ring */}
-                        <rect
-                          className="bg-ring"
-                          x="18"
-                          y="18"
-                          width="64"
-                          height="64"
-                          rx="8"
-                          ry="8"
-                        />
-                        
-                        {/* Progress ring */}
+                        {/* Hanya progress ring saja, bg-ring dihapus */}
                         <rect
                           x="18"
                           y="18"
