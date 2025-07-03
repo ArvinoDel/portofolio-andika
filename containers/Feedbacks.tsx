@@ -85,7 +85,7 @@ const Feedbacks = () => {
                         </defs>
                         
                         {/* Background ring */}
-                        <rect
+                        {/* <rect
                           className="bg-ring"
                           x="18"
                           y="18"
@@ -93,7 +93,7 @@ const Feedbacks = () => {
                           height="64"
                           rx="8"
                           ry="8"
-                        />
+                        /> */}
                         
                         {/* Progress ring */}
                         <rect
