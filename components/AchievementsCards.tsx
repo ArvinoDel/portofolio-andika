@@ -197,7 +197,7 @@ const AchievementsCards = ({
                                             ✨ Certified
                                         </div>
                                         <div
-                                            className={`text-muted d-flex align-items-center ${isMobile ? 'flex-column align-items-start' : ''}`}
+                                            className={`text-muted ${isMobile ? 'flex-column align-items-start' : 'd-flex align-items-center'}`}
                                             style={{
                                                 fontSize: isMobile ? '0.75rem' : '0.85rem',
                                                 fontWeight: '500',
@@ -218,7 +218,7 @@ const AchievementsCards = ({
                                             )}
                                         </div>
                                         <div
-                                            className={`text-muted d-flex align-items-center ${isMobile ? 'flex-column align-items-start' : ''}`}
+                                            className={`text-muted ${isMobile ? 'flex-column align-items-start' : 'd-flex align-items-center'}`}
                                             style={{
                                                 fontSize: isMobile ? '0.75rem' : '0.85rem',
                                                 fontWeight: '500',
