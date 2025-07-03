@@ -208,7 +208,19 @@ const AchievementsCards = ({
                                             <span className="text-truncate" style={{ maxWidth: '100%' }}>
                                                 {issuer}
                                             </span>
-                                            {date && (
+                                        </div>
+
+ <div
+                                            className={`text-muted ${isMobile ? 'flex-column align-items-start' : 'd-flex align-items-center'}`}
+                                            style={{
+                                                fontSize: isMobile ? '0.75rem' : '0.85rem',
+                                                fontWeight: '500',
+                                                gap: isMobile ? '2px' : '8px',
+                                                lineHeight: isMobile ? '1.3' : '1.5'
+                                            }}
+                                        >
+                                            <span className="text-truncate" style={{ maxWidth: '100%' }}>
+                                                  {date && (
                                                 <>
                                                     {!isMobile && <span style={{ opacity: 0.5 }}>•</span>}
                                                     <span className="text-truncate" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
@@ -216,6 +228,7 @@ const AchievementsCards = ({
                                                     </span>
                                                 </>
                                             )}
+                                            </span>
                                         </div>
                                         <div
                                             className={`text-muted ${isMobile ? 'flex-column align-items-start' : 'd-flex align-items-center'}`}
