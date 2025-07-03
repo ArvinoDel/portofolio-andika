@@ -183,8 +183,8 @@ body > div:first-child {
     /* Desktop large: sama adjustment seperti desktop biasa */
     top: -18px;  /* Was -20px, now -18px (sedikit ke bawah) */
     left: -18px; /* Was -20px, now -18px (sedikit ke kanan) */
-    width: 120px;
-    height: 120px;
+    width: 112px;
+    height: 112px;
   }
 }
 

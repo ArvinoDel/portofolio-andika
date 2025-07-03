@@ -88,8 +88,8 @@ const Feedbacks = () => {
                         <rect
                           x="18"
                           y="18"
-                          width="64"
-                          height="64"
+                          width="68"
+                          height="68"
                           rx="8"
                           ry="8"
                         />
