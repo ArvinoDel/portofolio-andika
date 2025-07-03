@@ -10,7 +10,7 @@ const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBulle
       <Card className="shadow-lg--hover shadow mt-4">
         <CardBody>
           <div className="d-flex flex-column flex-md-row align-items-center align-items-md-start px-3 text-center text-md-start">
-            <div className="mb-3 mb-md-0 me-md-3">
+            <div className="mb-3 mb-md-0 me-md-3 p-2">
               <img
                 src={img}
                 alt={`${schoolName} logo`}
