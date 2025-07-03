@@ -76,13 +76,33 @@ const Feedbacks = () => {
                   >
                     {i === activeIndex && (
                       <svg className="avatar-progress-ring">
+                        <defs>
+                          <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#0d6efd" />
+                            <stop offset="50%" stopColor="#6c5ce7" />
+                            <stop offset="100%" stopColor="#a29bfe" />
+                          </linearGradient>
+                        </defs>
+                        
+                        {/* Background ring */}
                         <rect
-                          x="15"
-                          y="15"
+                          className="bg-ring"
+                          x="18"
+                          y="18"
                           width="64"
                           height="64"
-                          rx="20"
-                          ry="20"
+                          rx="8"
+                          ry="8"
+                        />
+                        
+                        {/* Progress ring */}
+                        <rect
+                          x="18"
+                          y="18"
+                          width="64"
+                          height="64"
+                          rx="8"
+                          ry="8"
                         />
                       </svg>
                     )}
