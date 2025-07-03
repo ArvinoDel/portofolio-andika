@@ -13,8 +13,8 @@ const EducationCard = ({ schoolName, subHeader, duration, desc, grade, descBulle
             <div
               className="mb-3 mb-md-0 me-md-3 d-flex justify-content-center align-items-center"
               style={{
-                width: "70px", // lebih besar dari 60px
-                height: "70px", // lebih tinggi dari 60px
+                width: "80px", // lebih besar dari 60px
+                height: "80px", // lebih tinggi dari 60px
                 borderRadius: "50%", // opsional, jika mau efek lingkaran juga
                 backgroundColor: "#f1f2f6", // opsional, buat padding visual
               }}
