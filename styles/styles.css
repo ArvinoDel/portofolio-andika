@@ -173,6 +173,7 @@ h4 {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.65), rgba(240, 240, 255, 0.4));
 }
 
 .achievement-card.glass:hover {
@@ -192,3 +193,12 @@ h4 {
   transition: all 0.3s ease;
 }
 
+.card-modern:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 80%);
+  opacity: 0.3;
+  pointer-events: none;
+}
