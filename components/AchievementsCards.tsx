@@ -116,37 +116,42 @@ const AchievementsCards = ({
                         {/* Animated background patterns - Hide on mobile for performance */}
                         {!isMobile && (
                             <>
+                                {/* Top-right gradient circle */}
                                 <div
                                     className="position-absolute"
                                     style={{
-                                        top: '-50%',
-                                        right: '-20%',
-                                        width: isTablet ? '150px' : '200px',
-                                        height: isTablet ? '150px' : '200px',
-                                        background: 'linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))',
+                                        top: isTablet ? '-40px' : '-60px',
+                                        right: isTablet ? '-40px' : '-80px',
+                                        width: isTablet ? '140px' : '180px',
+                                        height: isTablet ? '140px' : '180px',
+                                        background: 'linear-gradient(45deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08))',
                                         borderRadius: '50%',
-                                        transform: isHovered ? 'scale(1.2) rotate(45deg)' : 'scale(1) rotate(0deg)',
-                                        transition: 'all 0.6s ease',
+                                        transform: isHovered ? 'scale(1.15) rotate(30deg)' : 'scale(1) rotate(0deg)',
+                                        transition: 'transform 0.7s ease, opacity 0.7s ease',
                                         zIndex: 0,
+                                        opacity: 0.9,
                                     }}
                                 />
 
+                                {/* Bottom-left gradient circle */}
                                 <div
                                     className="position-absolute"
                                     style={{
-                                        bottom: '-30%',
-                                        left: '-10%',
-                                        width: isTablet ? '120px' : '150px',
-                                        height: isTablet ? '120px' : '150px',
-                                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.08), transparent)',
+                                        bottom: isTablet ? '-40px' : '-60px',
+                                        left: isTablet ? '-30px' : '-50px',
+                                        width: isTablet ? '100px' : '140px',
+                                        height: isTablet ? '100px' : '140px',
+                                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.06), transparent)',
                                         borderRadius: '50%',
-                                        transform: isHovered ? 'scale(1.3) rotate(-30deg)' : 'scale(1) rotate(0deg)',
-                                        transition: 'all 0.8s ease',
+                                        transform: isHovered ? 'scale(1.2) rotate(-20deg)' : 'scale(1) rotate(0deg)',
+                                        transition: 'transform 0.8s ease, opacity 0.8s ease',
                                         zIndex: 0,
+                                        opacity: 0.8,
                                     }}
                                 />
                             </>
                         )}
+
 
                         {/* Content wrapper */}
                         <div className="position-relative" style={{ zIndex: 2 }}>
