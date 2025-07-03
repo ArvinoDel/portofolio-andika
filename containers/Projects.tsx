@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { projects } from "../portfolio";
 import { Container, Row, Nav, NavItem, NavLink } from "reactstrap";
 import ProjectsCard from "../components/ProjectsCard";
@@ -8,6 +8,16 @@ import classnames from "classnames";
 const categories = ["All", "React", "Laravel", "Next.js", "Tailwind CSS"];
 
 const Projects = () => {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
@@ -23,20 +33,23 @@ const Projects = () => {
     <section className="section section-lg">
       <Container>
         {/* Header */}
-        <div className="d-flex align-items-start p-4 flex-md-row flex-column">
-          <div className="d-flex justify-content-center justify-content-md-start w-100 w-md-auto mb-3 mb-md-0">
-            <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info">
+        <div
+          className={`d-flex align-items-center p-4 ${isMobile ? "flex-column text-center" : "flex-row text-start"
+            }`}
+        >
+          <div className={`${isMobile ? "mb-3" : "me-4"}`}>
+            <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info mx-auto">
               <i className="ni ni-laptop text-info" />
             </div>
           </div>
-          <div className="text-center text-md-start w-100">
+          <div>
             <h4 className="display-3 text-info fw-bold">My Projects</h4>
             <p className="text-muted mb-0">
-              A showcase of my latest work, built with modern tools and elegant design.
+              A showcase of my latest work, built with modern tools and elegant
+              design.
             </p>
           </div>
         </div>
-
 
         <Nav pills className="justify-content-center mb-4 modern-filter-tabs">
           {categories.map((cat) => (
