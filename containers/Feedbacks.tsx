@@ -33,20 +33,35 @@ const Feedbacks = () => {
     setAvatarUrls(urls);
   }, []);
 
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      handleResize(); // initial check
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   return (
     <section className="section py-5 bg-white">
       <Fade duration={2000}>
         <Container>
-          <div className="d-flex p-4">
-            <div>
-              <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
-                <i className="fa fa-star text-info" />
-              </div>
-            </div>
-            <div className="pl-4">
-              <h4 className="display-3 text-info">Feedbacks</h4>
-            </div>
-          </div>
+        <div
+  className={`mb-3 d-flex p-4 ${isMobile ? "flex-column text-center align-items-center" : "flex-row align-items-center"}`}
+>
+  <div className={`${isMobile ? "mb-3" : ""}`}>
+    <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info mx-auto">
+      <i className="fa fa-star text-info" />
+    </div>
+  </div>
+  <div className={`${isMobile ? "" : "pl-4"}`}>
+    <h4 className="display-3 text-info">Feedbacks</h4>
+    <p className="text-muted mb-0">
+      What people are saying about my work, a collection of voices that inspire and motivate.
+    </p>
+  </div>
+</div>
+
           <Row className="align-items-center">
 
             <Col md="4">

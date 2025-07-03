@@ -34,7 +34,7 @@ const Projects = () => {
       <Container>
         {/* Header */}
         <div
-          className={`d-flex align-items-center p-4 ${isMobile ? "flex-column text-center" : "flex-row text-start"
+          className={`mb-3 d-flex align-items-center p-4 ${isMobile ? "flex-column text-center" : "flex-row text-start"
             }`}
         >
           <div className={`${isMobile ? "mb-3" : "me-4"}`}>
