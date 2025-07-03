@@ -210,7 +210,7 @@ const AchievementsCards = ({
                                             </span>
                                         </div>
 
- <div
+                                        <div
                                             className={`text-muted ${isMobile ? 'flex-column align-items-start' : 'd-flex align-items-center'}`}
                                             style={{
                                                 fontSize: isMobile ? '0.75rem' : '0.85rem',
@@ -220,14 +220,14 @@ const AchievementsCards = ({
                                             }}
                                         >
                                             <span className="text-truncate" style={{ maxWidth: '100%' }}>
-                                                  {date && (
-                                                <>
-                                                    {!isMobile && <span style={{ opacity: 0.5 }}>•</span>}
-                                                    <span className="text-truncate" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
-                                                        {date}
-                                                    </span>
-                                                </>
-                                            )}
+                                                {date && (
+                                                    <>
+                                                        {!isMobile && <span style={{ opacity: 0.5 }}>•</span>}
+                                                        <span className="text-truncate" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
+                                                            {date}
+                                                        </span>
+                                                    </>
+                                                )}
                                             </span>
                                         </div>
                                         <div
@@ -309,9 +309,7 @@ const AchievementsCards = ({
                                     className="d-flex flex-wrap mb-4"
                                     style={{
                                         gap: isMobile ? '4px' : '8px',
-                                        maxHeight: isMobile ? '60px' : 'none',
-                                        overflow: isMobile ? 'hidden' : 'visible',
-                                        marginBottom: isMobile ? '12px' : '16px'
+                                        marginBottom: isMobile ? '12px' : '16px',
                                     }}
                                 >
                                     {tags.slice(0, isMobile ? 3 : tags.length).map((tag, idx) => (
@@ -325,13 +323,15 @@ const AchievementsCards = ({
                                                 fontSize: styles.tagSize,
                                                 fontWeight: '600',
                                                 color: '#2d3436',
-                                                border: `1px solid ${idx % 2 === 0 ? 'rgba(102, 126, 234, 0.2)' : 'rgba(118, 75, 162, 0.2)'}`,
+                                                border: `1px solid ${idx % 2 === 0 ? 'rgba(102, 126, 234, 0.2)' : 'rgba(118, 75, 162, 0.2)'
+                                                    }`,
                                                 transition: 'all 0.3s ease',
-                                                padding: isMobile ? '3px 8px' : '6px 12px',
-                                                maxWidth: isMobile ? 'calc(33% - 3px)' : 'none',
+                                                padding: isMobile ? '4px 8px' : '6px 12px',
+                                                flex: isMobile ? '1 1 calc(33.333% - 4px)' : 'none',
+                                                textAlign: 'center',
+                                                whiteSpace: 'nowrap',
                                                 overflow: 'hidden',
                                                 textOverflow: 'ellipsis',
-                                                whiteSpace: 'nowrap',
                                             }}
                                         >
                                             {tag}
@@ -345,7 +345,9 @@ const AchievementsCards = ({
                                                 fontSize: styles.tagSize,
                                                 fontWeight: '600',
                                                 color: '#666',
-                                                padding: '3px 8px',
+                                                padding: '4px 8px',
+                                                flex: '1 1 calc(33.333% - 4px)',
+                                                textAlign: 'center',
                                             }}
                                         >
                                             +{tags.length - 3}
@@ -353,6 +355,7 @@ const AchievementsCards = ({
                                     )}
                                 </div>
                             )}
+
 
                             {/* Action buttons - Responsive layout */}
                             {link && (
