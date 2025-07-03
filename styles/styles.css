@@ -47,8 +47,9 @@ body > div:first-child {
 /* Progress ring yang melingkari avatar - Modern stylish design */
 .avatar-progress-ring {
   position: absolute;
-  top: -18px;
-  left: -18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
   width: 100px;
   height: 100px;
   z-index: 1;
@@ -148,8 +149,7 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    top: -15px;
-    left: -15px;
+    transform: translate(-50%, -50%) scale(1.0);
     width: 84px;
     height: 84px;
   }
@@ -167,6 +167,15 @@ body > div:first-child {
     border-width: 1.5px;
   }
 }
+
+.avatar-ring-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
 
 .card {
   border-radius: 1rem;
