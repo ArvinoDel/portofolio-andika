@@ -45,11 +45,12 @@ body > div:first-child {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Progress ring yang melekat sempurna ke avatar - tetap dengan desain asli */
+/* Progress ring dengan positioning yang konsisten */
 .avatar-progress-ring {
   position: absolute;
-  top: -18px;
-  left: -18px;
+  /* Menggunakan calc untuk positioning yang presisi */
+  top: calc(50% - 50px);  /* 50px = setengah dari ring size (100px) */
+  left: calc(50% - 50px);
   width: 100px;
   height: 100px;
   z-index: 1;
@@ -131,7 +132,7 @@ body > div:first-child {
   filter: drop-shadow(0 0 12px rgba(13, 110, 253, 0.5));
 }
 
-/* Responsive adjustments - scaling yang konsisten */
+/* Responsive adjustments - scaling yang konsisten dengan positioning fix */
 @media (max-width: 768px) {
   .avatar-wrapper {
     width: 54px;
@@ -139,9 +140,11 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
+    /* Ring scaled: 100px * 0.84 = 84px */
     transform: scale(0.84);
-    top: -15px;
-    left: -15px;
+    /* Positioning untuk ring 84px: calc(50% - 42px) */
+    top: calc(50% - 42px);
+    left: calc(50% - 42px);
   }
   
   .avatar-img {
@@ -156,9 +159,11 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
+    /* Ring scaled: 100px * 0.72 = 72px */
     transform: scale(0.72);
-    top: -12px;
-    left: -12px;
+    /* Positioning untuk ring 72px: calc(50% - 36px) */
+    top: calc(50% - 36px);
+    left: calc(50% - 36px);
   }
   
   .avatar-img {
@@ -174,9 +179,49 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
+    /* Ring scaled: 100px * 1.12 = 112px */
     transform: scale(1.12);
-    top: -20px;
-    left: -20px;
+    /* Positioning untuk ring 112px: calc(50% - 56px) */
+    top: calc(50% - 56px);
+    left: calc(50% - 56px);
+  }
+}
+
+/* Alternative: Gunakan CSS Custom Properties untuk maintenance yang lebih mudah */
+:root {
+  --ring-size: 100px;
+  --ring-offset: calc(var(--ring-size) / -2);
+}
+
+/* Jika ingin menggunakan custom properties approach */
+.avatar-progress-ring-v2 {
+  position: absolute;
+  top: calc(50% + var(--ring-offset));
+  left: calc(50% + var(--ring-offset));
+  width: var(--ring-size);
+  height: var(--ring-size);
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
+  transform-origin: center;
+}
+
+/* Media queries untuk custom properties approach */
+@media (max-width: 768px) {
+  :root {
+    --ring-size: 84px; /* 100px * 0.84 */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --ring-size: 72px; /* 100px * 0.72 */
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --ring-size: 112px; /* 100px * 1.12 */
   }
 }
 
