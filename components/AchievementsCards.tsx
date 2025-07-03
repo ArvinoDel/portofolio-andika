@@ -204,7 +204,7 @@ const AchievementsCards = ({
                                                 lineHeight: isMobile ? '1.3' : '1.5'
                                             }}
                                         >
-                                            <span className="text-truncate" style={{ maxWidth: isMobile ? '100%' : '150px' }}>
+                                            <span className="text-truncate" style={{ maxWidth: '100%' }}>
                                                 {issuer}
                                             </span>
                                             {date && (
