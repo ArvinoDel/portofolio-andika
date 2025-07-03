@@ -64,6 +64,7 @@ const Feedbacks = () => {
               </p>
             </div>
           </div>
+          
 
           <Row className="align-items-center">
             <Col md="4">
