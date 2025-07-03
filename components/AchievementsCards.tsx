@@ -107,12 +107,15 @@ const AchievementsCards = ({
                     <div
                         className="h-100 w-100 position-relative overflow-hidden"
                         style={{
+                            width: '100%',
+                            maxWidth: 'none',
                             background: 'rgba(255, 255, 255, 0.95)',
                             backdropFilter: isMobile ? 'blur(10px)' : 'blur(20px)',
                             borderRadius: styles.innerBorderRadius,
                             padding: styles.innerPadding,
                         }}
                     >
+
                         {/* Animated background patterns - Hide on mobile for performance */}
                         {!isMobile && (
                             <>
