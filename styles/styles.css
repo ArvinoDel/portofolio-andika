@@ -45,18 +45,18 @@ body > div:first-child {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Progress ring dengan positioning yang konsisten */
+/* Progress ring - positioning absolut dengan center alignment yang tepat */
 .avatar-progress-ring {
   position: absolute;
-  /* Menggunakan calc untuk positioning yang presisi */
-  top: calc(50% - 50px);  /* 50px = setengah dari ring size (100px) */
-  left: calc(50% - 50px);
+  /* Menggunakan transform untuk centering yang presisi */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
-  transform-origin: center;
 }
 
 .avatar-progress-ring rect {
@@ -132,7 +132,7 @@ body > div:first-child {
   filter: drop-shadow(0 0 12px rgba(13, 110, 253, 0.5));
 }
 
-/* Responsive adjustments - scaling yang konsisten dengan positioning fix */
+/* Responsive adjustments - hanya mengubah size ring, positioning tetap center */
 @media (max-width: 768px) {
   .avatar-wrapper {
     width: 54px;
@@ -140,11 +140,11 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Ring scaled: 100px * 0.84 = 84px */
-    transform: scale(0.84);
-    /* Positioning untuk ring 84px: calc(50% - 42px) */
-    top: calc(50% - 42px);
-    left: calc(50% - 42px);
+    /* Hanya ubah size, positioning tetap center */
+    width: 84px;  /* 100px * 0.84 */
+    height: 84px;
+    /* Transform tetap untuk perfect centering */
+    transform: translate(-50%, -50%);
   }
   
   .avatar-img {
@@ -159,11 +159,11 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Ring scaled: 100px * 0.72 = 72px */
-    transform: scale(0.72);
-    /* Positioning untuk ring 72px: calc(50% - 36px) */
-    top: calc(50% - 36px);
-    left: calc(50% - 36px);
+    /* Hanya ubah size */
+    width: 72px;  /* 100px * 0.72 */
+    height: 72px;
+    /* Transform tetap untuk perfect centering */
+    transform: translate(-50%, -50%);
   }
   
   .avatar-img {
@@ -179,50 +179,71 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Ring scaled: 100px * 1.12 = 112px */
-    transform: scale(1.12);
-    /* Positioning untuk ring 112px: calc(50% - 56px) */
-    top: calc(50% - 56px);
-    left: calc(50% - 56px);
+    /* Hanya ubah size */
+    width: 112px;  /* 100px * 1.12 */
+    height: 112px;
+    /* Transform tetap untuk perfect centering */
+    transform: translate(-50%, -50%);
   }
 }
 
-/* Alternative: Gunakan CSS Custom Properties untuk maintenance yang lebih mudah */
+/* Alternative approach menggunakan CSS custom properties untuk lebih clean */
 :root {
+  --avatar-size: 64px;
   --ring-size: 100px;
-  --ring-offset: calc(var(--ring-size) / -2);
 }
 
-/* Jika ingin menggunakan custom properties approach */
+.avatar-wrapper-v2 {
+  position: relative;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: visible;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .avatar-progress-ring-v2 {
   position: absolute;
-  top: calc(50% + var(--ring-offset));
-  left: calc(50% + var(--ring-offset));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: var(--ring-size);
   height: var(--ring-size);
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
-  transform-origin: center;
 }
 
-/* Media queries untuk custom properties approach */
+/* Media queries untuk custom properties */
 @media (max-width: 768px) {
   :root {
-    --ring-size: 84px; /* 100px * 0.84 */
+    --avatar-size: 54px;
+    --ring-size: 84px;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --ring-size: 72px; /* 100px * 0.72 */
+    --avatar-size: 48px;
+    --ring-size: 72px;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-    --ring-size: 112px; /* 100px * 1.12 */
+    --avatar-size: 72px;
+    --ring-size: 112px;
   }
+}
+
+/* Jika masih ada masalah sub-pixel, tambahkan ini */
+.avatar-progress-ring {
+  /* Force hardware acceleration untuk rendering yang lebih presisi */
+  will-change: transform;
+  backface-visibility: hidden;
+  /* Untuk browser yang mendukung sub-pixel rendering */
+  transform: translate(-50%, -50%) translateZ(0);
 }
 
 .card {
