@@ -6,7 +6,7 @@ import Fade from "react-reveal/Fade";
 
 const Achievements = () => {
   return (
-    <section className="py-5 bg-light" id="achievements">
+    <section className="py-5 bg-white" id="achievements">
       <Container>
         <Fade bottom duration={800} distance="30px">
           <div className="text-center mb-5">
