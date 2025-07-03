@@ -45,18 +45,20 @@ body > div:first-child {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Progress ring - positioning absolut dengan center alignment yang tepat */
+/* Progress ring - FIXED positioning dengan margin negatif yang tepat */
 .avatar-progress-ring {
   position: absolute;
-  /* Menggunakan transform untuk centering yang presisi */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* Positioning yang tepat: ring 100px, avatar 64px */
+  /* Margin negatif = (ring-size - avatar-size) / 2 */
+  /* (100px - 64px) / 2 = 18px */
+  top: -18px;
+  left: -18px;
   width: 100px;
   height: 100px;
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
+  /* PENTING: Hapus transform-origin dan transform lainnya */
 }
 
 .avatar-progress-ring rect {
@@ -132,7 +134,8 @@ body > div:first-child {
   filter: drop-shadow(0 0 12px rgba(13, 110, 253, 0.5));
 }
 
-/* Responsive adjustments - hanya mengubah size ring, positioning tetap center */
+/* RESPONSIVE - PERHITUNGAN YANG BENAR */
+/* Mobile 768px: Avatar 54px, Ring 84px */
 @media (max-width: 768px) {
   .avatar-wrapper {
     width: 54px;
@@ -140,11 +143,12 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Hanya ubah size, positioning tetap center */
-    width: 84px;  /* 100px * 0.84 */
+    /* Ring 84px, Avatar 54px */
+    /* Margin negatif = (84px - 54px) / 2 = 15px */
+    top: -15px;
+    left: -15px;
+    width: 84px;
     height: 84px;
-    /* Transform tetap untuk perfect centering */
-    transform: translate(-50%, -50%);
   }
   
   .avatar-img {
@@ -152,6 +156,7 @@ body > div:first-child {
   }
 }
 
+/* Small Mobile 480px: Avatar 48px, Ring 72px */
 @media (max-width: 480px) {
   .avatar-wrapper {
     width: 48px;
@@ -159,11 +164,12 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Hanya ubah size */
-    width: 72px;  /* 100px * 0.72 */
+    /* Ring 72px, Avatar 48px */
+    /* Margin negatif = (72px - 48px) / 2 = 12px */
+    top: -12px;
+    left: -12px;
+    width: 72px;
     height: 72px;
-    /* Transform tetap untuk perfect centering */
-    transform: translate(-50%, -50%);
   }
   
   .avatar-img {
@@ -171,7 +177,7 @@ body > div:first-child {
   }
 }
 
-/* Untuk layar besar */
+/* Desktop Large 1200px: Avatar 72px, Ring 112px */
 @media (min-width: 1200px) {
   .avatar-wrapper {
     width: 72px;
@@ -179,71 +185,56 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Hanya ubah size */
-    width: 112px;  /* 100px * 1.12 */
+    /* Ring 112px, Avatar 72px */
+    /* Margin negatif = (112px - 72px) / 2 = 20px */
+    top: -20px;
+    left: -20px;
+    width: 112px;
     height: 112px;
-    /* Transform tetap untuk perfect centering */
-    transform: translate(-50%, -50%);
   }
 }
 
-/* Alternative approach menggunakan CSS custom properties untuk lebih clean */
-:root {
-  --avatar-size: 64px;
-  --ring-size: 100px;
+/* DEBUG: Tambahkan border sementara untuk memastikan positioning */
+/*
+.avatar-progress-ring {
+  border: 1px solid red;
 }
+.avatar-wrapper {
+  border: 1px solid blue;
+}
+*/
 
-.avatar-wrapper-v2 {
-  position: relative;
-  width: var(--avatar-size);
-  height: var(--avatar-size);
+/* ALTERNATIF: Jika masih bermasalah, gunakan CSS Grid untuk perfect centering */
+.avatar-wrapper-grid {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
   cursor: pointer;
   border-radius: 12px;
   overflow: visible;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.avatar-progress-ring-v2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: var(--ring-size);
-  height: var(--ring-size);
+.avatar-progress-ring-grid {
+  grid-area: 1 / 1;
+  width: 100px;
+  height: 100px;
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
 }
 
-/* Media queries untuk custom properties */
-@media (max-width: 768px) {
-  :root {
-    --avatar-size: 54px;
-    --ring-size: 84px;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --avatar-size: 48px;
-    --ring-size: 72px;
-  }
-}
-
-@media (min-width: 1200px) {
-  :root {
-    --avatar-size: 72px;
-    --ring-size: 112px;
-  }
-}
-
-/* Jika masih ada masalah sub-pixel, tambahkan ini */
-.avatar-progress-ring {
-  /* Force hardware acceleration untuk rendering yang lebih presisi */
-  will-change: transform;
-  backface-visibility: hidden;
-  /* Untuk browser yang mendukung sub-pixel rendering */
-  transform: translate(-50%, -50%) translateZ(0);
+.avatar-img-grid {
+  grid-area: 1 / 1;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  z-index: 2;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card {
