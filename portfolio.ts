@@ -217,7 +217,7 @@ export const achievements: AchievementsType[] = [
     tags: ["Cybersecurity", "Microsoft Azure"],
     link: "https://drive.google.com/file/d/1nBtHozS5cJqo5WI783AqJ_WYkUo9iETy/view?usp=sharing",
     scores: "980",
-    img: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain",
+    img: "https://miro.medium.com/v2/resize:fit:1200/1*RArxaPjk_kZRdLKfXqPaOw.png",
     date: "October 2024",
   },
 ];
