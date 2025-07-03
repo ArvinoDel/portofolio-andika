@@ -4,6 +4,8 @@ import { achievements } from "../portfolio";
 import AchievementsCards from "../components/AchievementsCards";
 
 const Achievements = () => {
+    console.log(achievements); // tambahkan di awal komponen Achievements
+
   return (
     <section className="py-5 bg-gradient-light" id="achievements">
       <Container>
