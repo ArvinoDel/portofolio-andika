@@ -203,6 +203,7 @@ export const achievements: AchievementsType[] = [
   {
     title: "TOEIC Listening & Reading Certificate",
     issuer: "ETS Educational Testing Service, Inc.",
+    credentials: "1738921",
     description: "Achieved a TOEIC score of 815, demonstrating strong proficiency in English for professional and business communication. Skilled in understanding spoken and written English in workplace contexts, effective communication in international environments, and professional correspondence.",
     tags: ["TOEIC", "English Proficiency"],
     link: "https://drive.google.com/file/d/11v5hxEz5fVte0gK0u6AI3q2TcrhG0-NH/view?usp=sharing",
@@ -213,6 +214,7 @@ export const achievements: AchievementsType[] = [
   {
     title: "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
     issuer: "Microsoft",
+    credentials: "CEEC3EB99457ECA2",
     description: "Achieved the Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) certification in 2024, validating a solid foundation in enterprise security, compliance, and identity concepts within Microsoft environments. Skilled in understanding and applying key principles such as Zero Trust, access management, threat protection, and regulatory compliance across Microsoft Azure and Microsoft 365 platforms. Demonstrates capability in supporting organizational security strategies and navigating cloud-based governance in modern digital infrastructures.",
     tags: ["Cybersecurity", "Microsoft Azure"],
     link: "https://drive.google.com/file/d/1nBtHozS5cJqo5WI783AqJ_WYkUo9iETy/view?usp=sharing",

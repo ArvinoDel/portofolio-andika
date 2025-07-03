@@ -12,6 +12,7 @@ const AchievementsCards = ({
     scores,
     link,
     img,
+    credentials,
 }: AchievementsType) => {
 
     const [isHovered, setIsHovered] = useState(false);
@@ -105,16 +106,16 @@ const AchievementsCards = ({
                 >
                     {/* Inner card with backdrop blur effect */}
                     <div
-  className="h-100 w-100 position-relative overflow-hidden"
-  style={{
-    width: '100%',
-    maxWidth: 'none',
-    background: 'rgba(255, 255, 255, 0.95)',
-    backdropFilter: isMobile ? 'blur(10px)' : 'blur(20px)',
-    borderRadius: styles.innerBorderRadius,
-    padding: styles.innerPadding,
-  }}
->
+                        className="h-100 w-100 position-relative overflow-hidden"
+                        style={{
+                            width: '100%',
+                            maxWidth: 'none',
+                            background: 'rgba(255, 255, 255, 0.95)',
+                            backdropFilter: isMobile ? 'blur(10px)' : 'blur(20px)',
+                            borderRadius: styles.innerBorderRadius,
+                            padding: styles.innerPadding,
+                        }}
+                    >
 
                         {/* Animated background patterns - Hide on mobile for performance */}
                         {!isMobile && (
@@ -215,6 +216,19 @@ const AchievementsCards = ({
                                                     </span>
                                                 </>
                                             )}
+                                        </div>
+                                        <div
+                                            className={`text-muted d-flex align-items-center ${isMobile ? 'flex-column align-items-start' : ''}`}
+                                            style={{
+                                                fontSize: isMobile ? '0.75rem' : '0.85rem',
+                                                fontWeight: '500',
+                                                gap: isMobile ? '2px' : '8px',
+                                                lineHeight: isMobile ? '1.3' : '1.5'
+                                            }}
+                                        >
+                                            <span className="text-truncate" style={{ maxWidth: '100%' }}>
+                                                {credentials}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

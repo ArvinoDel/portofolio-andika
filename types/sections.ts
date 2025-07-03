@@ -94,6 +94,7 @@ export type FeedbackType = {
 export type AchievementsType = {
   title: string;
   issuer: string;
+  credentials: string;
   date?: string;
   description: string;
   tags?: string[];
