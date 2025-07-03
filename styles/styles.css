@@ -48,17 +48,14 @@ body > div:first-child {
 /* Progress ring - FIXED positioning dengan margin negatif yang tepat */
 .avatar-progress-ring {
   position: absolute;
-  /* Positioning yang tepat: ring 100px, avatar 64px */
-  /* Margin negatif = (ring-size - avatar-size) / 2 */
-  /* (100px - 64px) / 2 = 18px */
-  top: -18px;
-  left: -18px;
+  /* Desktop fix: kurang 1-2px ke kanan dan bawah */
+  top: -16px;  /* Was -18px, now -16px (2px ke bawah) */
+  left: -16px; /* Was -18px, now -16px (2px ke kanan) */
   width: 100px;
   height: 100px;
   z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
-  /* PENTING: Hapus transform-origin dan transform lainnya */
 }
 
 .avatar-progress-ring rect {
@@ -143,10 +140,9 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Ring 84px, Avatar 54px */
-    /* Margin negatif = (84px - 54px) / 2 = 15px */
-    top: -15px;
-    left: -15px;
+    /* Mobile fix: terlalu ke bawah dan ke kanan */
+    top: -18px;  /* Was -15px, now -18px (lebih ke atas) */
+    left: -18px; /* Was -15px, now -18px (lebih ke kiri) */
     width: 84px;
     height: 84px;
   }
@@ -164,10 +160,9 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Ring 72px, Avatar 48px */
-    /* Margin negatif = (72px - 48px) / 2 = 12px */
-    top: -12px;
-    left: -12px;
+    /* Small mobile fix: sama seperti mobile biasa */
+    top: -15px;  /* Was -12px, now -15px (lebih ke atas) */
+    left: -15px; /* Was -12px, now -15px (lebih ke kiri) */
     width: 72px;
     height: 72px;
   }
@@ -185,10 +180,9 @@ body > div:first-child {
   }
   
   .avatar-progress-ring {
-    /* Ring 112px, Avatar 72px */
-    /* Margin negatif = (112px - 72px) / 2 = 20px */
-    top: -20px;
-    left: -20px;
+    /* Desktop large: sama adjustment seperti desktop biasa */
+    top: -18px;  /* Was -20px, now -18px (sedikit ke bawah) */
+    left: -18px; /* Was -20px, now -18px (sedikit ke kanan) */
     width: 112px;
     height: 112px;
   }
