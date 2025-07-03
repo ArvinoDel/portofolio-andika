@@ -217,27 +217,29 @@ const AchievementsCards = ({
                                 </div>
 
                                 {scores && (
-                                    <div
-                                        className={`text-center px-${isMobile ? '2' : '3'} py-${isMobile ? '1' : '2'} rounded-3 ${isMobile ? 'align-self-end' : ''}`}
-                                        style={{
-                                            background: 'linear-gradient(135deg, #00b894, #00cec9)',
-                                            color: 'white',
-                                            minWidth: isMobile ? '60px' : '80px',
-                                            fontSize: isMobile ? '0.8rem' : '1rem',
-                                        }}
-                                    >
-                                        <div style={{
-                                            fontSize: isMobile ? '1rem' : '1.25rem',
-                                            fontWeight: '700',
-                                            lineHeight: 1
-                                        }}>
-                                            {scores.split('/')[0]}
-                                        </div>
-                                        <div style={{ fontSize: isMobile ? '0.6rem' : '0.7rem', opacity: 0.9 }}>
-                                            /{scores.split('/')[1]}
+                                    <div className="d-flex justify-content-center w-100 mb-3">
+                                        <div
+                                            className={`text-center px-${isMobile ? '2' : '3'} py-${isMobile ? '1' : '2'} rounded-3`}
+                                            style={{
+                                                background: 'linear-gradient(135deg, #00b894, #00cec9)',
+                                                color: 'white',
+                                                minWidth: isMobile ? '60px' : '80px',
+                                                fontSize: isMobile ? '0.8rem' : '1rem',
+                                            }}
+                                        >
+                                            <div
+                                                style={{
+                                                    fontSize: isMobile ? '1rem' : '1.25rem',
+                                                    fontWeight: 700,
+                                                    lineHeight: 1,
+                                                }}
+                                            >
+                                                {scores}
+                                            </div>
                                         </div>
                                     </div>
                                 )}
+
                             </div>
 
                             {/* Title - Responsive typography */}
@@ -349,39 +351,6 @@ const AchievementsCards = ({
                                             <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                             <path d="M17 7H7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                             <path d="M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                        </svg>
-                                    </button>
-
-                                    {/* Share button - Show on all devices but smaller on mobile */}
-                                    <button
-                                        className="btn d-flex align-items-center justify-content-center rounded-circle border-0"
-                                        style={{
-                                            width: isMobile ? '36px' : isTablet ? '40px' : '44px',
-                                            height: isMobile ? '36px' : isTablet ? '40px' : '44px',
-                                            background: 'rgba(102, 126, 234, 0.1)',
-                                            color: '#667eea',
-                                            transition: 'all 0.3s ease',
-                                            alignSelf: isMobile ? 'center' : 'auto'
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            if (!isMobile) {
-                                                const target = e.target as HTMLButtonElement;
-                                                target.style.background = 'rgba(102, 126, 234, 0.2)';
-                                                target.style.transform = 'scale(1.1)';
-                                            }
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            if (!isMobile) {
-                                                const target = e.target as HTMLButtonElement;
-                                                target.style.background = 'rgba(102, 126, 234, 0.1)';
-                                                target.style.transform = 'scale(1)';
-                                            }
-                                        }}
-                                    >
-                                        <svg width={isMobile ? "14" : isTablet ? "16" : "18"} height={isMobile ? "14" : isTablet ? "16" : "18"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 12V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                            <path d="M16 6L12 2L8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                            <path d="M12 2V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                         </svg>
                                     </button>
                                 </div>
