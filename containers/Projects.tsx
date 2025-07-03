@@ -14,48 +14,48 @@ const Projects = () => {
     activeCategory === "All"
       ? projects
       : projects.filter((project) =>
-          project.tech.some((t) =>
-            t.toLowerCase().includes(activeCategory.toLowerCase())
-          )
-        );
+        project.tech.some((t) =>
+          t.toLowerCase().includes(activeCategory.toLowerCase())
+        )
+      );
 
   return (
     <section className="section section-lg">
       <Container>
         {/* Header */}
-        <div className="d-flex align-items-center p-4">
-          <div>
-            <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info">
+        <div className="d-flex align-items-center p-4 flex-column flex-md-row text-center text-md-start">
+          <div className="mb-3 mb-md-0">
+            <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info mx-auto mx-md-0">
               <i className="ni ni-laptop text-info" />
             </div>
           </div>
-          <div className="pl-4">
+          <div className="ps-0 ps-md-4">
             <h4 className="display-3 text-info fw-bold">My Projects</h4>
             <p className="text-muted mb-0">
-              A showcase of my latest work, built with modern tools and elegant
-              design.
+              A showcase of my latest work, built with modern tools and elegant design.
             </p>
           </div>
         </div>
 
-       <Nav pills className="justify-content-center mb-4 modern-filter-tabs">
-  {categories.map((cat) => (
-    <NavItem key={cat}>
-      <NavLink
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          setActiveCategory(cat);
-        }}
-        className={classnames("modern-tab-link", {
-          active: activeCategory === cat,
-        })}
-      >
-        {cat}
-      </NavLink>
-    </NavItem>
-  ))}
-</Nav>
+
+        <Nav pills className="justify-content-center mb-4 modern-filter-tabs">
+          {categories.map((cat) => (
+            <NavItem key={cat}>
+              <NavLink
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveCategory(cat);
+                }}
+                className={classnames("modern-tab-link", {
+                  active: activeCategory === cat,
+                })}
+              >
+                {cat}
+              </NavLink>
+            </NavItem>
+          ))}
+        </Nav>
 
 
         {/* Filtered Projects */}

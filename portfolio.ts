@@ -158,8 +158,8 @@ export const projects: ProjectType[] = [
     name: "TerasKBK",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
-      "A local e-commerce and podcast platform that empowers creators to publish, promote, and monetize digital audio content. With seamless Handcash BitcoinSV integration, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the web3 frontier.",
-    link: "https://teraskbk.com",
+      "A local e-commerce and podcast platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the frontier.",
+    link: "https://github.com/gragemediatechnology/keyFood",
   },
   {
     name: "SMK1Presence",
@@ -172,7 +172,7 @@ export const projects: ProjectType[] = [
     name: "Djajanan",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
-      "An e-commerce platform for local snacks and products, blending modern shopping experiences with crypto-native payments via Handcash BitcoinSV. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
+      "An e-commerce platform for local snacks and products, blending modern shopping experiences with digital payments. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
     link: "https://github.com/PT-Grage-Media-Technology/djajanan",
   },
 ];
@@ -205,7 +205,7 @@ export const achievements: AchievementsType[] = [
     issuer: "ETS Educational Testing Service, Inc.",
     credentials: "1738921",
     description: "Achieved a TOEIC score of 815, demonstrating strong proficiency in English for professional and business communication. Skilled in understanding spoken and written English in workplace contexts, effective communication in international environments, and professional correspondence.",
-    tags: ["TOEIC", "English Proficiency"],
+    tags: ["TOEIC", "English Proficiency", "C2 Level"],
     link: "https://drive.google.com/file/d/11v5hxEz5fVte0gK0u6AI3q2TcrhG0-NH/view?usp=sharing",
     scores: "815",
     img: "https://miro.medium.com/v2/resize:fit:1400/1*WzmsmHBf7l0T0DBTtmsUqQ.png",
@@ -216,7 +216,7 @@ export const achievements: AchievementsType[] = [
     issuer: "Microsoft",
     credentials: "CEEC3EB99457ECA2",
     description: "Achieved the Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) certification in 2024, validating a solid foundation in enterprise security, compliance, and identity concepts within Microsoft environments. Skilled in understanding and applying key principles such as Zero Trust, access management, threat protection, and regulatory compliance across Microsoft Azure and Microsoft 365 platforms. Demonstrates capability in supporting organizational security strategies and navigating cloud-based governance in modern digital infrastructures.",
-    tags: ["Cybersecurity", "Microsoft Azure"],
+    tags: ["Cybersecurity", "Microsoft Azure", "SC-900"],
     link: "https://drive.google.com/file/d/1nBtHozS5cJqo5WI783AqJ_WYkUo9iETy/view?usp=sharing",
     scores: "980",
     img: "https://media.licdn.com/dms/image/v2/D5612AQHkhBzht3-ziw/article-cover_image-shrink_600_2000/B56ZV0YwQWHsAU-/0/1741414402092?e=2147483647&v=beta&t=UQfk5K3zHLAN_jVXcH-QpIhgvVRFPYKOn416VzpDdi4",
