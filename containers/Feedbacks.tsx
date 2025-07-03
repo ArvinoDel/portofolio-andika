@@ -95,13 +95,16 @@ const Feedbacks = () => {
                     onClick={() => handleAvatarClick(i)}
                   >
                     {i === activeIndex && (
-                      <div
-                        className="avatar-progress-ring"
-                        style={{
-                          '--progress': `${progress * 360}deg`,
-                          animation: `ringProgress ${INTERVAL}ms linear infinite`
-                        } as React.CSSProperties}
-                      />
+                      <svg className="avatar-progress-ring">
+                        <circle
+                          cx="47"
+                          cy="47"
+                          r="40"
+                          style={{
+                            strokeDashoffset: 251 * (1 - progress)
+                          }}
+                        />
+                      </svg>
                     )}
 
                     <img

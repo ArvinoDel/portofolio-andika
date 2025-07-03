@@ -40,58 +40,29 @@ body > div:first-child {
   height: 64px;
   cursor: pointer;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible untuk ring */
 }
 
-/* Progress ring yang melingkari avatar */
+/* Progress ring yang melingkari avatar - SVG approach */
 .avatar-progress-ring {
   position: absolute;
   top: -15px;
   left: -15px;
   width: 94px;
   height: 94px;
-  border-radius: 27px;
   z-index: 1;
   pointer-events: none;
-  
-  /* Ring border dengan gradient yang berputar */
-  background: conic-gradient(
-    from 0deg,
-    #0d6efd 0deg,
-    #0d6efd var(--progress, 0deg),
-    transparent var(--progress, 0deg),
-    transparent 360deg
-  );
-  padding: 15px;
-  
-  /* Mask untuk membuat ring effect */
-  -webkit-mask: 
-    radial-gradient(farthest-side, transparent calc(100% - 15px), white calc(100% - 15px));
-  mask: 
-    radial-gradient(farthest-side, transparent calc(100% - 15px), white calc(100% - 15px));
+  transform: rotate(-90deg); /* Start from top */
 }
 
-/* Alternative dengan border approach yang lebih simple */
-.avatar-progress-ring-border {
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 94px;
-  height: 94px;
-  border-radius: 27px;
-  z-index: 1;
-  pointer-events: none;
-  border: 15px solid transparent;
-  background: 
-    conic-gradient(from 0deg, #0d6efd var(--progress, 0deg), transparent var(--progress, 0deg)) border-box;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
+.avatar-progress-ring circle {
+  fill: none;
+  stroke: #0d6efd;
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-dasharray: 251; /* 2 * PI * 40 (radius) */
+  stroke-dashoffset: 251;
+  transition: stroke-dashoffset 0.1s ease;
 }
 
 /* Avatar image */
@@ -107,10 +78,10 @@ body > div:first-child {
 /* Animation keyframe untuk smooth progress */
 @keyframes ringProgress {
   0% {
-    --progress: 0deg;
+    stroke-dashoffset: 251;
   }
   100% {
-    --progress: 360deg;
+    stroke-dashoffset: 0;
   }
 }
 
@@ -132,21 +103,17 @@ body > div:first-child {
     height: 54px;
   }
   
-  .avatar-progress-ring,
-  .avatar-progress-ring-border {
+  .avatar-progress-ring {
     top: -12px;
     left: -12px;
     width: 78px;
     height: 78px;
-    padding: 12px;
-    border-width: 12px;
   }
   
-  .avatar-progress-ring {
-    -webkit-mask: 
-      radial-gradient(farthest-side, transparent calc(100% - 12px), white calc(100% - 12px));
-    mask: 
-      radial-gradient(farthest-side, transparent calc(100% - 12px), white calc(100% - 12px));
+  .avatar-progress-ring circle {
+    stroke-width: 12;
+    stroke-dasharray: 201; /* 2 * PI * 32 (radius for mobile) */
+    stroke-dashoffset: 201;
   }
 }
 .card {
