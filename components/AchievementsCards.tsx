@@ -16,13 +16,10 @@ const AchievementsCards = ({
   return (
     <Fade bottom duration={1000} distance="40px">
       <div
-        className="p-4 rounded-4 shadow border bg-white h-100 position-relative overflow-hidden card-modern"
-        style={{
-          transition: "all 0.4s ease",
-          borderColor: "#e9ecef",
-        }}
+        className="achievement-card glass card-modern p-4 rounded-4 shadow border bg-white h-100 position-relative overflow-hidden"
+        style={{ borderColor: "#e9ecef", transition: "all 0.4s ease" }}
       >
-        {/* Accent circle background */}
+        {/* Accent Circle */}
         <div
           style={{
             position: "absolute",
@@ -36,7 +33,7 @@ const AchievementsCards = ({
           }}
         />
 
-        {/* Logo floating top */}
+        {/* Logo */}
         {img && (
           <div
             className="position-absolute"
@@ -57,6 +54,7 @@ const AchievementsCards = ({
             <img
               src={img}
               alt={issuer}
+              onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
               style={{
                 maxWidth: "70%",
                 maxHeight: "70%",
@@ -66,15 +64,32 @@ const AchievementsCards = ({
           </div>
         )}
 
-        {/* Content */}
+        {/* Main Content */}
         <div style={{ position: "relative", zIndex: 1 }}>
           <div className="mt-4 pt-3">
-            <h5 className="fw-bold text-dark">{title}</h5>
-            <div className="text-muted small mb-2">{issuer}</div>
+            <h5 className="fw-semibold text-dark" style={{ fontSize: "1.25rem" }}>
+              {title}
+            </h5>
+            <div className="text-muted fst-italic mb-2" style={{ fontSize: "0.75rem" }}>
+              {issuer}
+            </div>
 
-            <div className="d-flex flex-wrap align-items-center text-secondary mb-3" style={{ fontSize: "0.8rem", gap: "1rem" }}>
-              {date && <span>📅 {date}</span>}
-              {scores && <span>📊 Score: {scores}</span>}
+            <div
+              className="d-flex flex-wrap align-items-center text-secondary mb-3"
+              style={{ fontSize: "0.8rem", gap: "1rem" }}
+            >
+              {date && (
+                <span>
+                  <i className="fa fa-calendar-alt me-1" />
+                  {date}
+                </span>
+              )}
+              {scores && (
+                <span>
+                  <i className="fa fa-chart-line me-1" />
+                  Score: {scores}
+                </span>
+              )}
             </div>
 
             <p className="text-muted small lh-sm mb-3" style={{ minHeight: "60px" }}>

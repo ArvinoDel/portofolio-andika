@@ -11,7 +11,10 @@ const Achievements = () => {
         <Fade bottom duration={800} distance="30px">
           <div className="text-center mb-5">
             <div className="d-flex flex-column align-items-center gap-3">
-              <div className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info d-flex align-items-center justify-content-center" style={{ width: "64px", height: "64px" }}>
+              <div
+                className="icon icon-lg icon-shape bg-white shadow rounded-circle text-info d-flex align-items-center justify-content-center"
+                style={{ width: "64px", height: "64px" }}
+              >
                 <i className="fa fa-trophy text-info fs-4" />
               </div>
               <div>
@@ -23,13 +26,15 @@ const Achievements = () => {
         </Fade>
 
         <Row className="gy-4">
-          {achievements.map((item, index) => (
-            <Col key={index} md="6" lg="4">
-              <Fade bottom delay={index * 100} duration={800} distance="20px">
-                <AchievementsCards {...item} />
-              </Fade>
-            </Col>
-          ))}
+          {(
+            achievements.map((item, index) => (
+              <Col key={index} md="6" lg="4">
+                <Fade bottom delay={index * 100} duration={800} distance="20px">
+                  <AchievementsCards {...item} />
+                </Fade>
+              </Col>
+            ))
+          )}
         </Row>
       </Container>
     </section>
