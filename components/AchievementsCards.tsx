@@ -247,7 +247,7 @@ const AchievementsCards = ({
                                 </div>
 
                                 {scores && (
-                                    <div className="d-flex justify-content-center w-100 mb-3">
+                                    <div className={`w-100 mb-3 ${isMobile ? 'd-flex justify-content-center' : 'flex-column align-items-end'}`}>
                                         <div
                                             className={`text-center px-${isMobile ? '2' : '3'} py-${isMobile ? '1' : '2'} rounded-3`}
                                             style={{
@@ -308,11 +308,11 @@ const AchievementsCards = ({
                                 <div
                                     className="d-flex flex-wrap mb-4"
                                     style={{
-                                        gap: isMobile ? '4px' : '8px',
-                                        marginBottom: isMobile ? '12px' : '16px',
+                                        gap: '8px',
+                                        marginBottom: '16px',
                                     }}
                                 >
-                                    {tags.slice(0, isMobile ? 3 : tags.length).map((tag, idx) => (
+                                    {tags.map((tag, idx) => (
                                         <span
                                             key={idx}
                                             className="d-inline-flex align-items-center rounded-pill"
@@ -323,36 +323,15 @@ const AchievementsCards = ({
                                                 fontSize: styles.tagSize,
                                                 fontWeight: '600',
                                                 color: '#2d3436',
-                                                border: `1px solid ${idx % 2 === 0 ? 'rgba(102, 126, 234, 0.2)' : 'rgba(118, 75, 162, 0.2)'
-                                                    }`,
+                                                border: `1px solid ${idx % 2 === 0 ? 'rgba(102, 126, 234, 0.2)' : 'rgba(118, 75, 162, 0.2)'}`,
                                                 transition: 'all 0.3s ease',
-                                                padding: isMobile ? '4px 8px' : '6px 12px',
-                                                flex: isMobile ? '1 1 calc(33.333% - 4px)' : 'none',
-                                                textAlign: 'center',
+                                                padding: '6px 12px',
                                                 whiteSpace: 'nowrap',
-                                                overflow: 'hidden',
-                                                textOverflow: 'ellipsis',
                                             }}
                                         >
                                             {tag}
                                         </span>
                                     ))}
-                                    {isMobile && tags.length > 3 && (
-                                        <span
-                                            className="d-inline-flex align-items-center rounded-pill"
-                                            style={{
-                                                background: 'rgba(0, 0, 0, 0.05)',
-                                                fontSize: styles.tagSize,
-                                                fontWeight: '600',
-                                                color: '#666',
-                                                padding: '4px 8px',
-                                                flex: '1 1 calc(33.333% - 4px)',
-                                                textAlign: 'center',
-                                            }}
-                                        >
-                                            +{tags.length - 3}
-                                        </span>
-                                    )}
                                 </div>
                             )}
 
