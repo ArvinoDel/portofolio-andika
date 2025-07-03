@@ -36,7 +36,7 @@ const AchievementsCards = ({
                 >
                     {/* Inner card with backdrop blur effect */}
                     <div
-                        className="h-100 position-relative overflow-hidden"
+                        className="h-100 w-100 position-relative overflow-hidden"
                         style={{
                             background: 'rgba(255, 255, 255, 0.95)',
                             backdropFilter: 'blur(20px)',
