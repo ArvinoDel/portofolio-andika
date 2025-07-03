@@ -28,7 +28,7 @@ const Achievements = () => {
         <Row className="gy-4">
           {(
             achievements.map((item, index) => (
-              <Col key={index} md="12" lg="4">
+              <Col key={index} md="12">
                 <Fade bottom delay={index * 100} duration={800} distance="20px">
                   <AchievementsCards {...item} />
                 </Fade>
