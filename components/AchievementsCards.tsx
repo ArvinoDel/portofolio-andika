@@ -116,50 +116,43 @@ const AchievementsCards = ({
                         {/* Animated background patterns - Hide on mobile for performance */}
                         {!isMobile && (
                             <>
-                                {/* Top-right gradient circle */}
                                 <div
                                     className="position-absolute"
                                     style={{
-                                        top: isTablet ? '-40px' : '-60px',
-                                        right: isTablet ? '-40px' : '-80px',
-                                        width: isTablet ? '140px' : '180px',
-                                        height: isTablet ? '140px' : '180px',
-                                        background: 'linear-gradient(45deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08))',
+                                        top: '-50%',
+                                        right: '-20%',
+                                        width: isTablet ? '150px' : '200px',
+                                        height: isTablet ? '150px' : '200px',
+                                        background: 'linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))',
                                         borderRadius: '50%',
-                                        transform: isHovered ? 'scale(1.15) rotate(30deg)' : 'scale(1) rotate(0deg)',
-                                        transition: 'transform 0.7s ease, opacity 0.7s ease',
+                                        transform: isHovered ? 'scale(1.2) rotate(45deg)' : 'scale(1) rotate(0deg)',
+                                        transition: 'all 0.6s ease',
                                         zIndex: 0,
-                                        opacity: 0.9,
                                     }}
                                 />
 
-                                {/* Bottom-left gradient circle */}
                                 <div
                                     className="position-absolute"
                                     style={{
-                                        bottom: isTablet ? '-40px' : '-60px',
-                                        left: isTablet ? '-30px' : '-50px',
-                                        width: isTablet ? '100px' : '140px',
-                                        height: isTablet ? '100px' : '140px',
-                                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.06), transparent)',
+                                        bottom: '-30%',
+                                        left: '-10%',
+                                        width: isTablet ? '120px' : '150px',
+                                        height: isTablet ? '120px' : '150px',
+                                        background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.08), transparent)',
                                         borderRadius: '50%',
-                                        transform: isHovered ? 'scale(1.2) rotate(-20deg)' : 'scale(1) rotate(0deg)',
-                                        transition: 'transform 0.8s ease, opacity 0.8s ease',
+                                        transform: isHovered ? 'scale(1.3) rotate(-30deg)' : 'scale(1) rotate(0deg)',
+                                        transition: 'all 0.8s ease',
                                         zIndex: 0,
-                                        opacity: 0.8,
                                     }}
                                 />
                             </>
                         )}
 
-
                         {/* Content wrapper */}
-                        <div className="position-relative" style={{ zIndex: 2 }}>
+                        <div className="position-relative h-100 d-flex flex-column" style={{ zIndex: 2 }}>
                             {/* Header section with logo and status - Responsive layout */}
-                            <div
-                                className={`d-flex ${isMobile ? 'flex-column' : 'align-items-start justify-content-between'} mb-${isMobile ? '3' : '4'}`}
-                            >
-                                <div className={`d-flex align-items-center ${isMobile ? 'mb-3' : ''}`} style={{ gap: isMobile ? '12px' : '16px' }}>
+                            <div className={`d-flex ${isMobile ? 'flex-column' : 'align-items-start justify-content-between'} mb-${isMobile ? '3' : '4'}`}>
+                                <div className={`d-flex align-items-center ${isMobile ? 'mb-2' : ''}`} style={{ gap: isMobile ? '12px' : '16px' }}>
                                     {img && !imageError && (
                                         <div
                                             className="d-flex align-items-center justify-content-center flex-shrink-0"
@@ -167,8 +160,8 @@ const AchievementsCards = ({
                                                 width: styles.logoSize,
                                                 height: styles.logoSize,
                                                 background: 'linear-gradient(135deg, #fff, #f8f9fa)',
-                                                borderRadius: isMobile ? '16px' : '20px',
-                                                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+                                                borderRadius: isMobile ? '12px' : '16px',
+                                                boxShadow: isMobile ? '0 4px 16px rgba(0, 0, 0, 0.08)' : '0 8px 32px rgba(0, 0, 0, 0.1)',
                                                 border: '2px solid rgba(255, 255, 255, 0.8)',
                                             }}
                                         >
@@ -187,10 +180,10 @@ const AchievementsCards = ({
 
                                     <div className="flex-grow-1 min-width-0">
                                         <div
-                                            className={`d-inline-flex align-items-center px-${isMobile ? '2' : '3'} py-1 rounded-pill mb-2`}
+                                            className={`d-inline-flex align-items-center px-${isMobile ? '2' : '3'} py-1 rounded-pill mb-${isMobile ? '1' : '2'}`}
                                             style={{
                                                 background: 'linear-gradient(90deg, #667eea, #764ba2)',
-                                                fontSize: isMobile ? '0.7rem' : '0.75rem',
+                                                fontSize: isMobile ? '0.65rem' : '0.75rem',
                                                 fontWeight: '600',
                                                 color: 'white',
                                                 letterSpacing: '0.5px',
@@ -202,16 +195,21 @@ const AchievementsCards = ({
                                         <div
                                             className={`text-muted d-flex align-items-center ${isMobile ? 'flex-column align-items-start' : ''}`}
                                             style={{
-                                                fontSize: isMobile ? '0.8rem' : '0.85rem',
+                                                fontSize: isMobile ? '0.75rem' : '0.85rem',
                                                 fontWeight: '500',
-                                                gap: isMobile ? '4px' : '8px'
+                                                gap: isMobile ? '2px' : '8px',
+                                                lineHeight: isMobile ? '1.3' : '1.5'
                                             }}
                                         >
-                                            <span className="text-truncate">{issuer}</span>
+                                            <span className="text-truncate" style={{ maxWidth: isMobile ? '100%' : '150px' }}>
+                                                {issuer}
+                                            </span>
                                             {date && (
                                                 <>
                                                     {!isMobile && <span style={{ opacity: 0.5 }}>•</span>}
-                                                    <span className="text-truncate">{date}</span>
+                                                    <span className="text-truncate" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
+                                                        {date}
+                                                    </span>
                                                 </>
                                             )}
                                         </div>
@@ -220,22 +218,22 @@ const AchievementsCards = ({
 
                                 {scores && (
                                     <div
-                                        className={`text-center px-3 py-2 rounded-3 ${isMobile ? 'align-self-end' : ''}`}
+                                        className={`text-center px-${isMobile ? '2' : '3'} py-${isMobile ? '1' : '2'} rounded-3 ${isMobile ? 'align-self-end' : ''}`}
                                         style={{
                                             background: 'linear-gradient(135deg, #00b894, #00cec9)',
                                             color: 'white',
-                                            minWidth: isMobile ? '70px' : '80px',
-                                            fontSize: isMobile ? '0.9rem' : '1rem',
+                                            minWidth: isMobile ? '60px' : '80px',
+                                            fontSize: isMobile ? '0.8rem' : '1rem',
                                         }}
                                     >
                                         <div style={{
-                                            fontSize: isMobile ? '1.1rem' : '1.25rem',
+                                            fontSize: isMobile ? '1rem' : '1.25rem',
                                             fontWeight: '700',
                                             lineHeight: 1
                                         }}>
                                             {scores.split('/')[0]}
                                         </div>
-                                        <div style={{ fontSize: '0.7rem', opacity: 0.9 }}>
+                                        <div style={{ fontSize: isMobile ? '0.6rem' : '0.7rem', opacity: 0.9 }}>
                                             /{scores.split('/')[1]}
                                         </div>
                                     </div>
@@ -247,10 +245,11 @@ const AchievementsCards = ({
                                 className="fw-bold mb-3"
                                 style={{
                                     fontSize: styles.titleSize,
-                                    lineHeight: isMobile ? '1.4' : '1.3',
+                                    lineHeight: isMobile ? '1.3' : '1.4',
                                     color: '#2d3436',
                                     letterSpacing: '-0.02em',
                                     wordBreak: 'break-word',
+                                    marginBottom: isMobile ? '8px' : '16px'
                                 }}
                             >
                                 {title}
@@ -258,16 +257,17 @@ const AchievementsCards = ({
 
                             {/* Description - Responsive with line clamping */}
                             <p
-                                className="text-muted mb-4"
+                                className="text-muted mb-4 flex-grow-1"
                                 style={{
                                     fontSize: styles.descSize,
-                                    lineHeight: '1.6',
+                                    lineHeight: isMobile ? '1.4' : '1.6',
                                     color: '#636e72',
                                     display: '-webkit-box',
                                     WebkitLineClamp: isMobile ? 3 : 4,
                                     WebkitBoxOrient: 'vertical',
                                     overflow: 'hidden',
                                     wordBreak: 'break-word',
+                                    marginBottom: isMobile ? '12px' : '16px'
                                 }}
                             >
                                 {description}
@@ -278,12 +278,13 @@ const AchievementsCards = ({
                                 <div
                                     className="d-flex flex-wrap mb-4"
                                     style={{
-                                        gap: isMobile ? '6px' : '8px',
-                                        maxHeight: isMobile ? '80px' : 'none',
-                                        overflow: isMobile ? 'hidden' : 'visible'
+                                        gap: isMobile ? '4px' : '8px',
+                                        maxHeight: isMobile ? '60px' : 'none',
+                                        overflow: isMobile ? 'hidden' : 'visible',
+                                        marginBottom: isMobile ? '12px' : '16px'
                                     }}
                                 >
-                                    {tags.slice(0, isMobile ? 4 : tags.length).map((tag, idx) => (
+                                    {tags.slice(0, isMobile ? 3 : tags.length).map((tag, idx) => (
                                         <span
                                             key={idx}
                                             className="d-inline-flex align-items-center rounded-pill"
@@ -296,8 +297,8 @@ const AchievementsCards = ({
                                                 color: '#2d3436',
                                                 border: `1px solid ${idx % 2 === 0 ? 'rgba(102, 126, 234, 0.2)' : 'rgba(118, 75, 162, 0.2)'}`,
                                                 transition: 'all 0.3s ease',
-                                                padding: isMobile ? '4px 12px' : '6px 12px',
-                                                maxWidth: isMobile ? 'calc(50% - 3px)' : 'none',
+                                                padding: isMobile ? '3px 8px' : '6px 12px',
+                                                maxWidth: isMobile ? 'calc(33% - 3px)' : 'none',
                                                 overflow: 'hidden',
                                                 textOverflow: 'ellipsis',
                                                 whiteSpace: 'nowrap',
@@ -306,7 +307,7 @@ const AchievementsCards = ({
                                             {tag}
                                         </span>
                                     ))}
-                                    {isMobile && tags.length > 4 && (
+                                    {isMobile && tags.length > 3 && (
                                         <span
                                             className="d-inline-flex align-items-center rounded-pill"
                                             style={{
@@ -314,10 +315,10 @@ const AchievementsCards = ({
                                                 fontSize: styles.tagSize,
                                                 fontWeight: '600',
                                                 color: '#666',
-                                                padding: '4px 12px',
+                                                padding: '3px 8px',
                                             }}
                                         >
-                                            +{tags.length - 4}
+                                            +{tags.length - 3}
                                         </span>
                                     )}
                                 </div>
@@ -325,12 +326,9 @@ const AchievementsCards = ({
 
                             {/* Action buttons - Responsive layout */}
                             {link && (
-                                <div className={`d-flex ${isMobile ? 'flex-column gap-3' : 'justify-content-between align-items-center'}`}>
-                                    <Button
-                                        href={link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`d-flex align-items-center justify-content-center gap-2 rounded-pill border-0 ${isMobile ? 'w-100' : ''}`}
+                                <div className={`d-flex ${isMobile ? 'flex-column gap-2' : 'justify-content-between align-items-center'} mt-auto`}>
+                                    <button
+                                        className={`btn d-flex align-items-center justify-content-center gap-2 rounded-pill border-0 ${isMobile ? 'w-100' : ''}`}
                                         style={{
                                             background: 'linear-gradient(135deg, #667eea, #764ba2)',
                                             fontSize: styles.buttonSize,
@@ -341,47 +339,51 @@ const AchievementsCards = ({
                                             boxShadow: isHovered && !isMobile
                                                 ? '0 8px 24px rgba(102, 126, 234, 0.4)'
                                                 : '0 4px 16px rgba(102, 126, 234, 0.2)',
-                                            padding: isMobile ? '12px 24px' : '8px 16px',
-                                            minHeight: isMobile ? '48px' : 'auto',
+                                            padding: isMobile ? '10px 20px' : '8px 16px',
+                                            minHeight: isMobile ? '44px' : 'auto',
                                         }}
+                                        onClick={() => window.open(link, '_blank')}
                                     >
                                         <span>View Certificate</span>
-                                        <svg width={isMobile ? "18" : "16"} height={isMobile ? "18" : "16"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width={isMobile ? "16" : "16"} height={isMobile ? "16" : "16"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                             <path d="M17 7H7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                             <path d="M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                         </svg>
-                                    </Button>
+                                    </button>
 
-                                    {/* Share button - Hidden on mobile to save space */}
-                                    {!isMobile && (
-                                        <button
-                                            className="btn d-flex align-items-center justify-content-center rounded-circle border-0"
-                                            style={{
-                                                width: isTablet ? '40px' : '44px',
-                                                height: isTablet ? '40px' : '44px',
-                                                background: 'rgba(102, 126, 234, 0.1)',
-                                                color: '#667eea',
-                                                transition: 'all 0.3s ease',
-                                            }}
-                                            onMouseEnter={(e) => {
+                                    {/* Share button - Show on all devices but smaller on mobile */}
+                                    <button
+                                        className="btn d-flex align-items-center justify-content-center rounded-circle border-0"
+                                        style={{
+                                            width: isMobile ? '36px' : isTablet ? '40px' : '44px',
+                                            height: isMobile ? '36px' : isTablet ? '40px' : '44px',
+                                            background: 'rgba(102, 126, 234, 0.1)',
+                                            color: '#667eea',
+                                            transition: 'all 0.3s ease',
+                                            alignSelf: isMobile ? 'center' : 'auto'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            if (!isMobile) {
                                                 const target = e.target as HTMLButtonElement;
                                                 target.style.background = 'rgba(102, 126, 234, 0.2)';
                                                 target.style.transform = 'scale(1.1)';
-                                            }}
-                                            onMouseLeave={(e) => {
+                                            }
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            if (!isMobile) {
                                                 const target = e.target as HTMLButtonElement;
                                                 target.style.background = 'rgba(102, 126, 234, 0.1)';
                                                 target.style.transform = 'scale(1)';
-                                            }}
-                                        >
-                                            <svg width={isTablet ? "16" : "18"} height={isTablet ? "16" : "18"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 12V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                                <path d="M16 6L12 2L8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                                <path d="M12 2V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
-                                        </button>
-                                    )}
+                                            }
+                                        }}
+                                    >
+                                        <svg width={isMobile ? "14" : isTablet ? "16" : "18"} height={isMobile ? "14" : isTablet ? "16" : "18"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 12V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                            <path d="M16 6L12 2L8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                            <path d="M12 2V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </button>
                                 </div>
                             )}
                         </div>
