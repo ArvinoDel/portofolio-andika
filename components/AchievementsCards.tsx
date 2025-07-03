@@ -247,7 +247,7 @@ const AchievementsCards = ({
                                 </div>
 
                                 {scores && (
-                                    <div className={`w-100 mb-3 ${isMobile ? 'd-flex justify-content-center' : 'flex-column align-items-end'}`}>
+                                    <div className={`w-100 mb-3 d-flex ${isMobile ? 'justify-content-center' : 'flex-column align-items-end'}`}>
                                         <div
                                             className={`text-center px-${isMobile ? '2' : '3'} py-${isMobile ? '1' : '2'} rounded-3`}
                                             style={{
@@ -269,6 +269,7 @@ const AchievementsCards = ({
                                         </div>
                                     </div>
                                 )}
+
 
                             </div>
 
