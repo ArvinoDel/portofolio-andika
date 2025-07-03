@@ -295,7 +295,7 @@ const AchievementsCards = ({
                                     lineHeight: isMobile ? '1.4' : '1.6',
                                     color: '#636e72',
                                     display: '-webkit-box',
-                                    WebkitLineClamp: isMobile ? 3 : 4,
+                                    // WebkitLineClamp: isMobile ? 3 : 4,
                                     WebkitBoxOrient: 'vertical',
                                     overflow: 'hidden',
                                     marginBottom: isMobile ? '12px' : '16px'
