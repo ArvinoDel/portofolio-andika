@@ -45,6 +45,31 @@ body > div:first-child {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Progress ring - FIXED positioning dengan margin negatif yang tepat */
+.avatar-progress-ring {
+  position: absolute;
+  /* Desktop fix: kurang 1-2px ke kanan dan bawah */
+  top: -16px;  /* Was -18px, now -16px (2px ke bawah) */
+  left: -16px; /* Was -18px, now -16px (2px ke kanan) */
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
+}
+
+.avatar-progress-ring rect {
+  fill: none;
+  stroke: url(#progressGradient);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  rx: 8;
+  ry: 8;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: ringProgressAuto 30s linear infinite;
+}
 
 /* Avatar image dengan efek modern */
 .avatar-img {
@@ -57,6 +82,16 @@ body > div:first-child {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation keyframe untuk auto progress dengan seamless loop */
+@keyframes ringProgressAuto {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Pulsing effect untuk active avatar */
@@ -91,12 +126,25 @@ body > div:first-child {
   transform: scale(1.05);
 }
 
+/* Glow effect untuk ring */
+.avatar-wrapper.active .avatar-progress-ring {
+  filter: drop-shadow(0 0 12px rgba(13, 110, 253, 0.5));
+}
+
 /* RESPONSIVE - PERHITUNGAN YANG BENAR */
 /* Mobile 768px: Avatar 54px, Ring 84px */
 @media (max-width: 768px) {
   .avatar-wrapper {
     width: 54px;
     height: 54px;
+  }
+  
+  .avatar-progress-ring {
+    /* Mobile fix: terlalu ke bawah dan ke kanan */
+    top: -18px;  /* Was -15px, now -18px (lebih ke atas) */
+    left: -18px; /* Was -15px, now -18px (lebih ke kiri) */
+    width: 84px;
+    height: 84px;
   }
   
   .avatar-img {
@@ -111,6 +159,14 @@ body > div:first-child {
     height: 48px;
   }
   
+  .avatar-progress-ring {
+    /* Small mobile fix: sama seperti mobile biasa */
+    top: -15px;  /* Was -12px, now -15px (lebih ke atas) */
+    left: -15px; /* Was -12px, now -15px (lebih ke kiri) */
+    width: 72px;
+    height: 72px;
+  }
+  
   .avatar-img {
     border-width: 1px;
   }
@@ -121,6 +177,14 @@ body > div:first-child {
   .avatar-wrapper {
     width: 72px;
     height: 72px;
+  }
+  
+  .avatar-progress-ring {
+    /* Desktop large: sama adjustment seperti desktop biasa */
+    top: -18px;  /* Was -20px, now -18px (sedikit ke bawah) */
+    left: -18px; /* Was -20px, now -18px (sedikit ke kanan) */
+    width: 112px;
+    height: 112px;
   }
 }
 
@@ -144,6 +208,15 @@ body > div:first-child {
   border-radius: 12px;
   overflow: visible;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.avatar-progress-ring-grid {
+  grid-area: 1 / 1;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.3));
 }
 
 .avatar-img-grid {

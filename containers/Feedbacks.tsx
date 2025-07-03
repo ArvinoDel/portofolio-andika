@@ -64,7 +64,6 @@ const Feedbacks = () => {
               </p>
             </div>
           </div>
-          
 
           <Row className="align-items-center">
             <Col md="4">
@@ -75,9 +74,30 @@ const Feedbacks = () => {
                     className={`avatar-wrapper ${i === activeIndex ? 'active' : ''}`}
                     onClick={() => handleAvatarClick(i)}
                   >
+                    {i === activeIndex && (
+                      <svg className="avatar-progress-ring">
+                        <defs>
+                          <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#0d6efd" />
+                            <stop offset="50%" stopColor="#6c5ce7" />
+                            <stop offset="100%" stopColor="#a29bfe" />
+                          </linearGradient>
+                        </defs>
+                        
+                        {/* Progress ring dengan desain asli */}
+                        <rect
+                          x="18"
+                          y="18"
+                          width="70"
+                          height="70"
+                          rx="8"
+                          ry="8"
+                        />
+                      </svg>
+                    )}
 
                     <img
-                      src={avatarUrls[i]}
+                      src={avatarUrls[i]} 
                       alt={feedback.name}
                       className="avatar-img"
                     />
