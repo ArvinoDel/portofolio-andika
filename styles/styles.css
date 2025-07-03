@@ -59,16 +59,6 @@ body > div:first-child {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Animation keyframe untuk auto progress dengan seamless loop */
-@keyframes ringProgressAuto {
-  0% {
-    stroke-dashoffset: 280;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
 /* Pulsing effect untuk active avatar */
 @keyframes pulse {
   0%, 100% {
