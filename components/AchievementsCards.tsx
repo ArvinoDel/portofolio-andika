@@ -223,7 +223,7 @@ const AchievementsCards = ({
                                                 {date && (
                                                     <>
                                                         {!isMobile && <span style={{ opacity: 0.5 }}>•</span>}
-                                                        <span className="text-truncate" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
+                                                        <span className="text-truncate mx-1" style={{ fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
                                                             {date}
                                                         </span>
                                                     </>
@@ -264,7 +264,7 @@ const AchievementsCards = ({
                                                     lineHeight: 1,
                                                 }}
                                             >
-                                                {scores}
+                                               Scores: {scores}
                                             </div>
                                         </div>
                                     </div>
