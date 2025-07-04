@@ -34,14 +34,16 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
 
       {/* WhatsApp Floating Button */}
 
-      <button
+<button
         onClick={() => window.open(link, '_blank')}
         className="whatsapp-float"
-        // rel="noopener noreferrer"
         aria-label="Chat via WhatsApp"
       >
-        <i className="ni ni-chat-round"></i>
+        <div className="chat-icon">
+          <i className="ni ni-chat-round"></i>
+        </div>
       </button>
+
     </div>
   );
 }
