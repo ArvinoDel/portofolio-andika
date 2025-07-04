@@ -154,14 +154,16 @@ export const projects: ProjectType[] = [
     desc:
       "A comprehensive learning management system built for educators and digital bootcamp providers. Developed using React.js and Next.js, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
     link: "https://pandaidigital.id",
+    preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20191359.png?updatedAt=1751631269197",
   },
   {
     name: "TerasKBK",
     img: "https://ik.imagekit.io/tdqizhhci/logo-removebg-preview.png?updatedAt=1751533310391",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
-      "A local e-commerce and podcast platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the frontier.",
+      "A local e-commerce platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the frontier.",
     link: "https://github.com/gragemediatechnology/keyFood",
+    preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20195307.png?updatedAt=1751633593701",
   },
   {
     name: "SMK1Presence",
@@ -170,6 +172,7 @@ export const projects: ProjectType[] = [
     desc:
       "A digital presence and attendance management system built for vocational schools. SMK1Presence leverages Next.js and modern web technologies to simplify student tracking and administrative workflows, tailored specifically for the Indonesian education landscape.",
     link: "https://github.com/ArvinoDel/SMK1Presence",
+    preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20201831.png?updatedAt=1751635121295",
   },
   {
     name: "Djajanan",
@@ -178,6 +181,7 @@ export const projects: ProjectType[] = [
     desc:
       "An e-commerce platform for local snacks and products, blending modern shopping experiences with digital payments. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
     link: "https://github.com/PT-Grage-Media-Technology/djajanan",
+    preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20195449.png?updatedAt=1751633674564",
   },
 ];
 

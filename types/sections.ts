@@ -82,6 +82,7 @@ export type ProjectType = {
   desc: string;
   github?: string;
   link?: string;
+  preview?: string; // Optional preview link for the project
 };
 
 // * FEEDBACK SECTION
