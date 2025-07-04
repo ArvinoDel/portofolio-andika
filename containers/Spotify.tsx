@@ -24,8 +24,14 @@ const Spotify = () => {
 
     // Auto close when clicking outside
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (isExpanded && !event.target.closest('.spotify-card') && !event.target.closest('.spotify-player')) {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+
+            if (
+                isExpanded &&
+                !target.closest('.spotify-card') &&
+                !target.closest('.spotify-player')
+            ) {
                 setIsExpanded(false);
             }
         };
@@ -33,6 +39,7 @@ const Spotify = () => {
         document.addEventListener('click', handleClickOutside);
         return () => document.removeEventListener('click', handleClickOutside);
     }, [isExpanded]);
+
 
     if (!isMounted) {
         return null;
@@ -184,11 +191,12 @@ const Spotify = () => {
                     <div
                         className="position-absolute w-100 h-100"
                         style={{
-                            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20zm0 0v20h20c0-11.046-8.954-20-20-20z'/%3E%3C/g%3E%3C/svg%3E"),
+                            background: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20zm0 0v20h20c0-11.046-8.954-20-20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
                             zIndex: 2,
-                            pointerEvents: 'none'
+                            pointerEvents: 'none',
                         }}
                     />
+
                 </CardBody>
             </Card>
 
@@ -217,16 +225,17 @@ const Spotify = () => {
                             src="https://open.spotify.com/embed/track/4D7BCuvgdJlYvlX5WlN54t?utm_source=generator&theme=0"
                             width="100%"
                             height="100%"
-                            frameBorder="0"
-                            allowtransparency="true"
+                            frameBorder={0}
+                            allowTransparency={true}
                             allow="encrypted-media"
                             style={{
                                 borderRadius: '12px',
                                 filter: 'brightness(1.1) contrast(1.1)',
-                                minHeight: '200px'
+                                minHeight: '200px',
                             }}
                         />
                     </div>
+
                 )}
             </div>
         </div>
