@@ -68,8 +68,8 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
                           alt={`${name} Logo`}
                           className="rounded-3"
                           style={{
-                            width: "36px",
-                            height: "36px",
+                            width: "clamp(28px, 5vw, 36px)",
+                            height: "clamp(28px, 5vw, 36px)",
                             objectFit: "contain",
                             boxShadow: "0 2px 8px rgba(59, 130, 246, 0.2)"
                           }}
@@ -77,7 +77,10 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
                           transition={{ duration: 0.2 }}
                         />
                       )}
-                      <h5 className="fw-bold mb-0 text-primary">{name}</h5>
+                      <h5 className="fw-bold mb-0 text-primary"
+                        style={{ fontSize: "clamp(0.9rem, 4vw, 1.25rem)" }}>
+                        {name}
+                      </h5>
                     </div>
 
                     {/* Preview Button */}
@@ -87,19 +90,23 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       style={{
-                        width: "36px",
-                        height: "36px",
+                        width: "clamp(32px, 6vw, 36px)",
+                        height: "clamp(32px, 6vw, 36px)",
                         background: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
                         color: "white",
                         boxShadow: "0 2px 10px rgba(59, 130, 246, 0.4)"
                       }}
                     >
-                      <i className="fa fa-eye" style={{ fontSize: "14px" }} />
+                      <i className="fa fa-eye" style={{ fontSize: "clamp(12px, 2.5vw, 14px)" }} />
                     </motion.button>
                   </div>
 
                   {/* Description */}
-                  <p className="text-dark mb-3 opacity-75" style={{ fontSize: "0.9rem", lineHeight: "1.5" }}>
+                  <p className="text-dark mb-3 opacity-75"
+                    style={{
+                      fontSize: "clamp(0.8rem, 2.5vw, 0.9rem)",
+                      lineHeight: "1.5"
+                    }}>
                     {desc}
                   </p>
 
@@ -110,13 +117,13 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
                         {tech.map((t, idx) => (
                           <Badge
                             key={idx}
-                            className="text-uppercase fw-normal"
+                            className="text-uppercase fw-normal rounded-pill"
                             style={{
                               background: "rgba(59, 130, 246, 0.1)",
                               color: "#1d4ed8",
                               border: "1px solid rgba(59, 130, 246, 0.2)",
                               padding: "4px 8px",
-                              fontSize: "0.65rem",
+                              fontSize: "clamp(0.6rem, 1.8vw, 0.65rem)",
                               letterSpacing: "0.5px"
                             }}
                           >
@@ -141,7 +148,7 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
                       style={{
                         borderColor: "rgba(59, 130, 246, 0.3)",
                         color: "#1d4ed8",
-                        fontSize: "0.8rem"
+                        fontSize: "clamp(0.75rem, 2vw, 0.8rem)"
                       }}
                     >
                       <i className="fa fa-github me-1" />
@@ -159,7 +166,7 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
                       style={{
                         background: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
                         border: "none",
-                        fontSize: "0.8rem"
+                        fontSize: "clamp(0.75rem, 2vw, 0.8rem)"
                       }}
                     >
                       <i className="fa fa-external-link me-1" />

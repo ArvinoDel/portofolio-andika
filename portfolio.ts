@@ -161,7 +161,7 @@ export const projects: ProjectType[] = [
     img: "https://ik.imagekit.io/tdqizhhci/logo-removebg-preview.png?updatedAt=1751533310391",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
-      "A local e-commerce platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions—bringing local commerce and creative economy into the frontier.",
+      "A local e-commerce platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions, bringing local commerce and creative economy into the frontier.",
     link: "https://github.com/gragemediatechnology/keyFood",
     preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20195307.png?updatedAt=1751633593701",
   },
