@@ -329,11 +329,12 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
           <motion.div
             className="position-relative"
             style={{
-              maxWidth: "90vw",
-              maxHeight: "90vh",
               borderRadius: "12px",
               overflow: "hidden",
-              boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5)"
+              boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5)",
+              display: "inline-block",
+              maxWidth: "100%",
+              maxHeight: "100%",
             }}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -345,8 +346,10 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
               src={preview}
               alt={`${name} Preview`}
               style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
+                width: "auto",
+                height: "auto",
+                maxWidth: "90vw",
+                maxHeight: "90vh",
                 objectFit: "contain",
                 display: "block"
               }}
@@ -371,6 +374,7 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
           </motion.div>
         </motion.div>
       )}
+
     </Col>
   );
 };
