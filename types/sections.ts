@@ -22,6 +22,13 @@ export type GreetingsType = {
   resumeLink?: string;
 };
 
+export type QuotesType = {
+  quote: string;
+  name: string;
+  title: string;
+  img?: string;
+}
+
 // * SKILLS SECTION
 
 type SoftwareSkillType = {
