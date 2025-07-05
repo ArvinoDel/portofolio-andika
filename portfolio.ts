@@ -25,7 +25,7 @@ export const quotes: QuotesType = {
   quote: "Believe you can and you're halfway there.",
   name: "Andika Supriyadi Nur Maulana",
   title: "Full-Stack Developer & Project Manager",
-  img: "https://ik.imagekit.io/tdqizhhci/DSC00084.jpg?updatedAt=1751698210497",
+  img: "https://ik.imagekit.io/tdqizhhci/foto%20andika%20yb.jpg?updatedAt=1751735087750",
 }
 
 export const openSource = {

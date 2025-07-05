@@ -252,7 +252,7 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
 
                   <h6 className="text-primary mb-2 fw-bold">Preview Mode</h6>
                   <p className="text-dark opacity-75 mb-3" style={{ fontSize: "0.85rem" }}>
-                    Preview data akan ditampilkan di area ini
+                    Click on the image to view a larger preview. You can also navigate back to the project details.
                   </p>
 
                   {/* Placeholder for preview data */}
