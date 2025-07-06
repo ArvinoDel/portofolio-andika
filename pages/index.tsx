@@ -14,12 +14,14 @@ const GithubProfileCard = dynamic(() => import("../components/GithubProfileCard"
 import { openSource } from "../portfolio";
 import SEO from "../components/SEO";
 import { GithubUserType } from "../types";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function Home({ githubProfileData }: { githubProfileData: any }) {
   const link = "https://wa.me/6281224964214?text=Halo%20Andika,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20Anda!";
 
   return (
     <div>
+       <SpeedInsights />
       <SEO />
       <Navigation />
       <Greetings />
