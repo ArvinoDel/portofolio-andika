@@ -22,7 +22,7 @@ export const greetings: GreetingsType = {
 };
 
 export const quotes: QuotesType = {
-  quote: "Like Kim Dokja, I move ahead of the script, unseen, unchosen, yet watched by constellations who wager on outliers. I was not made for the spotlight, but for the scenario no one dared to write.",
+  quote: "Like Kim Dokja, I walk ahead of the script, unseen, unchosen, yet followed by constellations who wager on the unwritten scenarios",
   name: "Andika Supriyadi Nur Maulana",
   title: "Full-Stack Developer & Project Manager",
   img: "https://ik.imagekit.io/tdqizhhci/foto%20andika%20yb.jpg?updatedAt=1751735087750",
