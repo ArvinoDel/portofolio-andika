@@ -45,8 +45,8 @@ const Projects = () => {
           <div>
             <h4 className="display-3 text-info fw-bold">My Projects</h4>
             <p className="text-muted mb-0">
-              A showcase of my latest work, built with modern tools and elegant
-              design.
+              A showcase of my most recent work, crafted with modern tools and refined design.
+              Please note: Some projects are either private or have been deprecated.
             </p>
           </div>
         </div>
