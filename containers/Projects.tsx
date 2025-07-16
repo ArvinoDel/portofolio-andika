@@ -44,10 +44,13 @@ const Projects = () => {
           </div>
           <div>
             <h4 className="display-3 text-info fw-bold">My Projects</h4>
-            <p className="text-muted mb-0">
+            <p className="text-muted mb-1">
               A showcase of my most recent work, crafted with modern tools and refined design.
-              Please note: Some projects are either private or have been deprecated.
             </p>
+            <p className="text-muted mb-0">
+              Note: Certain projects may be confidential or no have been archived.
+            </p>
+
           </div>
         </div>
 
