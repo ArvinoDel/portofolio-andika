@@ -5,7 +5,7 @@ import ProjectsCard from "../components/ProjectsCard";
 import { motion } from "framer-motion";
 import classnames from "classnames";
 
-const categories = ["All", "React", "Laravel", "Next.js", "Tailwind CSS"];
+const categories = ["All", "React", "Laravel", "Next.js"];
 
 const Projects = () => {
 
