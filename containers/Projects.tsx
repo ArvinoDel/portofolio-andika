@@ -48,7 +48,7 @@ const Projects = () => {
               A showcase of my most recent work, crafted with modern tools and refined design.
             </p>
             <p className="text-muted mb-0">
-              Note: Certain projects may be confidential or no have been archived.
+              Note: Certain projects may be confidential or have been archived.
             </p>
 
           </div>
