@@ -40,7 +40,7 @@ export const socialLinks: SocialLinksType = {
   github: "https://github.com/ArvinoDel",
   instagram: "https://www.instagram.com/itsmedikaa_",
   // facebook: 'https://www.facebook.com/1hanzla100',
-  // twitter: 'https://twitter.com/1hanzla100',
+  twitter: 'https://x.com/Dikaa_49/',
 };
 
 export const skillsSection: SkillsSectionType = {
@@ -246,7 +246,7 @@ export const seoData: SEODataType = {
   description: greetings.description,
   author: "Andika Supriyadi Nur Maulana",
   image: "https://avatars.githubusercontent.com/u/133538317?v=4",
-  url: "https://portofolio-andika-one.vercel.app/",
+  url: "https://www.andikasnm.my.id/",
   keywords: [
     "Andika",
     "Andika Supriyadi Nur Maulana",

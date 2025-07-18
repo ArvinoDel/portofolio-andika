@@ -60,9 +60,9 @@ const SEO = () => {
       <meta name="twitter:image:alt" content={`Preview image for ${title}`} />
 
       {/* Favicon */}
-      <link rel="apple-touch-icon" sizes="120x120" href="/favicon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="https://avatars.githubusercontent.com/u/133538317?v=4" />
+      <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/133538317?v=4" />
+      <link rel="icon" type="image/png" sizes="16x16" href="https://avatars.githubusercontent.com/u/133538317?v=4" />
 
       {/* Structured Data */}
       <script
