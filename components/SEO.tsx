@@ -19,7 +19,14 @@ const SEO = () => {
     url,
     author: {
       "@type": "Person",
-      name: author
+      name: author,
+      "url": url,
+      "image": image,
+      "jobTitle": "Full Stack Developer & Project Manager",
+      "sameAs": [
+        "https://www.linkedin.com/in/andika-supriyadi-nur-maulana/",
+        "https://github.com/ArvinoDel/"
+      ]
     },
     description,
     image
@@ -60,9 +67,9 @@ const SEO = () => {
       <meta name="twitter:image:alt" content={`Preview image for ${title}`} />
 
       {/* Favicon */}
-      <link rel="apple-touch-icon" sizes="120x120" href="https://avatars.githubusercontent.com/u/133538317?v=4" />
-      <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/133538317?v=4" />
-      <link rel="icon" type="image/png" sizes="16x16" href="https://avatars.githubusercontent.com/u/133538317?v=4" />
+      <link rel="apple-touch-icon" sizes="120x120" href="/favicon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
 
       {/* Structured Data */}
       <script
