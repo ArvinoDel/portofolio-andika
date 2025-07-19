@@ -4,6 +4,8 @@ import ExecutiveExperienceSectionCards from '../components/ExecutiveExperienceSe
 
 const ExecutiveExperienceSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showAllCards, setShowAllCards] = useState(false);
+  const [isExpanding, setIsExpanding] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -19,10 +21,20 @@ const ExecutiveExperienceSection = () => {
       });
     };
 
-
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  const handleToggleCards = () => {
+    if (!showAllCards) {
+      setIsExpanding(true);
+      setShowAllCards(true);
+      // Reset expanding state after animation completes
+      setTimeout(() => setIsExpanding(false), 1000);
+    } else {
+      setShowAllCards(false);
+    }
+  };
 
   const sectionStyle: React.CSSProperties = {
     minHeight: '100vh',
@@ -117,18 +129,23 @@ const ExecutiveExperienceSection = () => {
   };
 
   const ctaButtonStyle: React.CSSProperties = {
-    background: 'linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%)',
+    background: showAllCards 
+      ? 'linear-gradient(135deg, #6c757d 0%, #495057 100%)'
+      : 'linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%)',
     borderRadius: '16px',
     padding: '16px 40px',
     fontSize: '1.1rem',
     fontWeight: '600',
     color: 'white',
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-    boxShadow: '0 8px 32px rgba(135, 206, 235, 0.3)',
+    boxShadow: showAllCards 
+      ? '0 8px 32px rgba(108, 117, 125, 0.3)'
+      : '0 8px 32px rgba(135, 206, 235, 0.3)',
     position: 'relative',
     overflow: 'hidden',
     cursor: 'pointer',
-    border: '1px solid rgba(255, 255, 255, 0.2)'
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+    minWidth: '280px'
   };
 
   const ctaTextStyle: React.CSSProperties = {
@@ -204,6 +221,16 @@ const ExecutiveExperienceSection = () => {
         @keyframes pulse {
           0%, 100% { opacity: 0.6; }
           50% { opacity: 1; }
+        }
+
+        @keyframes expandPulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+        }
+
+        .expanding-button {
+          animation: expandPulse 0.6s ease-in-out;
         }
       `}</style>
 
@@ -291,7 +318,11 @@ const ExecutiveExperienceSection = () => {
             </div>
 
             {/* Experience Cards Component */}
-            <ExecutiveExperienceSectionCards isVisible={isVisible} />
+            <ExecutiveExperienceSectionCards 
+              isVisible={isVisible} 
+              showAllCards={showAllCards}
+              isExpanding={isExpanding}
+            />
 
             {/* Call to Action */}
             <div
@@ -304,26 +335,39 @@ const ExecutiveExperienceSection = () => {
               }}
             >
               <button
+                className={isExpanding ? 'expanding-button' : ''}
                 style={ctaButtonStyle}
+                onClick={handleToggleCards}
                 onMouseEnter={(e) => {
                   const target = e.currentTarget as HTMLButtonElement;
                   target.style.transform = 'translateY(-4px) scale(1.02)';
-                  target.style.boxShadow = '0 16px 40px rgba(135, 206, 235, 0.4)';
+                  target.style.boxShadow = showAllCards 
+                    ? '0 16px 40px rgba(108, 117, 125, 0.4)'
+                    : '0 16px 40px rgba(135, 206, 235, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   const target = e.currentTarget as HTMLButtonElement;
                   target.style.transform = 'translateY(0) scale(1)';
-                  target.style.boxShadow = '0 8px 32px rgba(135, 206, 235, 0.3)';
+                  target.style.boxShadow = showAllCards 
+                    ? '0 8px 32px rgba(108, 117, 125, 0.3)'
+                    : '0 8px 32px rgba(135, 206, 235, 0.3)';
                 }}
               >
                 <span style={{ position: 'relative', zIndex: 1 }}>
-                  Discuss Leadership Opportunities →
+                  {showAllCards 
+                    ? '↑ Show Less Experience' 
+                    : 'View All Leadership Experience →'
+                  }
                 </span>
               </button>
 
               <p style={ctaTextStyle}>
-                Connect to explore collaborative leadership possibilities and discover how we can drive innovation together through strategic partnerships and visionary thinking.
+                {showAllCards 
+                  ? 'Showing complete leadership portfolio with all positions and achievements across my professional journey.'
+                  : 'Connect to explore collaborative leadership possibilities and discover how we can drive innovation together through strategic partnerships and visionary thinking.'
+                }
               </p>
+              
               <div style={dividerContainerStyle}>
                 <div style={decorativeDotsStyle}>
                   {[...Array(3)].map((_, i) => (

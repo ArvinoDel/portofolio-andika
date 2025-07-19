@@ -6,6 +6,8 @@ import { executiveexperiences } from "../portfolio";
 
 interface ExecutiveExperienceSectionCardsProps {
   isVisible: boolean;
+  isExpanding: boolean;
+  showAllCards: boolean;
 }
 
 // 💡 Motion variants for card animation
