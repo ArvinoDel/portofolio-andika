@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Card, CardBody, CardTitle, CardText, Fade } from "reactstrap";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExecutiveExperiencesType } from "../types/sections";
 import { executiveexperiences } from "../portfolio";
 
@@ -22,6 +22,39 @@ const cardVariants = {
       ease: [0.4, 0, 0.2, 1]
     }
   })
+};
+
+// 💡 Additional card variants for expanding animation
+const expandingCardVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 30,
+    scale: 0.95
+  },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: (i - 3) * 0.15, // Delay based on position after first 3 cards
+      duration: 0.8,
+      ease: [0.4, 0, 0.2, 1],
+      scale: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15
+      }
+    }
+  }),
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 0.95,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.6, 1]
+    }
+  }
 };
 
 // 💡 Modular style constants
@@ -119,56 +152,155 @@ const styles = {
       display: "flex",
       flexDirection: "column" as const
     }
+  },
+  expandingSection: {
+    marginTop: "2rem",
+    position: "relative" as const
+  },
+  sectionDivider: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "2rem 0 1.5rem",
+    gap: "1rem"
+  },
+  dividerLine: {
+    height: "2px",
+    width: "60px",
+    background: "linear-gradient(90deg, #87ceeb 0%, #4a90e2 100%)",
+    borderRadius: "1px"
+  },
+  dividerText: {
+    fontSize: "14px",
+    fontWeight: 600,
+    color: "#4a90e2",
+    backgroundColor: "#ffffff",
+    padding: "0 16px",
+    textTransform: "uppercase" as const,
+    letterSpacing: "0.5px"
   }
 };
 
-const ExecutiveExperienceSectionCards: React.FC<ExecutiveExperienceSectionCardsProps> = ({ isVisible }) => {
+const ExecutiveExperienceSectionCards: React.FC<ExecutiveExperienceSectionCardsProps> = ({ 
+  isVisible, 
+  isExpanding, 
+  showAllCards 
+}) => {
+  // Split experiences into initial 3 and additional ones
+  const initialCards = executiveexperiences.slice(0, 3);
+  const additionalCards = executiveexperiences.slice(3);
+
+  const CardComponent = ({ exp, index, isAdditional = false }: { 
+    exp: ExecutiveExperiencesType, 
+    index: number, 
+    isAdditional?: boolean 
+  }) => (
+    <Col key={`${exp.title}-${index}`} lg={4} md={6} className="d-flex">
+      <motion.div
+        custom={index}
+        variants={isAdditional ? expandingCardVariants : cardVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+        exit={isAdditional ? "exit" : undefined}
+        whileHover={styles.card.hover}
+        style={styles.card.base}
+        layout
+      >
+        <div style={{ ...styles.card.line, backgroundColor: exp.color }} />
+
+        <CardBody style={{ padding: "20px" }}>
+          <div style={styles.layout.header}>
+            <div style={styles.layout.leftColumn}>
+              <div style={styles.icon.container}>
+                <img
+                  src={exp.icon}
+                  alt="Experience Icon"
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+              </div>
+            </div>
+
+            <div style={styles.text.timeframe}>{exp.timeframe}</div>
+          </div>
+
+          <CardTitle style={styles.text.title}>{exp.title}</CardTitle>
+
+          <div style={styles.text.organization}>{exp.organization}</div>
+
+          <div style={styles.text.location}>
+            <span style={styles.text.locationIcon}>📍</span>
+            {exp.location}
+          </div>
+
+          <CardText style={styles.text.description}>
+            {exp.description}
+          </CardText>
+        </CardBody>
+      </motion.div>
+    </Col>
+  );
+
   return (
-    <Row className="g-4">
-      {executiveexperiences.map((exp, index) => (
-        <Col key={exp.title} lg={4} md={6} className="d-flex">
+    <div>
+      {/* Initial 3 cards - always visible */}
+      <Row className="g-4">
+        {initialCards.map((exp, index) => (
+          <CardComponent 
+            key={exp.title} 
+            exp={exp} 
+            index={index} 
+            isAdditional={false}
+          />
+        ))}
+      </Row>
+
+      {/* Additional cards with animation */}
+      <AnimatePresence mode="wait">
+        {showAllCards && additionalCards.length > 0 && (
           <motion.div
-            custom={index}
-            variants={cardVariants}
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            whileHover={styles.card.hover}
-            style={styles.card.base}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ 
+              opacity: 1, 
+              height: "auto",
+              transition: {
+                height: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+                opacity: { duration: 0.4, delay: 0.2 }
+              }
+            }}
+            exit={{ 
+              opacity: 0, 
+              height: 0,
+              transition: {
+                height: { duration: 0.4, ease: [0.4, 0, 0.6, 1] },
+                opacity: { duration: 0.2 }
+              }
+            }}
+            style={styles.expandingSection}
           >
-            <div style={{ ...styles.card.line, backgroundColor: exp.color }} />
-
-            <CardBody style={{ padding: "20px" }}>
-              <div style={styles.layout.header}>
-                <div style={styles.layout.leftColumn}>
-                  <div style={styles.icon.container}>
-                    <img
-                      src={exp.icon}
-                      alt="Experience Icon"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                    />
-                  </div>
-                </div>
-
-                <div style={styles.text.timeframe}>{exp.timeframe}</div>
+            {/* Section divider */}
+            <div style={styles.sectionDivider}>
+              <div style={styles.dividerLine} />
+              <div style={styles.dividerText}>
+                Additional Experience
               </div>
+              <div style={styles.dividerLine} />
+            </div>
 
-              <CardTitle style={styles.text.title}>{exp.title}</CardTitle>
-
-              <div style={styles.text.organization}>{exp.organization}</div>
-
-              <div style={styles.text.location}>
-                <span style={styles.text.locationIcon}>📍</span>
-                {exp.location}
-              </div>
-
-              <CardText style={styles.text.description}>
-                {exp.description}
-              </CardText>
-            </CardBody>
+            {/* Additional cards */}
+            <Row className="g-4">
+              {additionalCards.map((exp, index) => (
+                <CardComponent 
+                  key={`additional-${exp.title}`} 
+                  exp={exp} 
+                  index={index + 3} // Continue index from where initial cards left off
+                  isAdditional={true}
+                />
+              ))}
+            </Row>
           </motion.div>
-        </Col>
-      ))}
-    </Row>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 
