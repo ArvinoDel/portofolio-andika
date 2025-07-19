@@ -303,17 +303,17 @@ const ExecutiveExperienceSection = () => {
             >
               <div style={statsContainerStyle}>
                 <div style={statItemStyle}>
-                  <div style={statNumberStyle}>9+</div>
+                  <div style={statNumberStyle}>3+</div>
                   <div style={statLabelStyle}>Years</div>
                 </div>
                 <div style={statItemStyle}>
-                  <div style={statNumberStyle}>6</div>
+                  <div style={statNumberStyle}>4</div>
                   <div style={statLabelStyle}>Positions</div>
                 </div>
-                <div style={statItemStyle}>
+                {/* <div style={statItemStyle}>
                   <div style={statNumberStyle}>50+</div>
                   <div style={statLabelStyle}>Projects</div>
-                </div>
+                </div> */}
               </div>
             </div>
 
