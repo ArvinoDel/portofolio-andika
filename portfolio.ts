@@ -11,6 +11,7 @@ import {
   SocialLinksType,
   GreetingsType,
   AchievementsType,
+  ExecutiveExperiencesType,
 } from "./types/sections";
 
 export const greetings: GreetingsType = {
@@ -208,11 +209,11 @@ export const feedbacks: FeedbackType[] = [
       "In a world overflowing with digital noise, Andika builds platforms that speak. His involvement in our rebranding initiative was nothing short of transformational. Not only did he restructure our digital ecosystem with elegance, but he also aligned our tech infrastructure with the soul of our brand. He was both visionary and pragmatic, blending corporate objectives with seamless user journeys. His leadership inspired our team, his delivery exceeded expectations, and his professionalism set a new internal benchmark. I’ve worked with many developers, but few possess Andika’s caliber of insight, execution, and empathy. He doesn't just code, he curates digital excellence.",
   },
   {
-  name: "Sabiq Sabirullah",
-  role: "Product Strategist",
-  feedback:
-    "As a client, I had high expectations, and Andika exceeded every single one. From the very first kickoff call to post-launch refinement, his professionalism, communication, and technical expertise stood out. He transformed our product vision into a dynamic, scalable web platform, all while maintaining crystal-clear transparency throughout the development cycle. Despite shifting requirements and tight timelines, Andika remained composed and solution-oriented, always proposing smart, sustainable approaches. What impressed me most was his rare ability to translate business goals into technical execution without losing sight of user experience."
-},
+    name: "Sabiq Sabirullah",
+    role: "Product Strategist",
+    feedback:
+      "As a client, I had high expectations, and Andika exceeded every single one. From the very first kickoff call to post-launch refinement, his professionalism, communication, and technical expertise stood out. He transformed our product vision into a dynamic, scalable web platform, all while maintaining crystal-clear transparency throughout the development cycle. Despite shifting requirements and tight timelines, Andika remained composed and solution-oriented, always proposing smart, sustainable approaches. What impressed me most was his rare ability to translate business goals into technical execution without losing sight of user experience."
+  },
 ];
 
 export const achievements: AchievementsType[] = [
@@ -239,6 +240,50 @@ export const achievements: AchievementsType[] = [
     date: "October 2024",
   },
 ];
+
+export const executiveexperiences: ExecutiveExperiencesType[] = [
+  {
+    title: "President",
+    organization: "Neper English Community",
+    timeframe: "2023 – 2024",
+    description:
+      "Spearheaded initiatives to enhance English proficiency across the student body, fostering cross-cultural communication and leadership through debate forums and international speaking simulations.",
+    location: "Cirebon, Indonesia",
+    icon: "https://ik.imagekit.io/tdqizhhci/nesco-removebg-preview.png",
+    color: "#3b82f6"
+  },
+  {
+    title: "Technology Ambassador",
+    organization: "SMKN 1 Cirebon",
+    timeframe: "2022 – 2023",
+    description:
+      "Represented the school at regional tech summits and spearheaded digital literacy campaigns, positioning the institution as a pioneer in student-led innovation.",
+    location: "Cirebon, Indonesia",
+    icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
+    color: "#6366f1"
+  },
+  {
+    title: "Student Council Member (MPK)",
+    organization: "SMKN 1 Cirebon",
+    timeframe: "2023 – 2024",
+    description:
+      "Collaborated with faculty and student leadership to streamline student governance, advocating for educational and extracurricular excellence.",
+    location: "Cirebon, Indonesia",
+    icon: "https://ik.imagekit.io/tdqizhhci/mpksmkn-removebg-preview.png",
+    color: "#f59e0b"
+  },
+  {
+    title: "Student Council Member (OSIS)",
+    organization: "SMPN 2 Plered",
+    timeframe: "2021 – 2022",
+    description:
+      "Actively engaged in planning and executing student events, championing a culture of inclusivity and student engagement at the junior high level.",
+    location: "Cirebon, Indonesia",
+    icon: "https://ik.imagekit.io/tdqizhhci/smpn.png",
+    color: "#10b981"
+  }
+];
+
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {

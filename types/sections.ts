@@ -111,3 +111,13 @@ export type AchievementsType = {
   scores?: string;
   img?: string; // Optional
 };
+
+export type ExecutiveExperiencesType = {
+  title: string;
+  organization: string;
+  timeframe: string;
+  description: string;
+  location: string;
+  icon: string;
+  color: string;
+};

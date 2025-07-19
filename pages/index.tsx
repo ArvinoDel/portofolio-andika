@@ -21,7 +21,7 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
 
   return (
     <div>
-       <SpeedInsights />
+      <SpeedInsights />
       <SEO />
       <Navigation />
       <Greetings />
@@ -38,7 +38,7 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
 
       {/* WhatsApp Floating Button */}
 
-<button
+      <button
         onClick={() => window.open(link, '_blank')}
         className="whatsapp-float"
         aria-label="Chat via WhatsApp"
