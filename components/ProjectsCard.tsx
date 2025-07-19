@@ -347,7 +347,7 @@ const ProjectsCard = ({ name, desc, github, link, tech, img, preview }: ProjectT
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
           >
             <img
               src={preview}
