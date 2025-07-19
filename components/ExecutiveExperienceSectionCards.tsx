@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Card, CardBody, CardTitle, CardText, Fade } from "reactstrap";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ExecutiveExperiencesType } from "../types/sections";
 import { executiveexperiences } from "../portfolio";
 
@@ -17,45 +17,14 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.1,
+      delay: i < 3 ? i * 0.1 : (i * 0.1) + 0.3, // Extra delay for cards beyond first 3
       duration: 0.6,
       ease: [0.4, 0, 0.2, 1]
     }
   })
 };
 
-// 💡 Additional card variants for expanding animation
-const expandingCardVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 30,
-    scale: 0.95
-  },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      delay: (i - 3) * 0.15, // Delay based on position after first 3 cards
-      duration: 0.8,
-      ease: [0.4, 0, 0.2, 1],
-      scale: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15
-      }
-    }
-  }),
-  exit: {
-    opacity: 0,
-    y: -20,
-    scale: 0.95,
-    transition: {
-      duration: 0.4,
-      ease: [0.4, 0, 0.6, 1]
-    }
-  }
-};
+
 
 // 💡 Modular style constants
 const styles = {
@@ -186,25 +155,22 @@ const ExecutiveExperienceSectionCards: React.FC<ExecutiveExperienceSectionCardsP
   isExpanding, 
   showAllCards 
 }) => {
-  // Split experiences into initial 3 and additional ones
-  const initialCards = executiveexperiences.slice(0, 3);
+  // Show cards based on showAllCards state
+  const cardsToShow = showAllCards ? executiveexperiences : executiveexperiences.slice(0, 3);
   const additionalCards = executiveexperiences.slice(3);
 
-  const CardComponent = ({ exp, index, isAdditional = false }: { 
+  const CardComponent = ({ exp, index }: { 
     exp: ExecutiveExperiencesType, 
-    index: number, 
-    isAdditional?: boolean 
+    index: number
   }) => (
-    <Col key={`${exp.title}-${index}`} lg={4} md={6} className="d-flex">
+    <Col key={`card-${exp.title}-${index}`} lg={4} md={6} className="d-flex">
       <motion.div
         custom={index}
-        variants={isAdditional ? expandingCardVariants : cardVariants}
+        variants={cardVariants}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
-        exit={isAdditional ? "exit" : undefined}
         whileHover={styles.card.hover}
         style={styles.card.base}
-        layout
       >
         <div style={{ ...styles.card.line, backgroundColor: exp.color }} />
 
@@ -241,66 +207,40 @@ const ExecutiveExperienceSectionCards: React.FC<ExecutiveExperienceSectionCardsP
   );
 
   return (
-    <div>
-      {/* Initial 3 cards - always visible */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Show divider when expanding to all cards */}
+      {showAllCards && additionalCards.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0 }}
+          animate={{ 
+            opacity: 1, 
+            scaleX: 1,
+            transition: { delay: 0.3, duration: 0.5 }
+          }}
+          style={styles.sectionDivider}
+        >
+          <div style={styles.dividerLine} />
+          <div style={styles.dividerText}>
+            Complete Leadership Portfolio
+          </div>
+          <div style={styles.dividerLine} />
+        </motion.div>
+      )}
+
       <Row className="g-4">
-        {initialCards.map((exp, index) => (
+        {cardsToShow.map((exp, index) => (
           <CardComponent 
-            key={exp.title} 
+            key={`experience-${index}-${exp.title}`}
             exp={exp} 
-            index={index} 
-            isAdditional={false}
+            index={index}
           />
         ))}
       </Row>
-
-      {/* Additional cards with animation */}
-      <AnimatePresence mode="wait">
-        {showAllCards && additionalCards.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ 
-              opacity: 1, 
-              height: "auto",
-              transition: {
-                height: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
-                opacity: { duration: 0.4, delay: 0.2 }
-              }
-            }}
-            exit={{ 
-              opacity: 0, 
-              height: 0,
-              transition: {
-                height: { duration: 0.4, ease: [0.4, 0, 0.6, 1] },
-                opacity: { duration: 0.2 }
-              }
-            }}
-            style={styles.expandingSection}
-          >
-            {/* Section divider */}
-            <div style={styles.sectionDivider}>
-              <div style={styles.dividerLine} />
-              <div style={styles.dividerText}>
-                Additional Experience
-              </div>
-              <div style={styles.dividerLine} />
-            </div>
-
-            {/* Additional cards */}
-            <Row className="g-4">
-              {additionalCards.map((exp, index) => (
-                <CardComponent 
-                  key={`additional-${exp.title}`} 
-                  exp={exp} 
-                  index={index + 3} // Continue index from where initial cards left off
-                  isAdditional={true}
-                />
-              ))}
-            </Row>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
