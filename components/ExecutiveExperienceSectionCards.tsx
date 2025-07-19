@@ -1,6 +1,6 @@
-import React from "react";
-import { Row, Col, CardBody, CardTitle, CardText } from "reactstrap";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useMemo } from "react";
+import { Row, Col, Card, CardBody, CardTitle, CardText, Fade } from "reactstrap";
+import { motion } from "framer-motion";
 import { ExecutiveExperiencesType } from "../types/sections";
 import { executiveexperiences } from "../portfolio";
 
@@ -10,20 +10,21 @@ interface ExecutiveExperienceSectionCardsProps {
   showAllCards: boolean;
 }
 
+// 💡 Motion variants for card animation
 const cardVariants = {
-  initial: { opacity: 0, y: 20 },
-  animate: (i: number) => ({
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i < 3 ? i * 0.1 : (i * 0.1) + 0.3,
+      delay: i < 3 ? i * 0.1 : (i * 0.1) + 0.3, // Extra delay for cards beyond first 3
       duration: 0.6,
       ease: [0.4, 0, 0.2, 1]
     }
-  }),
-  exit: { opacity: 0, y: 20, transition: { duration: 0.3 } }
+  })
 };
 
+// 💡 Modular style constants - moved outside component to prevent recreation
 const styles = {
   card: {
     base: {
@@ -61,6 +62,11 @@ const styles = {
       fontSize: "20px",
       marginBottom: "16px",
       border: "1px solid #e5e7eb"
+    },
+    image: {
+      width: '100%', 
+      height: '100%', 
+      objectFit: 'contain' as const
     }
   },
   text: {
@@ -119,6 +125,10 @@ const styles = {
       flexDirection: "column" as const
     }
   },
+  expandingSection: {
+    marginTop: "2rem",
+    position: "relative" as const
+  },
   sectionDivider: {
     display: "flex",
     alignItems: "center",
@@ -143,86 +153,117 @@ const styles = {
   }
 };
 
-const ExecutiveExperienceSectionCards: React.FC<ExecutiveExperienceSectionCardsProps> = ({
-  isVisible,
-  isExpanding,
-  showAllCards
-}) => {
-  const cardsToShow = showAllCards ? executiveexperiences : executiveexperiences.slice(0, 3);
-  const additionalCards = executiveexperiences.slice(3);
+// 💡 Memoized card component to prevent unnecessary re-renders
+const CardComponent = React.memo(({ 
+  exp, 
+  index, 
+  isVisible 
+}: { 
+  exp: ExecutiveExperiencesType, 
+  index: number,
+  isVisible: boolean
+}) => (
+  <Col lg={4} md={6} className="d-flex">
+    <motion.div
+      custom={index}
+      variants={cardVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+      whileHover={styles.card.hover}
+      style={styles.card.base}
+    >
+      <div style={{ ...styles.card.line, backgroundColor: exp.color }} />
 
-  const CardComponent = ({
-    exp,
-    index
-  }: {
-    exp: ExecutiveExperiencesType;
-    index: number;
-  }) => (
-    <Col key={exp.title} lg={4} md={6} className="d-flex">
-      <motion.div
-        layout
-        custom={index}
-        variants={cardVariants}
-        initial="initial"
-        animate={isVisible ? "animate" : "initial"}
-        exit="exit"
-        whileHover={styles.card.hover}
-        style={styles.card.base}
-      >
-        <div style={{ ...styles.card.line, backgroundColor: exp.color }} />
-
-        <CardBody style={{ padding: "20px" }}>
-          <div style={styles.layout.header}>
-            <div style={styles.layout.leftColumn}>
-              <div style={styles.icon.container}>
-                <img
-                  src={exp.icon}
-                  alt="Experience Icon"
-                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                />
-              </div>
+      <CardBody style={{ padding: "20px" }}>
+        <div style={styles.layout.header}>
+          <div style={styles.layout.leftColumn}>
+            <div style={styles.icon.container}>
+              <img
+                src={exp.icon}
+                alt={`${exp.title} Icon`}
+                style={styles.icon.image}
+                loading="lazy"
+              />
             </div>
-            <div style={styles.text.timeframe}>{exp.timeframe}</div>
           </div>
 
-          <CardTitle style={styles.text.title}>{exp.title}</CardTitle>
-          <div style={styles.text.organization}>{exp.organization}</div>
-          <div style={styles.text.location}>
-            <span style={styles.text.locationIcon}>📍</span>
-            {exp.location}
-          </div>
-          <CardText style={styles.text.description}>{exp.description}</CardText>
-        </CardBody>
-      </motion.div>
-    </Col>
+          <div style={styles.text.timeframe}>{exp.timeframe}</div>
+        </div>
+
+        <CardTitle style={styles.text.title}>{exp.title}</CardTitle>
+
+        <div style={styles.text.organization}>{exp.organization}</div>
+
+        <div style={styles.text.location}>
+          <span style={styles.text.locationIcon}>📍</span>
+          {exp.location}
+        </div>
+
+        <CardText style={styles.text.description}>
+          {exp.description}
+        </CardText>
+      </CardBody>
+    </motion.div>
+  </Col>
+));
+
+CardComponent.displayName = 'CardComponent';
+
+const ExecutiveExperienceSectionCards: React.FC<ExecutiveExperienceSectionCardsProps> = ({ 
+  isVisible, 
+  isExpanding, 
+  showAllCards 
+}) => {
+  // 💡 Memoize expensive calculations to prevent loop rendering
+  const { cardsToShow, additionalCards } = useMemo(() => {
+    const cards = showAllCards ? executiveexperiences : executiveexperiences.slice(0, 3);
+    const additional = executiveexperiences.slice(3);
+    return {
+      cardsToShow: cards,
+      additionalCards: additional
+    };
+  }, [showAllCards]);
+
+  // 💡 Memoize the divider visibility check
+  const showDivider = useMemo(() => 
+    showAllCards && additionalCards.length > 0, 
+    [showAllCards, additionalCards.length]
   );
 
   return (
     <motion.div
-      layout
-      initial={false}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3 }}
     >
-      {showAllCards && additionalCards.length > 0 && (
+      {/* Show divider when expanding to all cards */}
+      {showDivider && (
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          animate={{ 
+            opacity: 1, 
+            scaleX: 1,
+            transition: { delay: 0.3, duration: 0.5 }
+          }}
           style={styles.sectionDivider}
         >
           <div style={styles.dividerLine} />
-          <div style={styles.dividerText}>Complete Leadership Portfolio</div>
+          <div style={styles.dividerText}>
+            Complete Leadership Portfolio
+          </div>
           <div style={styles.dividerLine} />
         </motion.div>
       )}
 
       <Row className="g-4">
-        <AnimatePresence mode="wait">
-          {cardsToShow.map((exp, index) => (
-            <CardComponent key={exp.title} exp={exp} index={index} />
-          ))}
-        </AnimatePresence>
+        {cardsToShow.map((exp, index) => (
+          <CardComponent 
+            key={exp.title} // 💡 Use stable key instead of index-based key
+            exp={exp} 
+            index={index}
+            isVisible={isVisible}
+          />
+        ))}
       </Row>
     </motion.div>
   );
