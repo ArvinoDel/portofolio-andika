@@ -272,6 +272,16 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     icon: "https://ik.imagekit.io/tdqizhhci/mpksmkn-removebg-preview.png",
     color: "#f59e0b"
   },
+   {
+    title: "Technology Ambassador",
+    organization: "SMKN 1 Cirebon",
+    timeframe: "2022 – 2023",
+    description:
+      "Represented the school at regional tech summits and spearheaded digital literacy campaigns, positioning the institution as a pioneer in student-led innovation.",
+    location: "Cirebon, Indonesia",
+    icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
+    color: "#6366f1"
+  },
   {
     title: "Zero Waste Lifestyle Ambassador",
     organization: "SMKN 1 Cirebon",

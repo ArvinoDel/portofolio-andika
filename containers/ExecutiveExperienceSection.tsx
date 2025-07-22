@@ -307,7 +307,7 @@ const ExecutiveExperienceSection = () => {
                   <div style={statLabelStyle}>Years</div>
                 </div>
                 <div style={statItemStyle}>
-                  <div style={statNumberStyle}>4</div>
+                  <div style={statNumberStyle}>6</div>
                   <div style={statLabelStyle}>Positions</div>
                 </div>
               </div>
