@@ -19,7 +19,7 @@ export const greetings: GreetingsType = {
   title: "Hi, I'm Andika Supriyadi Nur Maulana",
   description:
     "A Full-Stack Developer and Project Manager with strong expertise in both front-end and backend technologies. Skilled in leading projects end-to-end, ensuring quality, efficiency, and time delivery. Adept at public communication, with fluent English proficiency for effective collaboration across diverse teams and stakeholders.",
-  resumeLink: "https://drive.google.com/file/d/1eq7B-WUhup99SyVnGx19oyYllV8t-C_W/view?usp=sharing",
+  resumeLink: "https://drive.google.com/file/d/1b3zd8QTP5yro05u83MNZEYgnRW68zbcA/view?usp=drive_link",
 };
 
 export const quotes: QuotesType = {
