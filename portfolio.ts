@@ -243,8 +243,8 @@ export const achievements: AchievementsType[] = [
 
 export const executiveexperiences: ExecutiveExperiencesType[] = [
   {
-    title: "President",
-    organization: "Neper English Community",
+    title: "President of Nesco",
+    organization: "SMKN 1 Cirebon",
     timeframe: "2023 – 2024",
     description:
       "Spearheaded initiatives to enhance English proficiency across the student body, fostering cross-cultural communication and leadership through debate forums and international speaking simulations.",
@@ -253,14 +253,14 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     color: "#3b82f6"
   },
   {
-    title: "Technology Ambassador",
+    title: "Co-Founder of Mathematics Club",
     organization: "SMKN 1 Cirebon",
-    timeframe: "2022 – 2023",
+    timeframe: "2023 – 2024",
     description:
-      "Represented the school at regional tech summits and spearheaded digital literacy campaigns, positioning the institution as a pioneer in student-led innovation.",
+      "Spearheaded the foundational framework of the Mathematics Club, co-designing engaging problem-solving sessions while fostering a collaborative culture of analytical thinking and academic growth.",
     location: "Cirebon, Indonesia",
     icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
-    color: "#6366f1"
+    color: "#f51b0bff"
   },
   {
     title: "Student Council Member (MPK)",
@@ -271,6 +271,16 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     location: "Cirebon, Indonesia",
     icon: "https://ik.imagekit.io/tdqizhhci/mpksmkn-removebg-preview.png",
     color: "#f59e0b"
+  },
+  {
+    title: "Zero Waste Lifestyle Ambassador",
+    organization: "SMKN 1 Cirebon",
+    timeframe: "2022 – 2023",
+    description:
+      "Advocated for sustainable living through school-wide zero waste initiatives, led awareness campaigns, and collaborated with environmental groups to promote responsible consumption and ecological mindfulness among students.",
+    location: "Cirebon, Indonesia",
+    icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
+    color: "#04a818ff"
   },
   {
     title: "Student Council Member (OSIS)",
