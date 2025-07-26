@@ -218,12 +218,23 @@ export const feedbacks: FeedbackType[] = [
 
 export const achievements: AchievementsType[] = [
   {
+    title: "Certificate of Competence in Software Development (Programming)",
+    issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
+    credentials: "62010 2512 2 0000027 2025",
+    description: "Achieved the Certificate of Competence in Software Development (Programming), awarded by the Badan Nasional Sertifikasi Profesi (BNSP) — Indonesia’s official authority for professional certification. This certification demonstrates nationally recognized competence in core areas of software development, including programming logic, problem-solving, and code implementation aligned with industry standards. The assessment was conducted under the Indonesian National Work Competency Standards (SKKNI), ensuring both technical proficiency and professional readiness. Valid through May 2028, this certification serves as a testament to my dedication to growth and excellence in the tech industry.",
+    tags: ["Programming", "Object-Oriented Programming", "Website Development"],
+    link: "https://drive.google.com/file/d/1EFbpGc38otEjQAOvrSQwyinb4hPHGGv1/view?usp=sharing",
+    scores: "N/A",
+    img: "https://bnsp.go.id/ppid/assets/images/logo-bnsp.png",
+    date: "May 2025",
+  },
+  {
     title: "TOEIC Listening & Reading Certificate",
     issuer: "ETS Educational Testing Service, Inc.",
     credentials: "1738921",
     description: "Achieved a TOEIC score of 815, demonstrating strong proficiency in English for professional and business communication. Skilled in understanding spoken and written English in workplace contexts, effective communication in international environments, and professional correspondence.",
     tags: ["TOEIC", "English Proficiency", "C2 Level"],
-    link: "https://drive.google.com/file/d/11v5hxEz5fVte0gK0u6AI3q2TcrhG0-NH/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1Xza9o0ZmCBkyjEhoPiJNn1eVBJ43j3RU/view?usp=sharing",
     scores: "815",
     img: "https://miro.medium.com/v2/resize:fit:1400/1*WzmsmHBf7l0T0DBTtmsUqQ.png",
     date: "November 2024",
@@ -234,7 +245,7 @@ export const achievements: AchievementsType[] = [
     credentials: "CEEC3EB99457ECA2",
     description: "Achieved the Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) certification in 2024, validating a solid foundation in enterprise security, compliance, and identity concepts within Microsoft environments. Skilled in understanding and applying key principles such as Zero Trust, access management, threat protection, and regulatory compliance across Microsoft Azure and Microsoft 365 platforms. Demonstrates capability in supporting organizational security strategies and navigating cloud-based governance in modern digital infrastructures.",
     tags: ["Cybersecurity", "Microsoft Azure", "SC-900"],
-    link: "https://drive.google.com/file/d/1nBtHozS5cJqo5WI783AqJ_WYkUo9iETy/view?usp=sharing",
+    link: "https://learn.microsoft.com/en-gb/users/andikasupriyadinurmaulana-5098/credentials/ceec3eb99457eca2?ref=https%3A%2F%2Fwww.linkedin.com%2F",
     scores: "980",
     img: "https://media.licdn.com/dms/image/v2/D5612AQHkhBzht3-ziw/article-cover_image-shrink_600_2000/B56ZV0YwQWHsAU-/0/1741414402092?e=2147483647&v=beta&t=UQfk5K3zHLAN_jVXcH-QpIhgvVRFPYKOn416VzpDdi4",
     date: "October 2024",
@@ -272,7 +283,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     icon: "https://ik.imagekit.io/tdqizhhci/mpksmkn-removebg-preview.png",
     color: "#f59e0b"
   },
-   {
+  {
     title: "Technology Ambassador",
     organization: "SMKN 1 Cirebon",
     timeframe: "2022 – 2023",
