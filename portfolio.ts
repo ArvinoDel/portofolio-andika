@@ -219,8 +219,8 @@ export const feedbacks: FeedbackType[] = [
 export const achievements: AchievementsType[] = [
   {
     title: "Certificate of Competence in Software Development (Programming)",
-    issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
-    credentials: "62010 2512 2 0000027 2025",
+    issuer: "Badan Nasional Sertifikasi Profesi(BNSP)",
+    credentials: "620102512200000272025",
     description: "Achieved the Certificate of Competence in Software Development (Programming), awarded by the Badan Nasional Sertifikasi Profesi (BNSP) — Indonesia’s official authority for professional certification. This certification demonstrates nationally recognized competence in core areas of software development, including programming logic, problem-solving, and code implementation aligned with industry standards. The assessment was conducted under the Indonesian National Work Competency Standards (SKKNI), ensuring both technical proficiency and professional readiness. Valid through May 2028, this certification serves as a testament to my dedication to growth and excellence in the tech industry.",
     tags: ["Programming", "Object-Oriented Programming", "Website Development"],
     link: "https://drive.google.com/file/d/1EFbpGc38otEjQAOvrSQwyinb4hPHGGv1/view?usp=sharing",
