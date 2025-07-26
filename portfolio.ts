@@ -161,7 +161,7 @@ export const projects: ProjectType[] = [
     img: "https://ik.imagekit.io/tdqizhhci/logo_web.png?updatedAt=1751533310399",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
-      "A comprehensive learning management system built for educators and digital bootcamp providers. Developed using Laravel 11 and Tailwind CSS, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
+      "A comprehensive learning management system and digital bootcamp providers. Developed using Laravel 11 and Tailwind CSS, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
     link: "https://pandaidigital.id",
     preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20191359.png?updatedAt=1751631269197",
   },
