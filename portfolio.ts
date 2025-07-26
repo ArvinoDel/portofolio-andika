@@ -204,7 +204,7 @@ export const feedbacks: FeedbackType[] = [
   },
   {
     name: "Calista Yudhistira",
-    role: "CEO at Grage Media Technology",
+    role: "CEO of Grage Media Technology",
     feedback:
       "In a world overflowing with digital noise, Andika builds platforms that speak. His involvement in our rebranding initiative was nothing short of transformational. Not only did he restructure our digital ecosystem with elegance, but he also aligned our tech infrastructure with the soul of our brand. He was both visionary and pragmatic, blending corporate objectives with seamless user journeys. His leadership inspired our team, his delivery exceeded expectations, and his professionalism set a new internal benchmark. I’ve worked with many developers, but few possess Andika’s caliber of insight, execution, and empathy. He doesn't just code, he curates digital excellence.",
   },
