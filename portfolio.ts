@@ -141,14 +141,14 @@ export const experience: ExperienceType[] = [
   {
     role: "Project Manager",
     company: "PT Grage Media Technology",
-    companyLogo: "https://media.licdn.com/dms/image/v2/C560BAQGBCV5LuLQkKg/company-logo_200_200/company-logo_200_200/0/1674809054642?e=1756944000&v=beta&t=gMBsZ1BY7iLZdV8vnqGVppMy6Gy-jouFSWZP95KO80g",
+    companyLogo: "https://ik.imagekit.io/tdqizhhci/1674809054642.jpg?updatedAt=1757141488814",
     date: "Jul 2024 - Dec 2024",
     desc: "Spearheaded the Pandai Digital project by orchestrating cross-functional collaboration, managing stakeholder communication, and aligning delivery with client expectations. Ensured project success by leading Agile ceremonies, mitigating scope creep, and implementing strategic feature prioritization. Delivered impactful milestones on time while fostering synergy between frontend, backend, and business teams.",
   },
   {
     role: "Full-Stack Developer",
     company: "PT Grage Media Technology",
-    companyLogo: "https://media.licdn.com/dms/image/v2/C560BAQGBCV5LuLQkKg/company-logo_200_200/company-logo_200_200/0/1674809054642?e=1756944000&v=beta&t=gMBsZ1BY7iLZdV8vnqGVppMy6Gy-jouFSWZP95KO80g",
+    companyLogo: "https://ik.imagekit.io/tdqizhhci/1674809054642.jpg?updatedAt=1757141488814",
     date: "Jul 2024 - Dec 2024",
     desc: "Built dynamic and scalable web solutions using Laravel, React, and Tailwind CSS for the Pandai Digital platform. Engineered secure RESTful APIs, optimized MySQL queries, and implemented responsive UIs. Managed deployment pipelines using shared hosting tools and Git-based workflows. Acted as the bridge between development and design, ensuring technical feasibility and visual excellence.",
   },
