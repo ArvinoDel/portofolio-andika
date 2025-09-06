@@ -12,7 +12,6 @@ const ExecutiveExperienceSection = dynamic(() => import("../containers/Executive
 const Feedbacks = dynamic(() => import("../containers/Feedbacks"));
 const Contacts = dynamic(() => import("../containers/Contacts"));
 const GithubProfileCard = dynamic(() => import("../components/GithubProfileCard"));
-import { Analytics } from "@vercel/analytics/next"
 import { openSource } from "../portfolio";
 import SEO from "../components/SEO";
 import { GithubUserType } from "../types";
@@ -24,7 +23,6 @@ export default function Home({ githubProfileData }: { githubProfileData: any }) 
   return (
     <div>
       <SpeedInsights />
-      <Analytics/>
       <SEO />
       <Navigation />
       <Greetings />
