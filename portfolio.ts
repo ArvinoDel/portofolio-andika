@@ -19,7 +19,7 @@ export const greetings: GreetingsType = {
   title: "Hi, I'm Andika Supriyadi Nur Maulana",
   description:
     "A Full-Stack Developer and Project Manager with strong expertise in both front-end and backend technologies. Skilled in leading projects end-to-end, ensuring quality, efficiency, and time delivery. Adept at public communication, with fluent English proficiency for effective collaboration across diverse teams and stakeholders.",
-  resumeLink: "https://drive.google.com/file/d/1b3zd8QTP5yro05u83MNZEYgnRW68zbcA/view?usp=drive_link",
+  resumeLink: "https://drive.google.com/file/d/1kod_zf93mXgzZ8MOOUw3ZgUNnyd7nv7k/view?usp=sharing",
 };
 
 export const quotes: QuotesType = {
@@ -185,7 +185,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "Djajanan",
-    img: "https://media.licdn.com/dms/image/v2/C560BAQGBCV5LuLQkKg/company-logo_200_200/company-logo_200_200/0/1674809054642?e=1756944000&v=beta&t=gMBsZ1BY7iLZdV8vnqGVppMy6Gy-jouFSWZP95KO80g",
+    img: "https://ik.imagekit.io/tdqizhhci/1674809054642.jpg?updatedAt=1757141488814",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "An e-commerce platform for local snacks and products, blending modern shopping experiences with digital payments. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
@@ -203,7 +203,7 @@ export const feedbacks: FeedbackType[] = [
       "Andika embodies the rare harmony of precision and passion. His technical intuition is backed by a mastery of modern frameworks, from Laravel to React, resulting in solutions that are not only functional but future-proof. In our time working together, he consistently demonstrated the ability to decode complexity into clean, scalable architecture. One of his most impressive feats was accelerating our project lifecycle by 30% without compromising code quality. Truly, a Senior-level talent who thinks like a systems architect but moves like an agile craftsman. Any engineering squad would be lucky to have him steering the helm.",
   },
   {
-    name: "Calista Yudhistira",
+    name: "Calita Yudhistira",
     role: "CEO of Grage Media Technology",
     feedback:
       "In a world overflowing with digital noise, Andika builds platforms that speak. His involvement in our rebranding initiative was nothing short of transformational. Not only did he restructure our digital ecosystem with elegance, but he also aligned our tech infrastructure with the soul of our brand. He was both visionary and pragmatic, blending corporate objectives with seamless user journeys. His leadership inspired our team, his delivery exceeded expectations, and his professionalism set a new internal benchmark. I’ve worked with many developers, but few possess Andika’s caliber of insight, execution, and empathy. He doesn't just code, he curates digital excellence.",
@@ -225,7 +225,7 @@ export const achievements: AchievementsType[] = [
     tags: ["Programming", "Object-Oriented Programming", "Website Development"],
     link: "https://drive.google.com/file/d/1EFbpGc38otEjQAOvrSQwyinb4hPHGGv1/view?usp=sharing",
     scores: "N/A",
-    img: "https://bnsp.go.id/ppid/assets/images/logo-bnsp.png",
+    img: "https://ik.imagekit.io/tdqizhhci/logo-bnsp.png?updatedAt=1757143959188",
     date: "May 2025",
   },
   {
@@ -236,7 +236,7 @@ export const achievements: AchievementsType[] = [
     tags: ["TOEIC", "English Proficiency", "C2 Level"],
     link: "https://drive.google.com/file/d/1Xza9o0ZmCBkyjEhoPiJNn1eVBJ43j3RU/view?usp=sharing",
     scores: "815",
-    img: "https://miro.medium.com/v2/resize:fit:1400/1*WzmsmHBf7l0T0DBTtmsUqQ.png",
+    img: "https://ik.imagekit.io/tdqizhhci/logo-toeic.png?updatedAt=1757144010169",
     date: "November 2024",
   },
   {
@@ -247,7 +247,7 @@ export const achievements: AchievementsType[] = [
     tags: ["Cybersecurity", "Microsoft Azure", "SC-900"],
     link: "https://learn.microsoft.com/en-gb/users/andikasupriyadinurmaulana-5098/credentials/ceec3eb99457eca2?ref=https%3A%2F%2Fwww.linkedin.com%2F",
     scores: "980",
-    img: "https://media.licdn.com/dms/image/v2/D5612AQHkhBzht3-ziw/article-cover_image-shrink_600_2000/B56ZV0YwQWHsAU-/0/1741414402092?e=2147483647&v=beta&t=UQfk5K3zHLAN_jVXcH-QpIhgvVRFPYKOn416VzpDdi4",
+    img: "https://ik.imagekit.io/tdqizhhci/logo-microsoft.png?updatedAt=1757144009389",
     date: "October 2024",
   },
 ];
