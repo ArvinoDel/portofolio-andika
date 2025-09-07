@@ -27,8 +27,7 @@ const Quotes = () => {
     }, []);
 
     const handleShare = (platform: string) => {
-        const text = `${quotes.quote} - ${quotes.name}`;
-
+        const text = `${quotes.quote} - ${quotes.name} on andikasnm.my.id`;
 
         if (platform === 'twitter') {
             window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
