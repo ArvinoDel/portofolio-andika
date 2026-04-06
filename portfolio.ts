@@ -155,7 +155,7 @@ export const experience: ExperienceType[] = [
   {
      role: "English Teacher",
     company: "CV Fond of English",
-    companyLogo: "",
+    companyLogo: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png",
     date: "Oct 2024 - Now",
     desc: "An English teacher who builds students’ confidence in speaking and writing through clear, engaging lessons, helping them communicate effectively in everyday situations.",
   },
