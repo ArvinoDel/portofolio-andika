@@ -152,6 +152,13 @@ export const experience: ExperienceType[] = [
     date: "Jul 2024 - Dec 2024",
     desc: "Built dynamic and scalable web solutions using Laravel, React, and Tailwind CSS for the Pandai Digital platform. Engineered secure RESTful APIs, optimized MySQL queries, and implemented responsive UIs. Managed deployment pipelines using shared hosting tools and Git-based workflows. Acted as the bridge between development and design, ensuring technical feasibility and visual excellence.",
   },
+  {
+     role: "English Teacher",
+    company: "CV Fond of English",
+    companyLogo: "",
+    date: "Oct 2024 - Now",
+    desc: "An English teacher who builds students’ confidence in speaking and writing through clear, engaging lessons, helping them communicate effectively in everyday situations.",
+  },
 ];
 
 
