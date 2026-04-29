@@ -156,7 +156,7 @@ export const experience: ExperienceType[] = [
      role: "English Teacher",
     company: "CV Fond of English",
     companyLogo: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png",
-    date: "Oct 2024 - Now",
+    date: "Oct 2025 - Now",
     desc: "An English educator who builds students’ confidence across all language skills through clear, engaging, and student-centered instruction. Focused on helping learners communicate effectively in both everyday and academic contexts while fostering active participation and practical language use.",
   },
 ];
