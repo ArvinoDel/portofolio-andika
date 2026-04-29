@@ -153,7 +153,7 @@ export const experience: ExperienceType[] = [
     desc: "Built dynamic and scalable web solutions using Laravel, React, and Tailwind CSS for the Pandai Digital platform. Engineered secure RESTful APIs, optimized MySQL queries, and implemented responsive UIs. Managed deployment pipelines using shared hosting tools and Git-based workflows. Acted as the bridge between development and design, ensuring technical feasibility and visual excellence.",
   },
   {
-     role: "English Teacher",
+    role: "English Teacher",
     company: "CV Fond of English",
     companyLogo: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png",
     date: "Oct 2025 - Now",
@@ -221,6 +221,12 @@ export const feedbacks: FeedbackType[] = [
     feedback:
       "As a client, I had high expectations, and Andika exceeded every single one. From the very first kickoff call to post-launch refinement, his professionalism, communication, and technical expertise stood out. He transformed our product vision into a dynamic, scalable web platform, all while maintaining crystal-clear transparency throughout the development cycle. Despite shifting requirements and tight timelines, Andika remained composed and solution-oriented, always proposing smart, sustainable approaches. What impressed me most was his rare ability to translate business goals into technical execution without losing sight of user experience."
   },
+  {
+    name: "Agun Gunawan",
+    role: "Academic Supervisor",
+    feedback:
+      "Demonstrates strong professionalism and consistency in delivering engaging, student-centered lessons. Effectively supports students’ development across all language skills while maintaining a positive and structured learning environment. Shows good communication, adaptability, and commitment to continuous improvement in teaching practices."
+  }
 ];
 
 export const achievements: AchievementsType[] = [
