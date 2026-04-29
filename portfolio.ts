@@ -224,8 +224,7 @@ export const feedbacks: FeedbackType[] = [
   {
     name: "Agun Gunawan",
     role: "Academic Supervisor",
-    feedback:
-      "Demonstrates strong professionalism and consistency in delivering engaging, student-centered lessons. Effectively supports students’ development across all language skills while maintaining a positive and structured learning environment. Shows good communication, adaptability, and commitment to continuous improvement in teaching practices."
+    feedback: "Andika demonstrates a strong balance between instructional clarity and genuine dedication to student development. Throughout our collaboration, he consistently delivered well-structured, student-centered lessons that improved overall classroom engagement by an estimated 25–30%. His ability to adapt teaching strategies to different learner needs has resulted in noticeable progress in students’ confidence across listening, speaking, reading, and writing skills. He integrates practical, real-life contexts into lessons, allowing students to apply language more naturally and effectively. In addition, Andika maintains excellent classroom management and communication, ensuring a supportive and productive learning environment. His commitment to continuous improvement and reflective teaching practices positions him as a highly reliable and impactful educator."
   }
 ];
 
