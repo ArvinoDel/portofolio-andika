@@ -202,7 +202,7 @@ export const projects: ProjectType[] = [
   {
     name: "Daily Teaching Report",
     img: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png?updatedAt=1775453665447",
-    tech: ["Next JS", "Node JS", "Tailwind CSS", "MongoDB"],
+    tech: ["Next.js", "Node.js", "Tailwind CSS", "MongoDB"],
     desc:
       "An Daily Teaching Report for CV Fond of English. Built with Next JS, Node JS, Tailwind CSS, and MongoDB. Designed to streamline the process of reporting daily teaching activities and track student progress.",
     link: "https://github.com/ArvinoDel/daily-teaching-report",
