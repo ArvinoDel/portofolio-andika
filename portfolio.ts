@@ -199,6 +199,15 @@ export const projects: ProjectType[] = [
     link: "https://github.com/PT-Grage-Media-Technology/djajanan",
     preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202025-07-04%20195449.png?updatedAt=1751633674564",
   },
+  {
+    name: "Daily Teaching Report",
+    img: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png?updatedAt=1775453665447",
+    tech: ["Next JS", "Node JS", "Tailwind CSS", "MongoDB"],
+    desc:
+      "An Daily Teaching Report for PT Grage Media Technology, blending modern shopping experiences with digital payments. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
+    link: "https://github.com/ArvinoDel/daily-teaching-report",
+    preview: "https://ik.imagekit.io/tdqizhhci/Screenshot%202026-05-15%20093200.png",
+  },
 ];
 
 
