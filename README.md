@@ -1,128 +1,142 @@
-<h1 align="center">Welcome to developer-portfolio 👋</h1>
-<a href="https://github.com/1hanzla100/developer-portfolio/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/1hanzla100/developer-portfolio"></a><a href="https://github.com/1hanzla100/developer-portfolio/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/1hanzla100/developer-portfolio"></a><a href="https://github.com/1hanzla100/developer-portfolio/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/1hanzla100/developer-portfolio"></a> <a href="https://github.com/1hanzla100/developer-portfolio/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/1hanzla100/developer-portfolio"></a>
-
-## Software Developer Portfolio Template built with Next.js, bootstrap that helps you showcase your work and skills as a software developer.
+<h1 align="center">👋 Welcome to My Portfolio</h1>
 
 <p align="center">
-  <kbd>
-    <img src="https://github.com/1hanzla100/developer-portfolio/blob/master/picture.PNG"></img>
-  </kbd>
+  <strong>Andika Supriyadi Nur Maulana</strong>
 </p>
 
-## To view a live example, **[click here](https://developer-portfolio-1hanzla100.vercel.app/)**.
+<p align="center">
+  Full-Stack Developer • Project Manager • Public Communicator
+</p>
 
-Just Edit `portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
+<p align="center">
+  Built with Next.js, React, TypeScript, and modern web technologies.
+</p>
 
-But if you want to **contribute** and make this much better for other developers have a look at
-[Issues](https://github.com/1hanzla100/developer-portfolio/issues).
+---
 
-If you created something awesome and want to contribute then feel free to open an
-[pull request](https://github.com/1hanzla100/developer-portfolio/pulls).
+## 🚀 About
 
-## Sections
+This portfolio showcases my professional experience, technical skills, certifications, and projects as a Full-Stack Developer and Project Manager.
 
-✔️ Summary and About me\
-✔️ Skills\
-✔️ Education\
-✔️ Work Experience\
-✔️ Feedbacks\
-✔️ Projects\
-✔️ Github Profile
+I specialize in building modern, scalable web applications using Laravel, React, Next.js, and MongoDB while applying Agile methodologies to deliver high-quality software solutions.
 
-## Getting Started
+---
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing
-purposes.
+## ✨ Features
 
-You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with
-[npm](http://npmjs.com)) installed on your computer. <br> **For Windows** Install Visual C++ Build Environment:
-[Visual Studio Build Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools)
+✔️ About Me
+✔️ Technical Skills
+✔️ Work Experience
+✔️ Education
+✔️ Certifications
+✔️ Featured Projects
+✔️ Testimonials
+✔️ Achievements
+✔️ GitHub Profile
+✔️ Responsive Design
 
-```
-node@v10.16.0 or higher
-npm@6.9.0 or higher
-git@2.17.1 or higher
-```
+---
 
-## How To Use
+## 🛠️ Technologies Used
 
-1. Fork this repository and clone it to your local machine.
+### Frontend
+
+* React.js
+* Next.js
+* TypeScript
+* JavaScript
+* Tailwind CSS
+* Bootstrap
+* Reactstrap
+
+### Backend
+
+* Laravel
+* PHP
+* REST APIs
+* Node.js
+
+### Database
+
+* MongoDB
+* MySQL
+
+### Tools
+
+* Git & GitHub
+* Vercel
+* Cloudinary
+* Postman
+* Figma
+
+---
+
+## 💼 Featured Projects
+
+### Pandai Digital
+
+Educational platform designed to support digital learning and training initiatives.
+
+### TomoLearn
+
+Modern learning platform inspired by Duolingo and MySkill, built with Next.js, React, Tailwind CSS, and MongoDB.
+
+### SMK1Presence
+
+Attendance management system developed using Next.js and React.js.
+
+### ORV Fandom & Wiki
+
+A large-scale fandom and knowledge platform dedicated to Omniscient Reader's Viewpoint (ORV).
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
 
 ```bash
-$ git clone https://github.com/<your-username>/developer-portfolio.git
+Node.js 18+
+npm 9+
+Git 2.17+
 ```
 
-2. Go into the repository
+### Installation
 
 ```bash
-$ cd developer-portfolio
+git clone https://github.com/<your-username>/<repository-name>.git
 ```
-
-3. Install dependencies
 
 ```bash
-$ yarn
+cd <repository-name>
 ```
-
-4. Edit `portfolio.js`
-
-5. Start your development server
 
 ```bash
-$ yarn dev
+npm install
 ```
 
-## Linking Portfolio to Github
-
-```javascript
-  //  portfolio.js
-  githubUserName: 'YOUR GITHUB USERNAME HERE',
+```bash
+npm run dev
 ```
 
-#### Using Emojis
+Open:
 
-For adding emoji 😃 into the texts in `Portfolio.js`, use the `emoji()` function and pass the text you need as an
-argument. This would help in keeping emojis compatible across different browsers and platforms.
+```bash
+http://localhost:3000
+```
 
-## Technologies Used
+---
 
-- [Next.js](https://nextjs.org/)
-- [axios](https://www.npmjs.com/package/axios)
-- [reactstrap](https://reactstrap.github.io/)
-- [react-reveal](https://www.react-reveal.com/)
-- [react-lottie](https://www.npmjs.com/package/react-lottie)
-- [react-easy-emoji](https://github.com/appfigures/react-easy-emoji)
-- [react-headroom](https://github.com/KyleAMathews/react-headroom)
-- [color-thief](https://github.com/lokesh/color-thief)
+## 📫 Contact
 
-## Illustrations
+**Andika Supriyadi Nur Maulana**
 
-- [Lottie File Source](https://lottiefiles.com)
+📧 [andikasupriyadinurmaulana@gmail.com](mailto:andikasupriyadinurmaulana@gmail.com)
 
-## Icons
+📱 +62 812-2496-4214
 
-Iconify Icons are used in the skill section. You can find all the icons here: [Iconify](https://icon-sets.iconify.design/).
+---
 
-## For the Future
+## ⭐ Support
 
-If you can help us with these. Please don't hesitate to open a
-[pull request](https://github.com/1hanzla100/developer-portfolio/pulls).
-
-- Enable Dark Mode
-
-- Add More Sections
-
-## Show your support
-
-Give a ⭐️ if this project helped you! You can buy me a coffee if you'd like to support my work further.
-<div>
-  <a href="https://www.buymeacoffee.com/1hanzla100"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=1hanzla100&button_colour=FFDD00&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
- </div>
-
-## Author
-
-👤 **Hanzla Tauqeer**
-
-- Website: https://hanzla.netlify.app
-- Github: [@1hanzla100](https://github.com/1hanzla100)
-- LinkedIn: [@1hanzla100](https://linkedin.com/in/1hanzla100)
+If you find this portfolio inspiring or useful, consider leaving a star on the repository.
