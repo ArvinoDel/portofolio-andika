@@ -25,6 +25,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "bootstrap": "^5.0.2",
     "classnames": "^2.3.1",
+    "cloudinary": "^2.11.0",
     "framer-motion": "^12.23.6",
     "graphql": "^15.5.1",
     "headroom.js": "^0.12.0",

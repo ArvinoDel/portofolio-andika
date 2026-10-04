@@ -26,7 +26,7 @@ export const quotes: QuotesType = {
   quote: "Like Kim Dokja, I walk ahead of the script, unseen, unchosen, yet followed by constellations who wager on the unwritten scenarios",
   name: "Andika Supriyadi Nur Maulana",
   title: "Full-Stack Developer & Project Manager",
-  img: "https://ik.imagekit.io/tdqizhhci/foto%20andika%20yb.jpg?updatedAt=1751735087750",
+  img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791132216/andika-pict.jpg",
 }
 
 export const openSource = {
@@ -141,21 +141,21 @@ export const experience: ExperienceType[] = [
   {
     role: "Project Manager",
     company: "PT Grage Media Technology",
-    companyLogo: "https://ik.imagekit.io/tdqizhhci/1674809054642.jpg?updatedAt=1757141488814",
+    companyLogo: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133505/gmt.png",
     date: "Jul 2024 - Dec 2024",
     desc: "Spearheaded the Pandai Digital project by orchestrating cross-functional collaboration, managing stakeholder communication, and aligning delivery with client expectations. Ensured project success by leading Agile ceremonies, mitigating scope creep, and implementing strategic feature prioritization. Delivered impactful milestones on time while fostering synergy between frontend, backend, and business teams.",
   },
   {
     role: "Full-Stack Developer",
     company: "PT Grage Media Technology",
-    companyLogo: "https://ik.imagekit.io/tdqizhhci/1674809054642.jpg?updatedAt=1757141488814",
+    companyLogo: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133505/gmt.png",
     date: "Jul 2024 - Dec 2024",
     desc: "Built dynamic and scalable web solutions using Laravel, React, and Tailwind CSS for the Pandai Digital platform. Engineered secure RESTful APIs, optimized MySQL queries, and implemented responsive UIs. Managed deployment pipelines using shared hosting tools and Git-based workflows. Acted as the bridge between development and design, ensuring technical feasibility and visual excellence.",
   },
   {
     role: "English Teacher",
     company: "CV Fond of English",
-    companyLogo: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png",
+    companyLogo: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133655/foe-removebg-preview.png",
     date: "Oct 2025 - Now",
     desc: "An English educator who builds students’ confidence across all language skills through clear, engaging, and student-centered instruction. Focused on helping learners communicate effectively in both everyday and academic contexts while fostering active participation and practical language use.",
   },
@@ -165,7 +165,7 @@ export const experience: ExperienceType[] = [
 export const projects: ProjectType[] = [
   {
     name: "Pandai Digital",
-    img: "https://ik.imagekit.io/tdqizhhci/logo_web.png?updatedAt=1751533310399",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133675/logo.png",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "A comprehensive learning management system and digital bootcamp providers. Developed using Laravel 11 and Tailwind CSS, Pandai Digital streamlines course creation, participant management, and online learning experiences with modern UI and robust backend support.",
@@ -174,7 +174,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "TerasKBK",
-    img: "https://ik.imagekit.io/tdqizhhci/logo-removebg-preview.png?updatedAt=1751533310391",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133505/gmt.png",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "A local e-commerce platform that empowers creators to publish, promote, and monetize digital audio content. With seamless digital payments, TerasKBK supports fast and secure transactions, bringing local commerce and creative economy into the frontier.",
@@ -183,7 +183,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "SMK1Presence",
-    img: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png?updatedAt=1751532959330",
+    img: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
     tech: ["Next.js", "React.js", "Tailwind CSS"],
     desc:
       "A digital presence and attendance management system built for vocational schools. SMK1Presence leverages Next.js and modern web technologies to simplify student tracking and administrative workflows, tailored specifically for the Indonesian education landscape.",
@@ -192,7 +192,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "Djajanan",
-    img: "https://ik.imagekit.io/tdqizhhci/1674809054642.jpg?updatedAt=1757141488814",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133505/gmt.png",
     tech: ["Laravel", "Tailwind CSS"],
     desc:
       "An e-commerce platform for local snacks and products, blending modern shopping experiences with digital payments. Djajanan offers a secure, user-friendly interface for both buyers and sellers in the digital marketplace.",
@@ -201,7 +201,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "Daily Teaching Report",
-    img: "https://ik.imagekit.io/tdqizhhci/123140378_132030078313327_4339181029461678292_n-removebg-preview.png?updatedAt=1775453665447",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133655/foe-removebg-preview.png",
     tech: ["Next.js", "Node.js", "Tailwind CSS", "MongoDB"],
     desc:
       "An Daily Teaching Report for CV Fond of English. Built with Next JS, Node JS, Tailwind CSS, and MongoDB. Designed to streamline the process of reporting daily teaching activities and track student progress.",
@@ -240,13 +240,13 @@ export const feedbacks: FeedbackType[] = [
 export const achievements: AchievementsType[] = [
   {
     title: "Certificate of Competence in Software Development (Programming)",
-    issuer: "Badan Nasional Sertifikasi Profesi(BNSP)",
+    issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
     credentials: "620102512200000272025",
     description: "Achieved the Certificate of Competence in Software Development (Programming), awarded by the Badan Nasional Sertifikasi Profesi (BNSP) — Indonesia’s official authority for professional certification. This certification demonstrates nationally recognized competence in core areas of software development, including programming logic, problem-solving, and code implementation aligned with industry standards. The assessment was conducted under the Indonesian National Work Competency Standards (SKKNI), ensuring both technical proficiency and professional readiness. Valid through May 2028, this certification serves as a testament to my dedication to growth and excellence in the tech industry.",
     tags: ["Programming", "Object-Oriented Programming", "Website Development"],
     link: "https://drive.google.com/file/d/1EFbpGc38otEjQAOvrSQwyinb4hPHGGv1/view?usp=sharing",
     scores: "9/10",
-    img: "https://ik.imagekit.io/tdqizhhci/logo-bnsp.png?updatedAt=1757143959188",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133916/bnsp.png",
     date: "May 2025",
   },
   {
@@ -257,7 +257,7 @@ export const achievements: AchievementsType[] = [
     tags: ["TOEIC", "English Proficiency", "C2 Level"],
     link: "https://drive.google.com/file/d/1Xza9o0ZmCBkyjEhoPiJNn1eVBJ43j3RU/view?usp=sharing",
     scores: "815",
-    img: "https://ik.imagekit.io/tdqizhhci/logo-toeic.png?updatedAt=1757144010169",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791134086/images.png",
     date: "November 2024",
   },
   {
@@ -268,7 +268,7 @@ export const achievements: AchievementsType[] = [
     tags: ["Cybersecurity", "Microsoft Azure", "SC-900"],
     link: "https://learn.microsoft.com/en-gb/users/andikasupriyadinurmaulana-5098/credentials/ceec3eb99457eca2?ref=https%3A%2F%2Fwww.linkedin.com%2F",
     scores: "980",
-    img: "https://ik.imagekit.io/tdqizhhci/logo-microsoft.png?updatedAt=1757144009389",
+    img: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133917/microsoft.webp",
     date: "October 2024",
   },
 ];
@@ -281,7 +281,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Spearheaded initiatives to enhance English proficiency across the student body, fostering cross-cultural communication and leadership through debate forums and international speaking simulations.",
     location: "Cirebon, Indonesia",
-    icon: "https://ik.imagekit.io/tdqizhhci/nesco-removebg-preview.png",
+    icon: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791133372/nesco.png",
     color: "#3b82f6"
   },
   {
@@ -291,7 +291,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Spearheaded the foundational framework of the Mathematics Club, co-designing engaging problem-solving sessions while fostering a collaborative culture of analytical thinking and academic growth.",
     location: "Cirebon, Indonesia",
-    icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
+    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
     color: "#f51b0bff"
   },
   {
@@ -301,7 +301,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Collaborated with faculty and student leadership to streamline student governance, advocating for educational and extracurricular excellence.",
     location: "Cirebon, Indonesia",
-    icon: "https://ik.imagekit.io/tdqizhhci/mpksmkn-removebg-preview.png",
+    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
     color: "#f59e0b"
   },
   {
@@ -311,7 +311,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Represented the school at regional tech summits and spearheaded digital literacy campaigns, positioning the institution as a pioneer in student-led innovation.",
     location: "Cirebon, Indonesia",
-    icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
+    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
     color: "#6366f1"
   },
   {
@@ -321,7 +321,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Advocated for sustainable living through school-wide zero waste initiatives, led awareness campaigns, and collaborated with environmental groups to promote responsible consumption and ecological mindfulness among students.",
     location: "Cirebon, Indonesia",
-    icon: "https://ik.imagekit.io/tdqizhhci/logo-ct-dark.png",
+    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
     color: "#04a818ff"
   },
   {
@@ -331,7 +331,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Actively engaged in planning and executing student events, championing a culture of inclusivity and student engagement at the junior high level.",
     location: "Cirebon, Indonesia",
-    icon: "https://ik.imagekit.io/tdqizhhci/smpn.png",
+    icon: "https://res.cloudinary.com/abj2yrvq/image/upload/f_auto,q_auto/v1791134387/smpn.png",
     color: "#10b981"
   }
 ];
