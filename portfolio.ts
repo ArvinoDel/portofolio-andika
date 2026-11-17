@@ -127,7 +127,7 @@ export const SkillBars: SkillBarsType[] = [
 export const educationInfo: EducationType[] = [
   {
     schoolName: "State Vocational High School 1 Cirebon",
-    img: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    img: "https://res.cloudinary.com/djgaqlzkn/image/upload/v1794917978/logosmk.png",
     link: "https://pplg-smkn1cirebon.sch.id/",
     subHeader: "Software Engineering",
     duration: "May 2022 - May 2025",
@@ -183,7 +183,7 @@ export const projects: ProjectType[] = [
   },
   {
     name: "SMK1Presence",
-    img: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    img: "https://res.cloudinary.com/djgaqlzkn/image/upload/v1794917978/logosmk.png",
     tech: ["Next.js", "React.js", "Tailwind CSS"],
     desc:
       "A digital presence and attendance management system built for vocational schools. SMK1Presence leverages Next.js and modern web technologies to simplify student tracking and administrative workflows, tailored specifically for the Indonesian education landscape.",
@@ -291,7 +291,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Spearheaded the foundational framework of the Mathematics Club, co-designing engaging problem-solving sessions while fostering a collaborative culture of analytical thinking and academic growth.",
     location: "Cirebon, Indonesia",
-    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    icon: "https://res.cloudinary.com/djgaqlzkn/image/upload/v1794917978/logosmk.png",
     color: "#f51b0bff"
   },
   {
@@ -301,7 +301,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Collaborated with faculty and student leadership to streamline student governance, advocating for educational and extracurricular excellence.",
     location: "Cirebon, Indonesia",
-    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    icon: "https://res.cloudinary.com/djgaqlzkn/image/upload/v1794917978/logosmk.png",
     color: "#f59e0b"
   },
   {
@@ -311,7 +311,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Represented the school at regional tech summits and spearheaded digital literacy campaigns, positioning the institution as a pioneer in student-led innovation.",
     location: "Cirebon, Indonesia",
-    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    icon: "https://res.cloudinary.com/djgaqlzkn/image/upload/v1794917978/logosmk.png",
     color: "#6366f1"
   },
   {
@@ -321,7 +321,7 @@ export const executiveexperiences: ExecutiveExperiencesType[] = [
     description:
       "Advocated for sustainable living through school-wide zero waste initiatives, led awareness campaigns, and collaborated with environmental groups to promote responsible consumption and ecological mindfulness among students.",
     location: "Cirebon, Indonesia",
-    icon: "https://smkn1-cirebon.sch.id/website_neper_laravel/public/logo-neper.png",
+    icon: "https://res.cloudinary.com/djgaqlzkn/image/upload/v1794917978/logosmk.png",
     color: "#04a818ff"
   },
   {
